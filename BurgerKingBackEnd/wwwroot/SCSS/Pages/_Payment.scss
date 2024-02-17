@@ -1,0 +1,127 @@
+.payment-header {
+  display: flex;
+  align-items: center;
+  background-color: rgb(80, 35, 20);
+  height: 50px;
+  padding: 30px;
+
+  .left {
+    a {
+      img {
+        width: 20px;
+        height: 20px;
+      }
+    }
+  }
+  .right {
+    width: 100%;
+    h4 {
+      font-size: 24px;
+      font-family: "Flame Bold";
+      color: rgb(245, 235, 220);
+      text-align: center;
+    }
+  }
+}
+
+form.payment {
+  @include container();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+
+  h4 {
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-family: "Flame Sans";
+    font-weight: bold;
+    color: rgb(80, 35, 20);
+  }
+
+  div.flexs {
+    display: flex;
+    gap: 5px;
+    height: 100px;
+    @include for-size(tablet) {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 90px;
+    }
+  }
+  div.saveCard {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-left: 8px;
+    font-size: 16px;
+    font-family: "Flame Sans";
+    color: rgb(80, 35, 20);
+    input {
+      transition: height 200ms ease 0s, width 200ms ease 0s;
+      border-radius: 4px;
+      border-color: rgb(80, 35, 20);
+      border-width: 1px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  div {
+    width: 60%;
+
+    input.submit-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      padding: 12px;
+      background-color: rgb(214, 35, 0);
+      font-size: 20px;
+      line-height: 1.5em;
+      font-family: "Flame Sans";
+      font-weight: bold;
+      color: white;
+      border: none;
+      border-radius: 40px;
+    }
+
+    input {
+      display: flex;
+      outline: none;
+      font-family: "Flame Sans";
+      padding-top: 8px;
+      padding-right: 16px;
+      padding-left: 16px;
+      padding-bottom: 8px;
+      border-radius: 4px;
+      border-width: 1px;
+      width: 100%;
+      height: 50px;
+    }
+
+    label {
+      font-size: 16px;
+      color: rgb(80, 35, 20);
+      font-weight: bold;
+      font-family: "Flame Sans";
+    }
+  }
+
+  div.total-price {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid rgb(80, 35, 20);
+    span {
+      margin-top: 20px;
+      font-size: 16px;
+      color: rgb(80, 35, 20);
+      font-family: "Flame Sans";
+      font-weight: bold;
+    }
+  }
+}

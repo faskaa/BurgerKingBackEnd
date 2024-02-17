@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+    rel="Icon"
+    type="Images/Icon"
+    href="../../Assets/Icons/burger-king.png"
+  />
+
+    <title>Delivery- Burger King</title>
+    <link rel="stylesheet" href="../../SCSS/main.css" />
+    <link
+      href="https://db.onlinewebfonts.com/c/29eee6d957e73039264c9de9fd949d20?family=Flame+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://db.onlinewebfonts.com/c/565a681be0eb6f1d92c6bc57c629ea35?family=Flame+Bold"
+      rel="stylesheet"
+    />
+    <script defer src="./delivery.js"></script>
+  </head>
+  <body >
+    <div class="delivery-navbar">
+      <div class="nav">
+        <span>Delivery</span>
+      </div>
+    </div>
+    <section class="delivery-selectors">
+      <div class="selector">
+        <div class="top">
+          <a class="pick-up" href="../Locations/location.html">
+            <button>Pick Up</button>
+          </a>
+          <a class="delivery" href="../Delivery/delivery.html">
+            <button>Delivery</button>
+          </a>
+        </div>
+        <div class="bottom">
+          <form method="get" id="searchForm">
+            <div>
+              <input
+                type="text"
+                class="form-control"
+                name="query"
+                id="searchInput"
+                placeholder="Enter your search"
+                aria-label="Search"
+                aria-describedby="searchButton"
+              />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="delivery-locations">
+      <div class="locations-menu">
+        <button class="active" onclick="showNearby()">Nearby</button>
+        <button onclick="showFavorites()">Favorites</button>
+        <button onclick="showRecents()">Recents</button>
+      </div>
+    </section>
+
+    <section class="nearby-content">
+      <div class="location">
+        <div class="location-top">
+          <div class="left">
+            <h1>500 Lyons Avenue D Near</h1>
+            <div class="mid">
+              <span class="distance">3 km</span>
+              <span class="work">~Open</span>
+            </div>
+            <div class="functionality">
+              <span>Drive Thru</span>
+              <span>Take Out</span>
+              <span>Eat In</span>
+            </div>
+          </div>
+          <div class="right">
+            <button>
+              <img class="active" src="../../Assets/Icons/heart.png" alt="" />
+              <img src="../../Assets/Icons/heart-red.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="location-bottom">
+          <div class="order-menu">
+
+            <a href="../Menu/menu.html">
+              <button class="location-order">
+                <img src="../../Assets/Icons/burger.png" alt="" />
+              </button>
+              <span>Order</span>
+            </a>
+            <a href="../Offer/offer.html">
+              <button class="location-info">
+                <img src="../../Assets/Icons/order.png" alt="" />
+              </button>
+              <span>Offers</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden">
+      </div>
+
+    </section>
+
+    <section class="favorites-content">
+      <div class="location">
+        <div class="location-top">
+          <div class="left">
+            <h1>500 Lyons Avenue D fav</h1>
+            <div class="mid">
+              <span class="distance">3 km</span>
+              <span class="work">~Open</span>
+            </div>
+            <div class="functionality">
+              <span>Drive Thru</span>
+              <span>Take Out</span>
+              <span>Eat In</span>
+            </div>
+          </div>
+          <div class="right">
+            <button>
+              <img class="active" src="../../Assets/Icons/heart.png" alt="" />
+              <img src="../../Assets/Icons/heart-red.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="location-bottom">
+          <div class="order-menu">
+
+            <a href="../Menu/menu.html">
+              <button class="location-order">
+                <img src="../../Assets/Icons/burger.png" alt="" />
+              </button>
+              <span>Order</span>
+            </a>
+            <a href="../Offer/offer.html">
+              <button class="location-info">
+                <img src="../../Assets/Icons/order.png" alt="" />
+              </button>
+              <span>Offers</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="location">
+        <div class="location-top">
+          <div class="left">
+            <h1>500 Lyons Avenue D fav</h1>
+            <div class="mid">
+              <span class="distance">3 km</span>
+              <span class="work">~Open</span>
+            </div>
+            <div class="functionality">
+              <span>Drive Thru</span>
+              <span>Take Out</span>
+              <span>Eat In</span>
+            </div>
+          </div>
+          <div class="right">
+            <button>
+              <img class="active" src="../../Assets/Icons/heart.png" alt="" />
+              <img src="../../Assets/Icons/heart-red.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="location-bottom">
+          <div class="order-menu">
+
+            <a href="../Menu/menu.html">
+              <button class="location-order">
+                <img src="../../Assets/Icons/burger.png" alt="" />
+              </button>
+              <span>Order</span>
+            </a>
+            <a href="../Offer/offer.html">
+              <button class="location-info">
+                <img src="../../Assets/Icons/order.png" alt="" />
+              </button>
+              <span>Offers</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="location">
+        <div class="location-top">
+          <div class="left">
+            <h1>500 Lyons Avenue D fav</h1>
+            <div class="mid">
+              <span class="distance">3 km</span>
+              <span class="work">~Open</span>
+            </div>
+            <div class="functionality">
+              <span>Drive Thru</span>
+              <span>Take Out</span>
+              <span>Eat In</span>
+            </div>
+          </div>
+          <div class="right">
+            <button>
+              <img class="active" src="../../Assets/Icons/heart.png" alt="" />
+              <img src="../../Assets/Icons/heart-red.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="location-bottom">
+          <div class="order-menu">
+
+            <a href="../Menu/menu.html">
+              <button class="location-order">
+                <img src="../../Assets/Icons/burger.png" alt="" />
+              </button>
+              <span>Order</span>
+            </a>
+            <a href="../Offer/offer.html">
+              <button class="location-info">
+                <img src="../../Assets/Icons/order.png" alt="" />
+              </button>
+              <span>Offers</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="location">
+        <div class="location-top">
+          <div class="left">
+            <h1>500 Lyons Avenue D fav</h1>
+            <div class="mid">
+              <span class="distance">3 km</span>
+              <span class="work">~Open</span>
+            </div>
+            <div class="functionality">
+              <span>Drive Thru</span>
+              <span>Take Out</span>
+              <span>Eat In</span>
+            </div>
+          </div>
+          <div class="right">
+            <button>
+              <img class="active" src="../../Assets/Icons/heart.png" alt="" />
+              <img src="../../Assets/Icons/heart-red.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="location-bottom">
+          <div class="order-menu">
+
+            <a href="../Menu/menu.html">
+              <button class="location-order">
+                <img src="../../Assets/Icons/burger.png" alt="" />
+              </button>
+              <span>Order</span>
+            </a>
+            <a href="../Offer/offer.html">
+              <button class="location-info">
+                <img src="../../Assets/Icons/order.png" alt="" />
+              </button>
+              <span>Offers</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="location">
+        <div class="location-top">
+          <div class="left">
+            <h1>500 Lyons Avenue D fav</h1>
+            <div class="mid">
+              <span class="distance">3 km</span>
+              <span class="work">~Open</span>
+            </div>
+            <div class="functionality">
+              <span>Drive Thru</span>
+              <span>Take Out</span>
+              <span>Eat In</span>
+            </div>
+          </div>
+          <div class="right">
+            <button>
+              <img class="active" src="../../Assets/Icons/heart.png" alt="" />
+              <img src="../../Assets/Icons/heart-red.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="location-bottom">
+          <div class="order-menu">
+
+            <a href="../Menu/menu.html">
+              <button class="location-order">
+                <img src="../../Assets/Icons/burger.png" alt="" />
+              </button>
+              <span>Order</span>
+            </a>
+            <a href="../Offer/offer.html">
+              <button class="location-info">
+                <img src="../../Assets/Icons/order.png" alt="" />
+              </button>
+              <span>Offers</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hidden">
+      </div>
+    </section>
+
+    <section class="recents-content">
+      <div class="location">
+        <div class="location-top">
+          <div class="left">
+            <h1>500 Lyons Avenue D rec</h1>
+            <div class="mid">
+              <span class="distance">3 km</span>
+              <span class="work">~Open</span>
+            </div>
+            <div class="functionality">
+              <span>Drive Thru</span>
+              <span>Take Out</span>
+              <span>Eat In</span>
+            </div>
+          </div>
+          <div class="right">
+            <button>
+              <img class="active" src="../../Assets/Icons/heart.png" alt="" />
+              <img src="../../Assets/Icons/heart-red.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="location-bottom">
+          <div class="order-menu">
+
+            <a href="../Menu/menu.html">
+              <button class="location-order">
+                <img src="../../Assets/Icons/burger.png" alt="" />
+              </button>
+              <span>Order</span>
+            </a>
+            <a href="../Offer/offer.html">
+              <button class="location-info">
+                <img src="../../Assets/Icons/order.png" alt="" />
+              </button>
+              <span>Offers</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="location">
+        <div class="location-top">
+          <div class="left">
+            <h1>500 Lyons Avenue D rec</h1>
+            <div class="mid">
+              <span class="distance">3 km</span>
+              <span class="work">~Open</span>
+            </div>
+            <div class="functionality">
+              <span>Drive Thru</span>
+              <span>Take Out</span>
+              <span>Eat In</span>
+            </div>
+          </div>
+          <div class="right">
+            <button>
+              <img class="active" src="../../Assets/Icons/heart.png" alt="" />
+              <img src="../../Assets/Icons/heart-red.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="location-bottom">
+          <div class="order-menu">
+
+            <a href="../Menu/menu.html">
+              <button class="location-order">
+                <img src="../../Assets/Icons/burger.png" alt="" />
+              </button>
+              <span>Order</span>
+            </a>
+            <a href="../Offer/offer.html">
+              <button class="location-info">
+                <img src="../../Assets/Icons/order.png" alt="" />
+              </button>
+              <span>Offers</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="location">
+        <div class="location-top">
+          <div class="left">
+            <h1>500 Lyons Avenue D rec</h1>
+            <div class="mid">
+              <span class="distance">3 km</span>
+              <span class="work">~Open</span>
+            </div>
+            <div class="functionality">
+              <span>Drive Thru</span>
+              <span>Take Out</span>
+              <span>Eat In</span>
+            </div>
+          </div>
+          <div class="right">
+            <button>
+              <img class="active" src="../../Assets/Icons/heart.png" alt="" />
+              <img src="../../Assets/Icons/heart-red.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="location-bottom">
+          <div class="order-menu">
+
+            <a href="../Menu/menu.html">
+              <button class="location-order">
+                <img src="../../Assets/Icons/burger.png" alt="" />
+              </button>
+              <span>Order</span>
+            </a>
+            <a href="../Offer/offer.html">
+              <button class="location-info">
+                <img src="../../Assets/Icons/order.png" alt="" />
+              </button>
+              <span>Offers</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="location">
+        <div class="location-top">
+          <div class="left">
+            <h1>500 Lyons Avenue D rec</h1>
+            <div class="mid">
+              <span class="distance">3 km</span>
+              <span class="work">~Open</span>
+            </div>
+            <div class="functionality">
+              <span>Drive Thru</span>
+              <span>Take Out</span>
+              <span>Eat In</span>
+            </div>
+          </div>
+          <div class="right">
+            <button>
+              <img class="active" src="../../Assets/Icons/heart.png" alt="" />
+              <img src="../../Assets/Icons/heart-red.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="location-bottom">
+          <div class="order-menu">
+
+            <a href="../Menu/menu.html">
+              <button class="location-order">
+                <img src="../../Assets/Icons/burger.png" alt="" />
+              </button>
+              <span>Order</span>
+            </a>
+            <a href="../Offer/offer.html">
+              <button class="location-info">
+                <img src="../../Assets/Icons/order.png" alt="" />
+              </button>
+              <span>Offers</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="location">
+        <div class="location-top">
+          <div class="left">
+            <h1>500 Lyons Avenue D rec</h1>
+            <div class="mid">
+              <span class="distance">3 km</span>
+              <span class="work">~Open</span>
+            </div>
+            <div class="functionality">
+              <span>Drive Thru</span>
+              <span>Take Out</span>
+              <span>Eat In</span>
+            </div>
+          </div>
+          <div class="right">
+            <button>
+              <img class="active" src="../../Assets/Icons/heart.png" alt="" />
+              <img src="../../Assets/Icons/heart-red.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="location-bottom">
+          <div class="order-menu">
+
+            <a href="../Menu/menu.html">
+              <button class="location-order">
+                <img src="../../Assets/Icons/burger.png" alt="" />
+              </button>
+              <span>Order</span>
+            </a>
+            <a href="../Offer/offer.html">
+              <button class="location-info">
+                <img src="../../Assets/Icons/order.png" alt="" />
+              </button>
+              <span>Offers</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="location">
+        <div class="location-top">
+          <div class="left">
+            <h1>500 Lyons Avenue D rec</h1>
+            <div class="mid">
+              <span class="distance">3 km</span>
+              <span class="work">~Open</span>
+            </div>
+            <div class="functionality">
+              <span>Drive Thru</span>
+              <span>Take Out</span>
+              <span>Eat In</span>
+            </div>
+          </div>
+          <div class="right">
+            <button>
+              <img class="active" src="../../Assets/Icons/heart.png" alt="" />
+              <img src="../../Assets/Icons/heart-red.png" alt="" />
+            </button>
+          </div>
+        </div>
+        <div class="location-bottom">
+          <div class="order-menu">
+
+            <a href="../Menu/menu.html">
+              <button class="location-order">
+                <img src="../../Assets/Icons/burger.png" alt="" />
+              </button>
+              <span>Order</span>
+            </a>
+            <a href="../Offer/offer.html">
+              <button class="location-info">
+                <img src="../../Assets/Icons/order.png" alt="" />
+              </button>
+              <span>Offers</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="hidden">
+      </div>
+    </section>
+    <div class="location-footer">
+      <div class="footer">
+        <div>
+          <a href="../Home/home.html">
+            <img src="../../Assets/Icons/home.png" alt="" />
+            <span>Home</span>
+          </a>
+        </div>
+        <div>
+          <a href="../Locations/location.html">
+            <img src="../../Assets/Icons/menu.png" alt="" />
+            <span>Menu</span>
+          </a>
+        </div>
+        <div>
+          <a href="../Offer/offer.html">
+            <img src="../../Assets/Icons/discount.png" alt="" />
+            <span>Offers</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

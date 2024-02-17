@@ -1,0 +1,389 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\badge.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\badge.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\barcode.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\barcode.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\basket.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\basket.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\burger-bar.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\burger-bar.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\burger-king.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\burger-king.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\burger.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\burger.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\cart.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\cart.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\close.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\close.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\delivery-bike.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\delivery-bike.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\discount.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\discount.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\heart-red.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\heart-red.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\heart.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\heart.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\home-gif.gif",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\home-gif.gif"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\home.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\home.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\information.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\information.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\location.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\location.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\map (1).png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\map (1).png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\map.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\map.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\menu.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\menu.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\order.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\order.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\plus.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\plus.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\remove.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\remove.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\right-arrow.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\right-arrow.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\small-drink-size.webp",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\small-drink-size.webp"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\AppStore.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\AppStore.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\PlayStore.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\PlayStore.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\Sides.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Sides.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\candied-bacon-whopper.webp",
+      "PackagePath": "staticwebassets\\Assets\\Images\\candied-bacon-whopper.webp"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\card-1.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\card-1.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\card-2.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\card-2.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\card-3.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\card-3.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\card-4.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\card-4.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\cheesy-tots.webp",
+      "PackagePath": "staticwebassets\\Assets\\Images\\cheesy-tots.webp"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\chicken-fish.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\chicken-fish.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\coca-cola.webp",
+      "PackagePath": "staticwebassets\\Assets\\Images\\coca-cola.webp"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\condiments.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\condiments.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\download.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\download.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\drinks.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\drinks.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\featured.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\featured.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\flame-grill=burger.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\flame-grill=burger.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\have-sies.webp",
+      "PackagePath": "staticwebassets\\Assets\\Images\\have-sies.webp"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\honey-mustard-bk-royal-crispy-wrap.webp",
+      "PackagePath": "staticwebassets\\Assets\\Images\\honey-mustard-bk-royal-crispy-wrap.webp"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\phone-ads.png",
+      "PackagePath": "staticwebassets\\Assets\\Images\\phone-ads.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Fonts\\Flame-Bold.woff",
+      "PackagePath": "staticwebassets\\Fonts\\Flame-Bold.woff"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Fonts\\Flame-Regular.woff",
+      "PackagePath": "staticwebassets\\Fonts\\Flame-Regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Fonts\\FlameSans-Regular.woff",
+      "PackagePath": "staticwebassets\\Fonts\\FlameSans-Regular.woff"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\About\\about.html",
+      "PackagePath": "staticwebassets\\Pages\\About\\about.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\BurgerMenu\\burgermenu.html",
+      "PackagePath": "staticwebassets\\Pages\\BurgerMenu\\burgermenu.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Delivery\\delivery.html",
+      "PackagePath": "staticwebassets\\Pages\\Delivery\\delivery.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Delivery\\delivery.js",
+      "PackagePath": "staticwebassets\\Pages\\Delivery\\delivery.js"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Detail\\detail.html",
+      "PackagePath": "staticwebassets\\Pages\\Detail\\detail.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Detail\\detail.js",
+      "PackagePath": "staticwebassets\\Pages\\Detail\\detail.js"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Home\\home.html",
+      "PackagePath": "staticwebassets\\Pages\\Home\\home.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Locations\\location.html",
+      "PackagePath": "staticwebassets\\Pages\\Locations\\location.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Locations\\location.js",
+      "PackagePath": "staticwebassets\\Pages\\Locations\\location.js"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Menu\\menu.html",
+      "PackagePath": "staticwebassets\\Pages\\Menu\\menu.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\MyAccount\\account.html",
+      "PackagePath": "staticwebassets\\Pages\\MyAccount\\account.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Offer\\offer.html",
+      "PackagePath": "staticwebassets\\Pages\\Offer\\offer.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Order-Delivery\\delivery.js",
+      "PackagePath": "staticwebassets\\Pages\\Order-Delivery\\delivery.js"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Order-Delivery\\order-delivery.html",
+      "PackagePath": "staticwebassets\\Pages\\Order-Delivery\\order-delivery.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Order-Pickup\\order-pickup.html",
+      "PackagePath": "staticwebassets\\Pages\\Order-Pickup\\order-pickup.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Order-Pickup\\pickup.js",
+      "PackagePath": "staticwebassets\\Pages\\Order-Pickup\\pickup.js"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Payment\\payment.html",
+      "PackagePath": "staticwebassets\\Pages\\Payment\\payment.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Payment\\payment.js",
+      "PackagePath": "staticwebassets\\Pages\\Payment\\payment.js"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Recent-Orders\\recent-order.html",
+      "PackagePath": "staticwebassets\\Pages\\Recent-Orders\\recent-order.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Sign-Up\\signup.html",
+      "PackagePath": "staticwebassets\\Pages\\Sign-Up\\signup.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Sign-in\\signin.html",
+      "PackagePath": "staticwebassets\\Pages\\Sign-in\\signin.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Sub-menu\\submenu.html",
+      "PackagePath": "staticwebassets\\Pages\\Sub-menu\\submenu.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Base\\_reset.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Base\\_reset.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Base\\_typography.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Base\\_typography.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Layout\\_footer.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Layout\\_footer.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Layout\\_navbar.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Layout\\_navbar.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_About.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_About.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Account.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_Account.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Burgermenu.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_Burgermenu.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Delivery.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_Delivery.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Detail.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_Detail.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Home.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_Home.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Location.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_Location.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Menu.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_Menu.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Offer.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_Offer.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Order-Delivery.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_Order-Delivery.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Order-Pickup.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_Order-Pickup.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Payment.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_Payment.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Recent-Order.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_Recent-Order.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_SignUp.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_SignUp.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_SingIn.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_SingIn.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_SubMenu.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_SubMenu.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Utils\\_mixins.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Utils\\_mixins.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Utils\\_variables.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Utils\\_variables.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\main.css",
+      "PackagePath": "staticwebassets\\SCSS\\main.css"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\main.scss",
+      "PackagePath": "staticwebassets\\SCSS\\main.scss"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.BurgerKingBackEnd.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.BurgerKingBackEnd.props",
+      "PackagePath": "build\\BurgerKingBackEnd.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.BurgerKingBackEnd.props",
+      "PackagePath": "buildMultiTargeting\\BurgerKingBackEnd.props"
+    },
+    {
+      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.BurgerKingBackEnd.props",
+      "PackagePath": "buildTransitive\\BurgerKingBackEnd.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

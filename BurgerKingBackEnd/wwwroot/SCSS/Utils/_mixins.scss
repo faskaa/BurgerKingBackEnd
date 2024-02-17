@@ -1,0 +1,34 @@
+// @mixin container(){
+//     padding-right: 159.5px;
+//     padding-left: 159.5px;
+// }
+
+@mixin for-size($screen) {
+  @if $screen == tablet {
+    @media screen and (max-width: $desktop-container-width) {
+      @content;
+    }
+  }
+  @if $screen == mobile {
+    @media screen and (max-width: $tablet-container-width) {
+      @content;
+    }
+  }
+}
+
+@mixin container() {
+//   width: 1050px;
+    width: 1200px;
+  margin: auto;
+  @include for-size(tablet) {
+    //690
+    width: 767px;
+    margin: auto;
+  }
+
+  @include for-size(mobile) {
+    //375
+    width: 375px;
+    margin: auto;
+  }
+}

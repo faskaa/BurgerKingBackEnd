@@ -1,0 +1,163 @@
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #fff; // You can customize the background color
+  z-index: 1000; // Set a higher z-index to ensure it stays on top of other elements
+  transition: top 0.3s ease-in-out; // Smooth transition effect
+
+
+}
+
+
+header {
+  height: 104px;
+  background-color: rgb(245, 235, 220);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1.41px;
+  z-index: 400;
+  .navbar {
+    
+    @include container();
+    display: flex;
+    flex-direction: column;
+    .top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 50px;
+      .burgermenu {
+        text-decoration: none;
+        width: 209.5px;
+        height: 24px;
+        @include for-size(mobile){
+          width: 115px;
+        }
+   
+        img {
+          &:hover {
+            opacity: 50%;
+            transition: 0.3s;
+          }
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      .logo {
+        text-decoration: none;
+        width: 38px;
+        height: 38px;
+        img {
+          // position: relative;
+          // left: 100px;
+          width: 38px;
+          height: 38px;
+          // @include for-size(mobile){
+          //   position: relative;
+          //   left: 30px;
+
+          // }
+          &:hover {
+            opacity: 50%;
+            transition: 0.3s;
+          }
+        }
+      }
+      .buttons {
+        display: flex;
+        gap: 10px;
+        .account {
+          text-decoration: none;
+          width: 115px;
+          height: 34px;
+
+          button {
+            background-color: rgb(167, 27, 0);
+            border-radius: 9999px;
+            border: none;
+            width: 115px;
+            height: 34px;
+            color: white;
+            font-size: 12px;
+            font-family: "Flame Sans";
+            // background-color: transparent;
+            // border: none;
+            &:hover {
+              opacity: 50%;
+              transition: 0.3s;
+            }
+          }
+        }
+
+        .basket {
+            @include for-size(mobile){
+                display: none;
+            }
+          text-decoration: none;
+          width: 84.06px;
+          height: 34px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          button {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            background-color: rgb(80, 35, 20);
+            border-radius: 9999px;
+            border: none;
+            color: white;
+            width: 84.06px;
+            height: 34px;
+            font-size: 12px;
+            font-family: "Flame Sans";
+            &:hover {
+              opacity: 50%;
+              transition: 0.3s;
+            }
+
+            img {
+              width: 15px;
+              height: 15px;
+            }
+          }
+        }
+      }
+    }
+
+    .bottom {
+      display: flex;
+      align-items: center;
+      height: 48px;
+
+      a {
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        img {
+          width: 20px;
+          height: 20px;
+        }
+        span {
+          &:nth-child(2) {
+            font-size: 16px;
+            font-family: "Flame Sans";
+            font-weight: bold;
+            line-height: 24px;
+            color: rgb(80, 35, 20);
+          }
+
+          &:nth-child(3) {
+            color: rgb(80, 35, 20);
+            font-family: "Flame Sans";
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}

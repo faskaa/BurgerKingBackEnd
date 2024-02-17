@@ -1,0 +1,31 @@
+div.menu-wrapper{
+    @include container();
+
+    .menus{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 50px;
+
+
+        .menu{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 50px;
+            border-bottom: 1px solid black;
+            span{
+
+                font-size: 15px;
+                font-family: "Flame Sans";
+                color: rgb(80, 35, 20);
+                font-weight: bold;
+            }
+            img{
+                width: 20px;
+                height: 20px;
+            }
+
+        }
+    }
+}

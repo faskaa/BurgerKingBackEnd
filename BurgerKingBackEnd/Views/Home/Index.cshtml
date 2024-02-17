@@ -1,0 +1,143 @@
+﻿@model HomeVM
+ 
+<header>
+    <div class="navbar">
+        <div class="top">
+            <a class="burgermenu" href="~/../BurgerMenu/burgermenu.html">
+                <img src="~/./../../Assets/Icons/burger-bar.png" alt="" />
+            </a>
+            <a class="logo" href="~/./home.html">
+                <img src="~/./../../Assets/Icons/burger-king.png" alt="" />
+            </a>
+            <div class="buttons">
+                <a class="account" href="~/../Sign-Up/signup.html ">
+                    <button>Sign Up/Sing In</button>
+                </a>
+                <a class="basket" href="~/../Sign-Up/signup.html">
+                    <button>
+                        <img src="~/./../../Assets/Icons/basket.png" alt="" />
+                        $999.00
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="bottom">
+            <a href="~/../Locations/location.html">
+                <img src="~/../../Assets/Icons/map.png" alt="" />
+                <span>For availability</span>
+                <span>Choose location</span>
+            </a>
+        </div>
+    </div>
+</header>
+<section class="order">
+    <div class="main-section">
+        @foreach (Slider slider in Model.Sliders)
+        {
+            
+        <div class="left">
+            <span>@slider.Title</span>
+            <a class="pickup" href="~/../Locations/location.html">
+                <button>
+                    <img src="~/../../Assets/Icons/@slider.OrderImage" alt="" />
+                    Order Pickup
+                </button>
+            </a>
+            <a class="delivery" href="~/../Delivery/delivery.html">
+                <button>
+                    <img src="~/../../Assets/Icons/@slider.DeliveryImage" alt="" />
+                    Order Delivery
+                </button>
+            </a>
+        </div>
+        <div class="right">
+            <img src="~/../../Assets/Icons/@slider.Image" alt="" />
+        </div>
+        }
+    </div>
+</section>
+<section class="cards">
+
+    @foreach (Ad ad in Model.Ads)
+    {
+     <div class="card">
+        <div class="top">
+            <a href="~/../Locations/location.html">
+                <img src="~/../../Assets/Images/@ad.Image" alt="" />
+            </a>
+        </div>
+        <div class="bottom">
+            <div class="info">
+                <h4>@ad.Title</h4>
+                <span>
+                    @ad.Description
+                </span>
+            </div>
+            <div class="button">
+                <a href="~/../Locations/location.html">
+                    <button>Order Now</button>
+                </a>
+            </div>
+        </div>
+    </div>
+        
+    }
+</section>
+<section class="ads">
+    <div class="ad">
+        <div class="left">
+            <img src="~/../../Assets/Images/phone-ads.png" alt="" />
+        </div>
+        <div class="right">
+            <h4>
+                Save $$$ <br />
+                With offers on demand
+            </h4>
+            <div class="link">
+                <a class="appstore"
+                   href="~/https://play.google.com/store/apps?hl=en_US&gl=PL&pli=1">
+                    <img src="~/../../Assets/Images/PlayStore.png" alt="" />
+                </a>
+                <a class="playstore" href="~/https://www.apple.com/app-store/">
+                    <img src="~/../../Assets/Images/download.png" alt="" />
+                </a>
+            </div>
+            <span>
+                Apple and the Apple logo are trademarks of Apple Inc., registered
+                in the U.S. and other countries. App Store is a service mark of
+                Apple Inc. Google Play is a trademark of Google Inc. Terms
+                apply.
+            </span>
+        </div>
+    </div>
+</section>
+<section class="terms">
+    <div class="term">
+        <span>
+            TM & Copyright 2024 Burger King Company LLC. All Rights Reserved. I
+            Do Not Sell Or Share My Personal Information
+        </span>
+    </div>
+</section>
+<footer>
+    <div class="footer">
+        <div>
+            <a href="~/./home.html">
+                <img src="~/../../Assets/Icons/home.png" alt="" />
+                <span>Home</span>
+            </a>
+        </div>
+        <div>
+            <a href="~/../Locations/location.html">
+                <img src="~/../../Assets/Icons/menu.png" alt="" />
+                <span>Menu</span>
+            </a>
+        </div>
+        <div>
+            <a href="~/../Offer/offer.html">
+                <img src="~/../../Assets/Icons/discount.png" alt="" />
+                <span>Offers</span>
+            </a>
+        </div>
+    </div>
+</footer>

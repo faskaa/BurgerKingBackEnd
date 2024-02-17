@@ -1,0 +1,190 @@
+.sign-in {
+    height: 50px;
+    
+    div {
+      @include container();
+      padding: 15px;
+  
+      a {
+        button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          img {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+  
+  .section-signin {
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+  
+    .container {
+      @include container();
+      background-color: white;
+      width: 500px;
+      @include for-size(tablet){
+        width: 500px;
+  
+      }
+  
+      @include for-size(mobile){
+        width: 375px;
+  
+      }
+      height: 500px;
+      display: flex;
+      // gap: 70px;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 25px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  
+      h2 {
+        font-family: "Flame Bold";
+        font-size: 70px;
+        color: rgb(80, 35, 20);
+        margin-bottom: 20px;
+        @include for-size(mobile){
+          font-family: "Flame Bold";
+        font-size: 50px;
+        color: rgb(80, 35, 20);
+        margin-bottom: 20px;
+    
+        }
+      }
+  
+      .signin-form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 80%;
+  
+        // .email {
+        //   margin-bottom: 20px;
+        //   outline: none;
+        //   width: 100%;
+        //   cursor: auto;
+        //   background-color: rgb(255, 255, 255);
+        //   height: 50px;
+        //   border: 2px solid rgb(245, 235, 220);
+        //   border-radius: 12px;
+        //   &:hover {
+        //     border: 2px solid rgb(136, 136, 99);
+        //     transition: 0.3s;
+        //   }
+        //   padding-left: 10px;
+        //   &::placeholder {
+        //     font-size: 14px;
+        //     font-family: "Flame Sans";
+        //     color: rgb(80, 35, 20);
+        //   }
+        // }
+  
+        .username {
+          width: 100%;
+  
+          margin-bottom: 20px;
+          outline: none;
+          cursor: auto;
+          background-color: rgb(255, 255, 255);
+          height: 50px;
+          border: 2px solid rgb(245, 235, 220);
+          border-radius: 12px;
+          &:hover {
+            border: 2px solid rgb(136, 136, 99);
+            transition: 0.3s;
+          }
+          padding-left: 10px;
+          &::placeholder {
+            font-size: 14px;
+            font-family: "Flame Sans";
+            color: rgb(80, 35, 20);
+          }
+        }
+  
+        .password {
+          width: 100%;
+  
+          margin-bottom: 20px;
+          outline: none;
+          cursor: auto;
+          background-color: rgb(255, 255, 255);
+          height: 50px;
+          border: 2px solid rgb(245, 235, 220);
+          border-radius: 12px;
+          &:hover {
+            border: 2px solid rgb(136, 136, 99);
+            transition: 0.3s;
+          }
+          padding-left: 10px;
+          &::placeholder {
+            font-size: 14px;
+            font-family: "Flame Sans";
+            color: rgb(80, 35, 20);
+          }
+        }
+  
+        // .repassword {
+        //   width: 100%;
+  
+        //   margin-bottom: 20px;
+        //   outline: none;
+        //   cursor: auto;
+        //   background-color: rgb(255, 255, 255);
+        //   height: 50px;
+        //   border: 2px solid rgb(245, 235, 220);
+        //   border-radius: 12px;
+        //   &:hover {
+        //     border: 2px solid rgb(136, 136, 99);
+        //     transition: 0.3s;
+        //   }
+        //   padding-left: 10px;
+        //   &::placeholder {
+        //     font-size: 14px;
+        //     font-family: "Flame Sans";
+        //     color: rgb(80, 35, 20);
+        //   }
+        // }
+  
+        .signin-btn {
+          background-color: transparent;
+          height: 48px;
+          width: 50%;
+          border-radius: 20px;
+          background-color: rgb(245, 235, 220);
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+            rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+          border: none;
+          font-size: 15px;
+          font-family: "Flame Sans";
+          color: rgb(80, 35, 20);
+          margin-bottom: 20px;
+          &:hover {
+            border: 1px solid rgb(136, 136, 99);
+            transition: 0.5s;
+          }
+        }
+  
+      }
+      .signin-link {
+        font-size: 14px;
+        font-family: "Flame Sans";
+        color: rgb(80, 35, 20);
+  
+        a{
+          font-size: 14px;
+        font-family: "Flame Sans";
+        color: rgb(0, 0, 0);
+        }
+      }
+    }
+  }

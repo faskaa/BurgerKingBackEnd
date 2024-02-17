@@ -1,0 +1,78 @@
+.header-about{
+    background-color: rgb(80, 35, 20);
+
+
+    h4{
+
+        font-size: 96px;
+        padding-top: 48px;
+        padding-bottom: 48px;
+        margin-bottom: 12px;
+        padding-right: 24px;
+        padding-left: 24px;
+        text-align: center;
+        color: rgb(245, 235, 220);
+        font-family: "Flame Sans";
+        font-weight: bold;
+
+    }
+}
+
+
+.about-wrapper{
+    @include container();
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    .top{
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h4{
+            font-family: "Flame Sans";
+            font-weight: bold;
+            font-size: 30px;
+            color: rgb(80, 35, 20);
+
+        }
+
+        span{
+
+            font-family: "Flame Sans";
+            font-size: 20px;
+            color: rgb(80, 35, 20);
+
+        }
+    }
+
+    .bottom{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h4{
+            font-family: "Flame Sans";
+            font-weight: bold;
+            font-size: 30px;
+            color: rgb(80, 35, 20);
+
+        }
+        h1{
+            font-family: "Flame Sans";
+            font-size: 20px;
+            color: rgb(80, 35, 20);
+            font-weight: bold;
+        }
+
+        span{
+
+            font-family: "Flame Sans";
+            font-size: 20px;
+            color: rgb(80, 35, 20);
+
+        }
+    }
+}

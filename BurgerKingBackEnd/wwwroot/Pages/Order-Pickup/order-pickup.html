@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="Icon" type="Images/Icon" href="../../Assets/Icons/burger-king.png">
+
+    <title>Pick Up Order- Burger King</title>
+    <script defer src="./pickup.js"></script>
+    <link
+      href="https://db.onlinewebfonts.com/c/29eee6d957e73039264c9de9fd949d20?family=Flame+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://db.onlinewebfonts.com/c/565a681be0eb6f1d92c6bc57c629ea35?family=Flame+Bold"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./../../SCSS/main.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+  </head>
+  <body>
+    <div class="card-header">
+      <div class="left">
+        <a href="../Home/home.html">
+          <img src="../../Assets/Icons/close.png" alt="" />
+        </a>
+      </div>
+      <div class="right">
+        <h4>Order Pick Up</h4>
+      </div>
+    </div>
+    <div class="pickup-form-wrapper">
+      <form method="post">
+        <div class="restoran-details">
+          <h4>Restaurant Details</h4>
+          <div class="detail">
+            <span>15 Muar Street</span>
+          </div>
+          <div class="form">
+            <label>
+              <input required type="radio" name="option" value="option1" />Drive Thru
+            </label>
+            <label>
+              <input required type="radio" name="option" value="option2" />Pick Up
+            </label>
+            <label>
+              <input required type="radio" name="option" value="option3" />Dine In
+            </label>
+          </div>
+        </div>
+        <!-- <div class="pick-up-time">
+          <h4>Pick up time</h4>
+          <div class="times">
+            <input value="Now" type="button" onclick="selectButton(this)">
+            <input value="10 minute" type="button" onclick="selectButton(this)">
+            <input value="15 minute" type="button" onclick="selectButton(this)">
+            <input value="20 minute" type="button" onclick="selectButton(this)">
+          </div>
+        </div> -->
+
+        <div class="orders-wrapper">
+          <h4>Your Card</h4>
+          <div class="orders">
+            <div class="order ">
+              <div class="top">
+                <span class="name">Candied Bacon Whopper® 1 </span>
+              </div>
+              <div class="mid">
+                <span class="total-price">Item Total</span>
+                <span class="price">$8.79</span>
+              </div>
+              <div class="bottom">
+                <div class="left">
+
+                  <button type="button" class="remove">Remove</button>
+                </div>
+                <div class="right">
+                  <button class="increment" type="button">+</button>
+                  <span class="display">1</span>
+                  <button type="button" class="decrement">-</button>
+                </div>
+              </div>
+            </div>
+            <div class="order ">
+              <div class="top">
+                <span class="name">Candied Bacon Whopper®</span>
+              </div>
+              <div class="mid">
+                <span class="total-price">Item Total</span>
+                <span class="price">$8.79</span>
+              </div>
+              <div class="bottom">
+                <div class="left">
+
+                  <button type="button" class="remove">Remove</button>
+                </div>
+                <div class="right">
+                  <button class="increment" type="button">+</button>
+                  <span class="display">1</span>
+                  <button type="button" class="decrement">-</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a href="../Locations/location.html">
+            <button type="button">+ Add Items</button>
+          </a>
+        </div>
+        <div class="taxs-wrapper">
+          <div class="taxs">
+            <div class="subtotal-tax">
+              <span>Subtotal</span>
+              <span> $8.79</span>
+            </div>
+            <div class="delivery-tax">
+              <span>Delivery Fee</span>
+              <span> $1.00</span>
+            </div>
+            <div class="total-tax">
+              <span>Total</span>
+              <span> $14.96</span>
+            </div>
+          </div>
+        </div>
+        <div class="submit-wrapper">
+          <a href="#">
+              <input class="submit-btn" type="submit" placeholder="Continue" name="Continue" id="" />
+          </a>
+      </div>
+        <!-- <button type="submit">Submit</button> -->
+      </form>
+    </div>
+  </body>
+</html>

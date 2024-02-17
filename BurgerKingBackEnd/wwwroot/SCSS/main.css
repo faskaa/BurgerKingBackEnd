@@ -1,0 +1,4079 @@
+@import url(https://db.onlinewebfonts.com/c/565a681be0eb6f1d92c6bc57c629ea35?family=Flame+Bold);
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Flame-Regular";
+  src: url("../../Fonts/Flame-Regular.woff") format("woff");
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Flame-RegularSans";
+  src: url("../../Fonts/Flame-Bold.woff") format("woff");
+}
+@font-face {
+  font-family: "Flame Sans";
+  src: url("https://db.onlinewebfonts.com/t/29eee6d957e73039264c9de9fd949d20.eot");
+  src: url("https://db.onlinewebfonts.com/t/29eee6d957e73039264c9de9fd949d20.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/29eee6d957e73039264c9de9fd949d20.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/29eee6d957e73039264c9de9fd949d20.woff") format("woff"), url("https://db.onlinewebfonts.com/t/29eee6d957e73039264c9de9fd949d20.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/29eee6d957e73039264c9de9fd949d20.svg#Flame Sans") format("svg");
+}
+@font-face {
+  font-family: "Flame Bold";
+  src: url("https://db.onlinewebfonts.com/t/565a681be0eb6f1d92c6bc57c629ea35.eot");
+  src: url("https://db.onlinewebfonts.com/t/565a681be0eb6f1d92c6bc57c629ea35.eot?#iefix") format("embedded-opentype"), url("https://db.onlinewebfonts.com/t/565a681be0eb6f1d92c6bc57c629ea35.woff2") format("woff2"), url("https://db.onlinewebfonts.com/t/565a681be0eb6f1d92c6bc57c629ea35.woff") format("woff"), url("https://db.onlinewebfonts.com/t/565a681be0eb6f1d92c6bc57c629ea35.ttf") format("truetype"), url("https://db.onlinewebfonts.com/t/565a681be0eb6f1d92c6bc57c629ea35.svg#Flame Bold") format("svg");
+}
+header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
+  transition: top 0.3s ease-in-out;
+}
+
+header {
+  height: 104px;
+  background-color: rgb(245, 235, 220);
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 1.41px;
+  z-index: 400;
+}
+header .navbar {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 1200px) {
+  header .navbar {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  header .navbar {
+    width: 375px;
+    margin: auto;
+  }
+}
+header .navbar .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+}
+header .navbar .top .burgermenu {
+  text-decoration: none;
+  width: 209.5px;
+  height: 24px;
+}
+@media screen and (max-width: 767px) {
+  header .navbar .top .burgermenu {
+    width: 115px;
+  }
+}
+header .navbar .top .burgermenu img {
+  width: 24px;
+  height: 24px;
+}
+header .navbar .top .burgermenu img:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+header .navbar .top .logo {
+  text-decoration: none;
+  width: 38px;
+  height: 38px;
+}
+header .navbar .top .logo img {
+  width: 38px;
+  height: 38px;
+}
+header .navbar .top .logo img:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+header .navbar .top .buttons {
+  display: flex;
+  gap: 10px;
+}
+header .navbar .top .buttons .account {
+  text-decoration: none;
+  width: 115px;
+  height: 34px;
+}
+header .navbar .top .buttons .account button {
+  background-color: rgb(167, 27, 0);
+  border-radius: 9999px;
+  border: none;
+  width: 115px;
+  height: 34px;
+  color: white;
+  font-size: 12px;
+  font-family: "Flame Sans";
+}
+header .navbar .top .buttons .account button:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+header .navbar .top .buttons .basket {
+  text-decoration: none;
+  width: 84.06px;
+  height: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 767px) {
+  header .navbar .top .buttons .basket {
+    display: none;
+  }
+}
+header .navbar .top .buttons .basket button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(80, 35, 20);
+  border-radius: 9999px;
+  border: none;
+  color: white;
+  width: 84.06px;
+  height: 34px;
+  font-size: 12px;
+  font-family: "Flame Sans";
+}
+header .navbar .top .buttons .basket button:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+header .navbar .top .buttons .basket button img {
+  width: 15px;
+  height: 15px;
+}
+header .navbar .bottom {
+  display: flex;
+  align-items: center;
+  height: 48px;
+}
+header .navbar .bottom a {
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+header .navbar .bottom a img {
+  width: 20px;
+  height: 20px;
+}
+header .navbar .bottom a span:nth-child(2) {
+  font-size: 16px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  line-height: 24px;
+  color: rgb(80, 35, 20);
+}
+header .navbar .bottom a span:nth-child(3) {
+  color: rgb(80, 35, 20);
+  font-family: "Flame Sans";
+  text-decoration: underline;
+}
+
+footer {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(245, 235, 220);
+  z-index: 1000;
+  transition: bottom 0.3s ease-in-out;
+}
+
+footer {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -1px 1px;
+}
+footer .footer {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  padding: 20px;
+}
+@media screen and (max-width: 1200px) {
+  footer .footer {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .footer {
+    width: 375px;
+    margin: auto;
+  }
+}
+footer .footer div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+footer .footer div a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+}
+footer .footer div a:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+@media screen and (max-width: 1200px) {
+  footer .footer div a:hover {
+    opacity: 50%;
+    transition: 0.3s;
+  }
+}
+@media screen and (max-width: 767px) {
+  footer .footer div a:hover {
+    opacity: 50%;
+    transition: 0.3s;
+  }
+}
+footer .footer div a img {
+  width: 20px;
+  height: 20px;
+}
+footer .footer div a img:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+footer .footer div a span {
+  line-height: 20px;
+  font-size: 12px;
+  font-family: "Flame Sans";
+}
+
+body {
+  background-color: rgb(245, 235, 220);
+}
+
+.order .main-section {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+}
+@media screen and (max-width: 1200px) {
+  .order .main-section {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .order .main-section {
+    width: 375px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .order .main-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.order .main-section .left {
+  width: 394px;
+  height: 382px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  padding-right: 28px;
+}
+@media screen and (max-width: 1200px) {
+  .order .main-section .left {
+    width: 294px;
+    height: 282px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .order .main-section .left {
+    width: 100%;
+    height: 282px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .order .main-section .left {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    padding-right: 18px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .order .main-section .left {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.order .main-section .left span {
+  font-size: 60px;
+  color: rgb(80, 35, 20);
+  font-family: "Flame Bold";
+  font-weight: bold;
+}
+@media screen and (max-width: 1200px) {
+  .order .main-section .left span {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .order .main-section .left span {
+    font-size: 30px;
+  }
+}
+.order .main-section .left .pickup {
+  cursor: pointer;
+  width: 300px;
+  height: 55px;
+}
+@media screen and (max-width: 1200px) {
+  .order .main-section .left .pickup {
+    width: 100%;
+    height: 45px;
+  }
+}
+.order .main-section .left .pickup button {
+  cursor: pointer;
+  background-color: rgb(214, 35, 0);
+  width: 300px;
+  height: 55px;
+  border-radius: 9999px;
+  border: none;
+  font-size: 18px;
+  color: white;
+  font-family: "Flame Sans";
+  font-weight: bold;
+}
+.order .main-section .left .pickup button:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+@media screen and (max-width: 1200px) {
+  .order .main-section .left .pickup button {
+    width: 100%;
+    height: 45px;
+  }
+}
+.order .main-section .left .pickup button img {
+  width: 16px;
+  height: 16px;
+}
+.order .main-section .left .delivery {
+  width: 300px;
+  height: 55px;
+  border-radius: 9999px;
+}
+@media screen and (max-width: 1200px) {
+  .order .main-section .left .delivery {
+    width: 100%;
+    height: 45px;
+  }
+}
+.order .main-section .left .delivery button {
+  cursor: pointer;
+  border: 2px solid red;
+  background-color: transparent;
+  width: 300px;
+  height: 55px;
+  border-radius: 9999px;
+  font-size: 18px;
+  color: white;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  color: rgb(214, 35, 0);
+}
+.order .main-section .left .delivery button:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+@media screen and (max-width: 1200px) {
+  .order .main-section .left .delivery button {
+    width: 100%;
+    height: 45px;
+  }
+}
+.order .main-section .left .delivery button img {
+  width: 16px;
+  height: 16px;
+}
+.order .main-section .right {
+  z-index: -1;
+  width: 788.787px;
+  height: 382.6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 767px) {
+  .order .main-section .right {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .order .main-section .right {
+    width: 500.787px;
+    height: 300.6px;
+  }
+}
+.order .main-section .right img {
+  width: 700.787px;
+  height: 382.6px;
+  background-size: contain;
+}
+@media screen and (max-width: 1200px) {
+  .order .main-section .right img {
+    width: 500.787px;
+    height: 300.6px;
+  }
+}
+
+.cards {
+  width: 1200px;
+  margin: auto;
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .cards {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .cards {
+    width: 375px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 767px) {
+  .cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.cards .card {
+  border-radius: 16px;
+  box-shadow: rgba(0, 0, 0, 0.22) 0px 1px 2.22px;
+  width: 580px;
+  height: 515px;
+  background-color: white;
+  margin-bottom: 8px;
+}
+@media screen and (max-width: 767px) {
+  .cards .card {
+    width: 100%;
+    height: 315px;
+  }
+}
+.cards .card .top a img {
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
+  width: 580px;
+  height: 290px;
+}
+@media screen and (max-width: 767px) {
+  .cards .card .top a img {
+    width: 100%;
+    height: 190px;
+  }
+}
+.cards .card .bottom {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 220px;
+}
+@media screen and (max-width: 767px) {
+  .cards .card .bottom {
+    height: 120px;
+    padding: 10px;
+  }
+}
+.cards .card .bottom .info {
+  display: flex;
+  flex-direction: column;
+}
+.cards .card .bottom .info h4 {
+  line-height: 28px;
+  margin-bottom: 8px;
+  font-family: "Flame Bold";
+  font-size: 24px;
+  color: rgb(80, 35, 20);
+}
+@media screen and (max-width: 767px) {
+  .cards .card .bottom .info h4 {
+    line-height: 18px;
+    margin-bottom: 2px;
+    font-family: "Flame Bold";
+    font-size: 14px;
+  }
+}
+.cards .card .bottom .info span {
+  font-family: "Flame Sans";
+  font-size: 13px;
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+@media screen and (max-width: 767px) {
+  .cards .card .bottom .info span {
+    font-family: "Flame Sans";
+    font-size: 10px;
+    line-height: 10px;
+  }
+}
+.cards .card .bottom .info a {
+  font-family: "Flame Sans";
+  font-size: 13px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  text-decoration-line: underline;
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+  cursor: pointer;
+}
+.cards .card .bottom .info a:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+@media screen and (max-width: 767px) {
+  .cards .card .bottom .info a {
+    font-size: 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    text-decoration-line: underline;
+    line-height: 10px;
+  }
+}
+.cards .card .bottom .button {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  width: 100%;
+  height: 100%;
+}
+.cards .card .bottom .button button {
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  border: 2px solid red;
+  background-color: transparent;
+  border-radius: 9999px;
+  color: rgb(214, 35, 0);
+  font-size: 12px;
+  font-weight: bold;
+  font-family: "Flame Sans";
+}
+.cards .card .bottom .button button:hover {
+  opacity: 50%;
+  transition: 0.3s;
+  background-color: rgb(255, 0, 0);
+  color: white;
+}
+@media screen and (max-width: 767px) {
+  .cards .card .bottom .button button {
+    cursor: pointer;
+    width: 60px;
+    height: 20px;
+    border: 1px solid red;
+    background-color: transparent;
+    border-radius: 9999px;
+    color: rgb(214, 35, 0);
+    font-size: 6px;
+    font-weight: bold;
+  }
+}
+
+.ads {
+  background-color: rgba(0, 0, 0, 0.04);
+  height: 450px;
+  margin-top: 200px;
+}
+@media screen and (max-width: 1200px) {
+  .ads {
+    margin-top: 100px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ads {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+    margin-top: 55px;
+  }
+}
+.ads .ad {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+}
+@media screen and (max-width: 1200px) {
+  .ads .ad {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ads .ad {
+    width: 375px;
+    margin: auto;
+  }
+}
+.ads .ad .left {
+  padding-right: 10%;
+  padding-left: 10%;
+  padding-bottom: 40px;
+}
+@media screen and (max-width: 767px) {
+  .ads .ad .left {
+    display: none;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .ads .ad .left {
+    padding-right: 5%;
+    padding-left: 5%;
+    padding-bottom: 20px;
+  }
+}
+.ads .ad .left img {
+  position: relative;
+  top: -40px;
+  width: 300px;
+}
+.ads .ad .right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .ads .ad .right {
+    gap: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .ads .ad .right {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+}
+.ads .ad .right h4 {
+  font-size: 48px;
+  color: rgb(80, 35, 20);
+  font-family: "Flame Bold";
+}
+@media screen and (max-width: 1200px) {
+  .ads .ad .right h4 {
+    font-size: 35px;
+    color: rgb(80, 35, 20);
+    font-family: "Flame Bold";
+  }
+}
+@media screen and (max-width: 767px) {
+  .ads .ad .right h4 {
+    font-size: 20px;
+  }
+}
+.ads .ad .right .link {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .ads .ad .right .link {
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+}
+.ads .ad .right .link .appstore img {
+  width: 200px;
+  height: 70px;
+}
+.ads .ad .right .link .appstore img:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+@media screen and (max-width: 1200px) {
+  .ads .ad .right .link .appstore img {
+    width: 150px;
+    height: 45px;
+  }
+}
+.ads .ad .right .link .playstore img {
+  width: 200px;
+  height: 70px;
+  border-radius: 10px;
+}
+.ads .ad .right .link .playstore img:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+@media screen and (max-width: 1200px) {
+  .ads .ad .right .link .playstore img {
+    width: 150px;
+    height: 45px;
+  }
+}
+.ads .ad .right span {
+  font-family: "Flame Sans";
+  margin-top: 32px;
+  font-size: 14px;
+  line-height: 24px;
+  color: rgb(80, 35, 20);
+  text-align: left;
+}
+@media screen and (max-width: 1200px) {
+  .ads .ad .right span {
+    font-family: "Flame Sans";
+    margin-top: 22px;
+    font-size: 10px;
+    line-height: 20px;
+    color: rgb(80, 35, 20);
+    text-align: left;
+  }
+}
+
+.terms .term {
+  background-color: rgb(80, 35, 20);
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-right: 16px;
+  padding-left: 16px;
+  text-align: center;
+}
+.terms .term span {
+  width: 1200px;
+  margin: auto;
+  font-size: 12px;
+  font-family: "Flame Sans";
+  line-height: 24px;
+  color: rgb(245, 235, 220);
+}
+@media screen and (max-width: 1200px) {
+  .terms .term span {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .terms .term span {
+    width: 375px;
+    margin: auto;
+  }
+}
+.terms .term span a {
+  color: rgb(245, 235, 220);
+  font-size: 12px;
+  text-decoration-line: underline;
+  font-family: "Flame Sans";
+  line-height: 24px;
+  cursor: pointer;
+}
+.terms .term span a:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+
+.location-body {
+  min-height: 100vh;
+}
+
+.location-footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgb(245, 235, 220);
+  z-index: 1000;
+  transition: bottom 0.3s ease-in-out;
+}
+
+.location-footer {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -1px 1px;
+}
+.location-footer .footer {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  padding: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .location-footer .footer {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .location-footer .footer {
+    width: 375px;
+    margin: auto;
+  }
+}
+.location-footer .footer div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.location-footer .footer div a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: black;
+}
+.location-footer .footer div a:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+@media screen and (max-width: 1200px) {
+  .location-footer .footer div a:hover {
+    opacity: 50%;
+    transition: 0.3s;
+  }
+}
+@media screen and (max-width: 767px) {
+  .location-footer .footer div a:hover {
+    opacity: 50%;
+    transition: 0.3s;
+  }
+}
+.location-footer .footer div a img {
+  width: 20px;
+  height: 20px;
+}
+.location-footer .footer div a img:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+.location-footer .footer div a span {
+  line-height: 20px;
+  font-size: 12px;
+  font-family: "Flame Sans";
+}
+
+.location-navbar {
+  background-color: rgb(214, 35, 0);
+  height: 40px;
+  display: flex;
+}
+.location-navbar .nav {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .location-navbar .nav {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .location-navbar .nav {
+    width: 375px;
+    margin: auto;
+  }
+}
+.location-navbar .nav span {
+  width: 1200px;
+  text-align: center;
+  line-height: 32px;
+  font-family: "Flame Bold";
+  font-size: 24px;
+  color: rgb(245, 235, 220);
+}
+.location-navbar .nav a button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.location-navbar .nav a button:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+.location-navbar .nav a button img {
+  width: 24px;
+  height: 24px;
+}
+
+.location-selectors {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .location-selectors {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .location-selectors {
+    width: 375px;
+    margin: auto;
+  }
+}
+.location-selectors .selector {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.location-selectors .selector .top {
+  margin-top: 15px;
+  height: 48px;
+  display: flex;
+  width: 100%;
+}
+.location-selectors .selector .top .pick-up {
+  width: 100%;
+}
+.location-selectors .selector .top .pick-up button {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(80, 35, 20);
+  color: rgb(245, 235, 220);
+  font-size: 14px;
+  font-family: "Flame Sans";
+  border: none;
+}
+.location-selectors .selector .top .pick-up button:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.location-selectors .selector .top .delivery {
+  width: 100%;
+}
+.location-selectors .selector .top .delivery button {
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  font-family: "Flame Sans";
+  border: 2px solid rgb(198, 198, 145);
+  color: rgb(80, 35, 20);
+}
+.location-selectors .selector .top .delivery button:hover {
+  border: 2px solid rgb(136, 136, 99);
+  transition: 0.3s;
+}
+.location-selectors .selector .bottom {
+  width: 100%;
+}
+.location-selectors .selector .bottom input {
+  width: 100%;
+  outline: none;
+  cursor: auto;
+  background-color: rgb(255, 255, 255);
+  height: 48px;
+  border: 2px solid rgb(198, 198, 145);
+  padding-left: 10px;
+}
+.location-selectors .selector .bottom input:hover {
+  border: 2px solid rgb(136, 136, 99);
+  transition: 0.3s;
+}
+.location-selectors .selector .bottom input::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.location-selectors .selector .bottom input::placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+
+.nearby-content,
+.favorites-content,
+.recents-content {
+  display: none;
+}
+
+.nearby-content {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .nearby-content {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nearby-content {
+    width: 375px;
+    margin: auto;
+  }
+}
+.nearby-content .hidden {
+  height: 80px;
+}
+.nearby-content .location {
+  height: 100%;
+  border: 2px solid rgb(198, 198, 145);
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.nearby-content .location .location-top {
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.nearby-content .location .location-top .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.nearby-content .location .location-top .left h1 {
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: "Flame Bold";
+  color: rgb(80, 35, 20);
+}
+.nearby-content .location .location-top .left .mid span {
+  font-size: 13px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.nearby-content .location .location-top .left .functionality {
+  font-size: 13px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.nearby-content .location .location-top .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.nearby-content .location .location-top .right button {
+  height: 24px;
+  background-color: transparent;
+  border: none;
+}
+.nearby-content .location .location-top .right button img {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+.nearby-content .location .location-top .right button img.active {
+  transition: 1s;
+  display: initial;
+}
+.nearby-content .location .location-bottom {
+  display: none;
+}
+.nearby-content .location .location-bottom .order-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+}
+.nearby-content .location .location-bottom .order-menu a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 60px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+  text-decoration: none;
+  font-weight: bold;
+}
+.nearby-content .location .location-bottom .order-menu a button {
+  border: none;
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nearby-content .location .location-bottom .order-menu a button img {
+  width: 24px;
+}
+.nearby-content .location .location-bottom .order-menu a span {
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+
+.favorites-content {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .favorites-content {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .favorites-content {
+    width: 375px;
+    margin: auto;
+  }
+}
+.favorites-content .hidden {
+  height: 80px;
+}
+.favorites-content .location {
+  height: 100%;
+  border: 2px solid rgb(198, 198, 145);
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.favorites-content .location .location-top {
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.favorites-content .location .location-top .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.favorites-content .location .location-top .left h1 {
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: "Flame Bold";
+  color: rgb(80, 35, 20);
+}
+.favorites-content .location .location-top .left .mid span {
+  font-size: 13px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.favorites-content .location .location-top .left .functionality {
+  font-size: 13px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.favorites-content .location .location-top .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.favorites-content .location .location-top .right button {
+  height: 24px;
+  background-color: transparent;
+  border: none;
+}
+.favorites-content .location .location-top .right button img {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+.favorites-content .location .location-top .right button img.active {
+  transition: 1s;
+  display: initial;
+}
+.favorites-content .location .location-bottom {
+  display: none;
+}
+.favorites-content .location .location-bottom .order-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+}
+.favorites-content .location .location-bottom .order-menu a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 60px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+  text-decoration: none;
+  font-weight: bold;
+}
+.favorites-content .location .location-bottom .order-menu a button {
+  border: none;
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.favorites-content .location .location-bottom .order-menu a button img {
+  width: 24px;
+}
+.favorites-content .location .location-bottom .order-menu a span {
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+
+.recents-content {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .recents-content {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .recents-content {
+    width: 375px;
+    margin: auto;
+  }
+}
+.recents-content .hidden {
+  height: 80px;
+}
+.recents-content .location {
+  height: 100%;
+  border: 2px solid rgb(198, 198, 145);
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.recents-content .location .location-top {
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.recents-content .location .location-top .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.recents-content .location .location-top .left h1 {
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: "Flame Bold";
+  color: rgb(80, 35, 20);
+}
+.recents-content .location .location-top .left .mid span {
+  font-size: 13px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.recents-content .location .location-top .left .functionality {
+  font-size: 13px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.recents-content .location .location-top .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.recents-content .location .location-top .right button {
+  height: 24px;
+  background-color: transparent;
+  border: none;
+}
+.recents-content .location .location-top .right button img {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+.recents-content .location .location-top .right button img.active {
+  transition: 1s;
+  display: initial;
+}
+.recents-content .location .location-bottom {
+  display: none;
+}
+.recents-content .location .location-bottom .order-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+}
+.recents-content .location .location-bottom .order-menu a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 60px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+  text-decoration: none;
+  font-weight: bold;
+}
+.recents-content .location .location-bottom .order-menu a button {
+  border: none;
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recents-content .location .location-bottom .order-menu a button img {
+  width: 24px;
+}
+.recents-content .location .location-bottom .order-menu a span {
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+
+.location-locations {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .location-locations {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .location-locations {
+    width: 375px;
+    margin: auto;
+  }
+}
+.location-locations .locations-menu {
+  display: flex;
+}
+.location-locations .locations-menu button {
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(80, 35, 20);
+  width: 100%;
+  height: 48px;
+  background-color: transparent;
+  border: none;
+  font-family: "Flame Sans";
+}
+.location-locations .locations-menu .active {
+  color: red;
+  border-bottom: 3px solid red;
+  font-weight: bold;
+}
+
+.delivery-body {
+  min-height: 100vh;
+}
+
+.delivery-navbar {
+  background-color: rgb(214, 35, 0);
+  height: 40px;
+  display: flex;
+}
+.delivery-navbar .nav {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .delivery-navbar .nav {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .delivery-navbar .nav {
+    width: 375px;
+    margin: auto;
+  }
+}
+.delivery-navbar .nav span {
+  width: 1200px;
+  text-align: center;
+  line-height: 32px;
+  font-family: "Flame Bold";
+  font-size: 24px;
+  color: rgb(245, 235, 220);
+}
+.delivery-navbar .nav a button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.delivery-navbar .nav a button:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+.delivery-navbar .nav a button img {
+  width: 24px;
+  height: 24px;
+}
+
+.delivery-selectors {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .delivery-selectors {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .delivery-selectors {
+    width: 375px;
+    margin: auto;
+  }
+}
+.delivery-selectors .selector {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.delivery-selectors .selector .top {
+  margin-top: 15px;
+  height: 48px;
+  display: flex;
+  width: 100%;
+}
+.delivery-selectors .selector .top .pick-up {
+  width: 100%;
+}
+.delivery-selectors .selector .top .pick-up button {
+  background-color: rgb(80, 35, 20);
+  height: 100%;
+  width: 100%;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: "Flame Sans";
+  border: none;
+  background-color: rgb(255, 255, 255);
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  font-family: "Flame Sans";
+  border: 2px solid rgb(198, 198, 145);
+  color: rgb(80, 35, 20);
+}
+.delivery-selectors .selector .top .pick-up button:hover {
+  border: 2px solid rgb(136, 136, 99);
+  transition: 0.3s;
+}
+.delivery-selectors .selector .top .delivery {
+  width: 100%;
+}
+.delivery-selectors .selector .top .delivery button {
+  height: 100%;
+  width: 100%;
+  font-size: 14px;
+  font-family: "Flame Sans";
+  background-color: rgb(80, 35, 20);
+  color: rgb(245, 235, 220);
+}
+.delivery-selectors .selector .top .delivery button:hover {
+  opacity: 0.8;
+  transition: 0.3s;
+}
+.delivery-selectors .selector .bottom {
+  width: 100%;
+}
+.delivery-selectors .selector .bottom input {
+  width: 100%;
+  outline: none;
+  cursor: auto;
+  background-color: rgb(255, 255, 255);
+  height: 48px;
+  border: 2px solid rgb(198, 198, 145);
+  padding-left: 10px;
+}
+.delivery-selectors .selector .bottom input:hover {
+  border: 2px solid rgb(136, 136, 99);
+  transition: 0.3s;
+}
+.delivery-selectors .selector .bottom input::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.delivery-selectors .selector .bottom input::placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+
+.nearby-content,
+.favorites-content,
+.recents-content {
+  display: none;
+}
+
+.nearby-content {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .nearby-content {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .nearby-content {
+    width: 375px;
+    margin: auto;
+  }
+}
+.nearby-content .hidden {
+  height: 80px;
+}
+.nearby-content .location {
+  height: 100%;
+  border: 2px solid rgb(198, 198, 145);
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.nearby-content .location .location-top {
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: 100%;
+  display: flex;
+}
+.nearby-content .location .location-top .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.nearby-content .location .location-top .left h1 {
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: "Flame Bold";
+  color: rgb(80, 35, 20);
+}
+.nearby-content .location .location-top .left .mid span {
+  font-size: 13px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.nearby-content .location .location-top .left .functionality {
+  font-size: 13px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.nearby-content .location .location-top .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.nearby-content .location .location-top .right button {
+  height: 24px;
+  background-color: transparent;
+  border: none;
+}
+.nearby-content .location .location-top .right button img {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+.nearby-content .location .location-top .right button img.active {
+  transition: 1s;
+  display: initial;
+}
+.nearby-content .location .location-bottom {
+  display: none;
+}
+.nearby-content .location .location-bottom .order-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+}
+.nearby-content .location .location-bottom .order-menu a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 60px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+  text-decoration: none;
+  font-weight: bold;
+}
+.nearby-content .location .location-bottom .order-menu a button {
+  border: none;
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.nearby-content .location .location-bottom .order-menu a button img {
+  width: 24px;
+}
+.nearby-content .location .location-bottom .order-menu a span {
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.nearby-content .location .clicked {
+  display: flex;
+}
+
+.favorites-content {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .favorites-content {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .favorites-content {
+    width: 375px;
+    margin: auto;
+  }
+}
+.favorites-content .hidden {
+  height: 80px;
+}
+.favorites-content .location {
+  height: 100%;
+  border: 2px solid rgb(198, 198, 145);
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.favorites-content .location .location-top {
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: 100%;
+  display: flex;
+}
+.favorites-content .location .location-top .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.favorites-content .location .location-top .left h1 {
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: "Flame Bold";
+  color: rgb(80, 35, 20);
+}
+.favorites-content .location .location-top .left .mid span {
+  font-size: 13px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.favorites-content .location .location-top .left .functionality {
+  font-size: 13px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.favorites-content .location .location-top .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.favorites-content .location .location-top .right button {
+  height: 24px;
+  background-color: transparent;
+  border: none;
+}
+.favorites-content .location .location-top .right button img {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+.favorites-content .location .location-top .right button img.active {
+  transition: 1s;
+  display: initial;
+}
+.favorites-content .location .location-bottom {
+  display: none;
+}
+.favorites-content .location .location-bottom .order-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+}
+.favorites-content .location .location-bottom .order-menu a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 60px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+  text-decoration: none;
+  font-weight: bold;
+}
+.favorites-content .location .location-bottom .order-menu a button {
+  border: none;
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.favorites-content .location .location-bottom .order-menu a button img {
+  width: 24px;
+}
+.favorites-content .location .location-bottom .order-menu a span {
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.favorites-content .location .clicked {
+  display: flex;
+}
+
+.recents-content {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .recents-content {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .recents-content {
+    width: 375px;
+    margin: auto;
+  }
+}
+.recents-content .hidden {
+  height: 80px;
+}
+.recents-content .location {
+  height: 100%;
+  border: 2px solid rgb(198, 198, 145);
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.recents-content .location .location-top {
+  padding-right: 12px;
+  padding-left: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  height: 100%;
+  display: flex;
+}
+.recents-content .location .location-top .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.recents-content .location .location-top .left h1 {
+  margin-bottom: 4px;
+  font-size: 18px;
+  line-height: 20px;
+  font-family: "Flame Bold";
+  color: rgb(80, 35, 20);
+}
+.recents-content .location .location-top .left .mid span {
+  font-size: 13px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.recents-content .location .location-top .left .functionality {
+  font-size: 13px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.recents-content .location .location-top .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+.recents-content .location .location-top .right button {
+  height: 24px;
+  background-color: transparent;
+  border: none;
+}
+.recents-content .location .location-top .right button img {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+.recents-content .location .location-top .right button img.active {
+  transition: 1s;
+  display: initial;
+}
+.recents-content .location .location-bottom {
+  display: none;
+}
+.recents-content .location .location-bottom .order-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+}
+.recents-content .location .location-bottom .order-menu a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 60px;
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+  text-decoration: none;
+  font-weight: bold;
+}
+.recents-content .location .location-bottom .order-menu a button {
+  border: none;
+  height: 50px;
+  width: 50px;
+  background-color: red;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.recents-content .location .location-bottom .order-menu a button img {
+  width: 24px;
+}
+.recents-content .location .location-bottom .order-menu a span {
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.recents-content .location .clicked {
+  display: flex;
+}
+
+.delivery-locations {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .delivery-locations {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .delivery-locations {
+    width: 375px;
+    margin: auto;
+  }
+}
+.delivery-locations .locations-menu {
+  display: flex;
+}
+.delivery-locations .locations-menu button {
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 24px;
+  color: rgb(80, 35, 20);
+  width: 100%;
+  height: 48px;
+  background-color: transparent;
+  border: none;
+  font-family: "Flame Sans";
+}
+.delivery-locations .locations-menu .active {
+  color: red;
+  border-bottom: 3px solid red;
+  font-weight: bold;
+}
+
+.sign-up {
+  height: 50px;
+}
+.sign-up div {
+  width: 1200px;
+  margin: auto;
+  padding: 15px;
+}
+@media screen and (max-width: 1200px) {
+  .sign-up div {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .sign-up div {
+    width: 375px;
+    margin: auto;
+  }
+}
+.sign-up div a button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.sign-up div a button img {
+  width: 20px;
+  height: 20px;
+}
+
+.section-signup {
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-signup .container {
+  width: 1200px;
+  margin: auto;
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media screen and (max-width: 1200px) {
+  .section-signup .container {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-signup .container {
+    width: 375px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .section-signup .container {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-signup .container {
+    width: 375px;
+  }
+}
+.section-signup .container h2 {
+  font-family: "Flame Bold";
+  font-size: 70px;
+  color: rgb(80, 35, 20);
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .section-signup .container h2 {
+    font-family: "Flame Bold";
+    font-size: 50px;
+    color: rgb(80, 35, 20);
+    margin-bottom: 20px;
+  }
+}
+.section-signup .container .signup-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+}
+.section-signup .container .signup-form .email {
+  margin-bottom: 20px;
+  outline: none;
+  width: 100%;
+  cursor: auto;
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  border: 2px solid rgb(245, 235, 220);
+  border-radius: 12px;
+  padding-left: 10px;
+}
+.section-signup .container .signup-form .email:hover {
+  border: 2px solid rgb(136, 136, 99);
+  transition: 0.3s;
+}
+.section-signup .container .signup-form .email::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.section-signup .container .signup-form .email::placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.section-signup .container .signup-form .username {
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  cursor: auto;
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  border: 2px solid rgb(245, 235, 220);
+  border-radius: 12px;
+  padding-left: 10px;
+}
+.section-signup .container .signup-form .username:hover {
+  border: 2px solid rgb(136, 136, 99);
+  transition: 0.3s;
+}
+.section-signup .container .signup-form .username::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.section-signup .container .signup-form .username::placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.section-signup .container .signup-form .password {
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  cursor: auto;
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  border: 2px solid rgb(245, 235, 220);
+  border-radius: 12px;
+  padding-left: 10px;
+}
+.section-signup .container .signup-form .password:hover {
+  border: 2px solid rgb(136, 136, 99);
+  transition: 0.3s;
+}
+.section-signup .container .signup-form .password::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.section-signup .container .signup-form .password::placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.section-signup .container .signup-form .repassword {
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  cursor: auto;
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  border: 2px solid rgb(245, 235, 220);
+  border-radius: 12px;
+  padding-left: 10px;
+}
+.section-signup .container .signup-form .repassword:hover {
+  border: 2px solid rgb(136, 136, 99);
+  transition: 0.3s;
+}
+.section-signup .container .signup-form .repassword::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.section-signup .container .signup-form .repassword::placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.section-signup .container .signup-form .signup-btn {
+  background-color: transparent;
+  height: 48px;
+  width: 50%;
+  border-radius: 20px;
+  background-color: rgb(245, 235, 220);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border: none;
+  font-size: 15px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  margin-bottom: 20px;
+}
+.section-signup .container .signup-form .signup-btn:hover {
+  border: 1px solid rgb(136, 136, 99);
+  transition: 0.5s;
+}
+.section-signup .container .signup-link {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.section-signup .container .signup-link a {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(0, 0, 0);
+}
+
+.sign-in {
+  height: 50px;
+}
+.sign-in div {
+  width: 1200px;
+  margin: auto;
+  padding: 15px;
+}
+@media screen and (max-width: 1200px) {
+  .sign-in div {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .sign-in div {
+    width: 375px;
+    margin: auto;
+  }
+}
+.sign-in div a button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.sign-in div a button img {
+  width: 20px;
+  height: 20px;
+}
+
+.section-signin {
+  height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-signin .container {
+  width: 1200px;
+  margin: auto;
+  background-color: white;
+  width: 500px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+@media screen and (max-width: 1200px) {
+  .section-signin .container {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-signin .container {
+    width: 375px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .section-signin .container {
+    width: 500px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-signin .container {
+    width: 375px;
+  }
+}
+.section-signin .container h2 {
+  font-family: "Flame Bold";
+  font-size: 70px;
+  color: rgb(80, 35, 20);
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 767px) {
+  .section-signin .container h2 {
+    font-family: "Flame Bold";
+    font-size: 50px;
+    color: rgb(80, 35, 20);
+    margin-bottom: 20px;
+  }
+}
+.section-signin .container .signin-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 80%;
+}
+.section-signin .container .signin-form .username {
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  cursor: auto;
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  border: 2px solid rgb(245, 235, 220);
+  border-radius: 12px;
+  padding-left: 10px;
+}
+.section-signin .container .signin-form .username:hover {
+  border: 2px solid rgb(136, 136, 99);
+  transition: 0.3s;
+}
+.section-signin .container .signin-form .username::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.section-signin .container .signin-form .username::placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.section-signin .container .signin-form .password {
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  cursor: auto;
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  border: 2px solid rgb(245, 235, 220);
+  border-radius: 12px;
+  padding-left: 10px;
+}
+.section-signin .container .signin-form .password:hover {
+  border: 2px solid rgb(136, 136, 99);
+  transition: 0.3s;
+}
+.section-signin .container .signin-form .password::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.section-signin .container .signin-form .password::placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.section-signin .container .signin-form .signin-btn {
+  background-color: transparent;
+  height: 48px;
+  width: 50%;
+  border-radius: 20px;
+  background-color: rgb(245, 235, 220);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border: none;
+  font-size: 15px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  margin-bottom: 20px;
+}
+.section-signin .container .signin-form .signin-btn:hover {
+  border: 1px solid rgb(136, 136, 99);
+  transition: 0.5s;
+}
+.section-signin .container .signin-link {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.section-signin .container .signin-link a {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(0, 0, 0);
+}
+
+.menu-navbar {
+  width: 1200px;
+  margin: auto;
+  margin-top: 15px;
+  display: flex;
+}
+@media screen and (max-width: 1200px) {
+  .menu-navbar {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .menu-navbar {
+    width: 375px;
+    margin: auto;
+  }
+}
+.menu-navbar a {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 48px;
+  text-decoration: none;
+}
+.menu-navbar a div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  width: 100%;
+  height: 100%;
+  color: black;
+}
+.menu-navbar a .navbar-menu {
+  color: rgb(214, 35, 0);
+  border-bottom: 3px solid rgb(214, 35, 0);
+}
+
+.section-menu {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .section-menu {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-menu {
+    width: 375px;
+    margin: auto;
+  }
+}
+.section-menu .cards .eat-card {
+  height: 244px;
+  display: flex;
+}
+.section-menu .cards .eat-card a {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+.section-menu .cards .eat-card a img {
+  height: 190px;
+}
+.section-menu .cards .eat-card a span {
+  font-size: 18px;
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+  font-family: "Flame Sans";
+  font-weight: bold;
+}
+
+.submenu-eat-cards {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 70px;
+}
+@media screen and (max-width: 1200px) {
+  .submenu-eat-cards {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .submenu-eat-cards {
+    width: 375px;
+    margin: auto;
+  }
+}
+.submenu-eat-cards .eat-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+@media screen and (max-width: 1200px) {
+  .submenu-eat-cards .eat-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+@media screen and (max-width: 767px) {
+  .submenu-eat-cards .eat-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.submenu-eat-cards .eat-cards .eat-card {
+  margin-bottom: 50px;
+  width: 300px;
+}
+.submenu-eat-cards .eat-cards .eat-card a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.submenu-eat-cards .eat-cards .eat-card a img {
+  width: 200px;
+}
+.submenu-eat-cards .eat-cards .eat-card a span {
+  font-size: 18px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  color: rgb(80, 35, 20);
+}
+.submenu-eat-cards .eat-cards .eat-card a div {
+  margin-top: 5px;
+  display: flex;
+  gap: 15px;
+}
+.submenu-eat-cards .eat-cards .eat-card a div span {
+  font-size: 16px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  color: rgb(80, 35, 20);
+}
+.submenu-eat-cards .eat-cards .eat-card a div p {
+  font-size: 16px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+
+.section-detail-bg {
+  height: 290px;
+  background-color: rgb(80, 35, 20);
+}
+
+.section-detail-info {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .section-detail-info {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-detail-info {
+    width: 375px;
+    margin: auto;
+  }
+}
+.section-detail-info div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.section-detail-info div img {
+  position: absolute;
+  top: -280px;
+  width: 370px;
+}
+.section-detail-info div .detail-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 80px;
+  gap: 20px;
+}
+.section-detail-info div .detail-info h4 {
+  color: rgb(80, 35, 20);
+  font-size: 30px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+}
+.section-detail-info div .detail-info div {
+  display: flex;
+  gap: 10px;
+}
+.section-detail-info div .detail-info div span {
+  text-transform: lowercase;
+  font-size: 18px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  color: rgb(80, 35, 20);
+}
+.section-detail-info div .detail-info div p {
+  text-transform: lowercase;
+  font-size: 18px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+
+.section-detail-order {
+  width: 1200px;
+  margin: auto;
+  margin-top: 100px;
+  background-color: white;
+}
+@media screen and (max-width: 1200px) {
+  .section-detail-order {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-detail-order {
+    width: 375px;
+    margin: auto;
+  }
+}
+.section-detail-order div .detail-sizes .top {
+  padding: 20px;
+}
+.section-detail-order div .detail-sizes .top span {
+  font-size: 18px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.section-detail-order div .detail-sizes .middle .size {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.section-detail-order div .detail-sizes .middle .size .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-detail-order div .detail-sizes .middle .size .left img {
+  width: 60px;
+  height: 60px;
+}
+.section-detail-order div .detail-sizes .middle .size .left .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+.section-detail-order div .detail-sizes .middle .size .left .info span {
+  font-size: 16px;
+  color: rgb(80, 35, 20);
+  font-family: "Flame Sans";
+}
+.section-detail-order div .detail-sizes .middle .size .left .info p {
+  font-size: 13px;
+  color: rgb(80, 35, 20);
+  font-family: "Flame Sans";
+}
+.section-detail-order div .detail-sizes .middle .size .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-detail-order div .detail-sizes .middle .size .right button {
+  display: inline-block;
+  margin: 5px;
+  padding: 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #f9f9f9;
+  border-radius: 9999px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.section-detail-order div .detail-sizes .middle .size .right button.clicked {
+  color: #fff;
+  background-color: rgb(245, 235, 220);
+  box-shadow: none;
+}
+
+.clicked {
+  display: none;
+}
+
+.form-section {
+  margin-top: 30px;
+}
+.form-section form .form {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+@media screen and (max-width: 1200px) {
+  .form-section form .form {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .form-section form .form {
+    width: 375px;
+    margin: auto;
+  }
+}
+.form-section form .form h4 {
+  padding: 20px;
+  font-size: 20px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+.form-section form .form div.size {
+  display: flex;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+.form-section form .form div.size label {
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.form-section form .form div.size label .infos {
+  display: flex;
+}
+.form-section form .form div.size label .infos .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+.form-section form .form div.size label .infos .info span {
+  font-size: 15px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.form-section form .form div.size label input[type=radio] {
+  margin-right: 5px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgb(80, 35, 20);
+  border-radius: 50%;
+  background-color: white;
+}
+.form-section form .form div.size label input[type=radio]:checked {
+  background-color: rgb(80, 35, 20);
+  border-color: rgb(80, 35, 20);
+}
+
+.section-selected-detail-order {
+  width: 1200px;
+  margin: auto;
+  margin-top: 40px;
+  background-color: white;
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 1200px) {
+  .section-selected-detail-order {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-selected-detail-order {
+    width: 375px;
+    margin: auto;
+  }
+}
+.section-selected-detail-order div .detail-order .top {
+  padding: 20px;
+}
+.section-selected-detail-order div .detail-order .top span {
+  font-size: 18px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.section-selected-detail-order div .detail-order .middle .order {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.section-selected-detail-order div .detail-order .middle .order .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.section-selected-detail-order div .detail-order .middle .order .left img {
+  width: 60px;
+  height: 60px;
+}
+.section-selected-detail-order div .detail-order .middle .order .left .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 5px;
+}
+.section-selected-detail-order div .detail-order .middle .order .left .info span {
+  font-size: 16px;
+  color: rgb(80, 35, 20);
+  font-family: "Flame Sans";
+  font-weight: bold;
+}
+.section-selected-detail-order div .detail-order .middle .order .left .info p {
+  font-size: 13px;
+  color: rgb(80, 35, 20);
+  font-family: "Flame Sans";
+}
+
+.section-detail-add-order {
+  margin-top: 10px;
+  padding-top: 20px;
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .section-detail-add-order {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-detail-add-order {
+    width: 375px;
+    margin: auto;
+  }
+}
+.section-detail-add-order .text span {
+  font-size: 18px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.section-detail-add-order .add-order {
+  margin-top: 10px;
+  display: flex;
+  gap: 20px;
+}
+.section-detail-add-order .add-order div.active {
+  display: none;
+}
+.section-detail-add-order .add-order .order {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  background-color: white;
+  width: -moz-max-content;
+  width: max-content;
+  border-radius: 20px;
+  padding: 10px;
+  height: 100px;
+}
+.section-detail-add-order .add-order .order .order-left {
+  display: flex;
+  align-items: center;
+}
+.section-detail-add-order .add-order .order .order-left .left img {
+  width: 60px;
+  height: 60px;
+}
+.section-detail-add-order .add-order .order .order-left .right {
+  display: flex;
+  flex-direction: column;
+}
+.section-detail-add-order .add-order .order .order-left .right h4 {
+  font-size: 18px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+}
+.section-detail-add-order .add-order .order .order-left .right div {
+  display: flex;
+  gap: 10px;
+}
+.section-detail-add-order .add-order .order .order-left .right div span {
+  font-size: 13px;
+  color: rgb(80, 35, 20);
+  font-family: "Flame Sans";
+  margin-top: 5px;
+}
+.section-detail-add-order .add-order .order .order-right button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.section-detail-add-order .add-order .order .order-right button:hover {
+  opacity: 50%;
+  transition: 0.2s;
+}
+.section-detail-add-order .add-order .order .order-right button img {
+  width: 14px;
+  height: 14px;
+}
+
+.section-detail-nutritional {
+  width: 1200px;
+  margin: auto;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .section-detail-nutritional {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-detail-nutritional {
+    width: 375px;
+    margin: auto;
+  }
+}
+.section-detail-nutritional .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.section-detail-nutritional .top span {
+  font-size: 16px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.section-detail-nutritional .top a img {
+  width: 15px;
+  height: 15px;
+}
+.section-detail-nutritional .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+.section-detail-nutritional .bottom span {
+  font-size: 14px;
+  color: rgb(80, 35, 20);
+  font-family: "Flame Sans";
+}
+.section-detail-nutritional .bottom span:nth-child(1) {
+  font-size: 18px;
+  color: rgb(80, 35, 20);
+  font-family: "Flame Sans";
+  font-weight: bold;
+}
+.section-detail-nutritional .bottom span:nth-child(2) {
+  margin-top: 10px;
+}
+
+.detail-footer {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px -1px 1px;
+  background-color: rgb(245, 235, 220);
+  height: 90px;
+  position: sticky;
+  bottom: 0;
+}
+.detail-footer div {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+@media screen and (max-width: 1200px) {
+  .detail-footer div {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .detail-footer div {
+    width: 375px;
+    margin: auto;
+  }
+}
+.detail-footer div span {
+  color: rgb(80, 35, 20);
+  font-size: 16px;
+  font-family: "Flame Sans";
+  padding: 10px;
+}
+.detail-footer div button {
+  border-radius: 9999px;
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgb(214, 35, 0);
+  color: red;
+  font-size: 20px;
+}
+.detail-footer div button:disabled {
+  opacity: 0.1;
+}
+.detail-footer div button:nth-child(4) {
+  width: 200px;
+  height: 50px;
+  background-color: rgb(214, 35, 0);
+  color: white;
+  font-size: 16px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+}
+
+div.pickup-form-wrapper {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  div.pickup-form-wrapper {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  div.pickup-form-wrapper {
+    width: 375px;
+    margin: auto;
+  }
+}
+div.pickup-form-wrapper form .restoran-details h4 {
+  margin-top: 20px;
+  line-height: 28px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+div.pickup-form-wrapper form .restoran-details .detail {
+  background-color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 24px;
+  padding-left: 24px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  border-bottom: 1px solid rgb(187, 163, 145);
+}
+div.pickup-form-wrapper form .restoran-details .detail span {
+  font-size: 16px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+div.pickup-form-wrapper form .restoran-details .form {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 24px;
+  padding-left: 24px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+div.pickup-form-wrapper form .restoran-details .form label {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+  width: -moz-max-content;
+  width: max-content;
+  font-size: 18px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+div.pickup-form-wrapper form .restoran-details .form label input[type=radio] {
+  margin-right: 5px;
+  cursor: pointer;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgb(80, 35, 20);
+  border-radius: 50%;
+  background-color: white;
+}
+div.pickup-form-wrapper form .restoran-details .form label input[type=radio]:checked {
+  background-color: rgb(80, 35, 20);
+  border-color: rgb(80, 35, 20);
+}
+div.pickup-form-wrapper form .orders-wrapper h4 {
+  margin-top: 20px;
+  line-height: 28px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+div.pickup-form-wrapper form .orders-wrapper .orders {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+div.pickup-form-wrapper form .orders-wrapper .orders .order {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+div.pickup-form-wrapper form .orders-wrapper .orders .order .top span {
+  font-size: 24px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+div.pickup-form-wrapper form .orders-wrapper .orders .order .mid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.pickup-form-wrapper form .orders-wrapper .orders .order .mid span:nth-child(1) {
+  font-size: 24px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+div.pickup-form-wrapper form .orders-wrapper .orders .order .mid span:nth-child(2) {
+  font-size: 16px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+div.pickup-form-wrapper form .orders-wrapper .orders .order .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+div.pickup-form-wrapper form .orders-wrapper .orders .order .bottom .left a {
+  text-decoration: none;
+}
+div.pickup-form-wrapper form .orders-wrapper .orders .order .bottom .left button {
+  color: rgb(214, 35, 0);
+  font-size: 14px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+}
+div.pickup-form-wrapper form .orders-wrapper .orders .order .bottom .right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+div.pickup-form-wrapper form .orders-wrapper .orders .order .bottom .right .decrement:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+div.pickup-form-wrapper form .orders-wrapper .orders .order .bottom .right button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgb(214, 35, 0);
+  background-color: transparent;
+  color: rgb(214, 35, 0);
+  font-size: 30px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+}
+div.pickup-form-wrapper form .orders-wrapper .orders .order .bottom .right span {
+  color: rgb(214, 35, 0);
+  font-size: 15px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+}
+div.pickup-form-wrapper form .orders-wrapper .orders .removed {
+  display: none;
+}
+div.pickup-form-wrapper form .orders-wrapper a button {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: transparent;
+  border: 2px solid rgb(214, 35, 0);
+  color: rgb(214, 35, 0);
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 40px;
+}
+div.pickup-form-wrapper form .taxs-wrapper .taxs {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+div.pickup-form-wrapper form .taxs-wrapper .taxs div {
+  display: flex;
+  justify-content: space-between;
+}
+div.pickup-form-wrapper form .taxs-wrapper .taxs div span {
+  font-size: 16px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+div.pickup-form-wrapper form .taxs-wrapper .taxs div.total-tax {
+  margin-top: 5px;
+  padding-top: 15px;
+  border-top: 1px solid rgb(80, 35, 20);
+}
+div.pickup-form-wrapper form .taxs-wrapper .taxs div.total-tax span {
+  font-size: 18px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+div.pickup-form-wrapper form div.submit-wrapper {
+  display: flex;
+  justify-content: center;
+}
+div.pickup-form-wrapper form div.submit-wrapper input.submit-btn {
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(214, 35, 0);
+  font-size: 20px;
+  font-family: "Flame Sans";
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  background-color: rgb(80, 35, 20);
+  height: 50px;
+  padding: 30px;
+}
+.card-header .left a img {
+  width: 20px;
+  height: 20px;
+}
+.card-header .right {
+  width: 100%;
+}
+.card-header .right h4 {
+  font-size: 24px;
+  font-family: "Flame Bold";
+  color: rgb(245, 235, 220);
+  text-align: center;
+}
+
+div.delivery-form-wrapper {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  div.delivery-form-wrapper {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  div.delivery-form-wrapper {
+    width: 375px;
+    margin: auto;
+  }
+}
+div.delivery-form-wrapper h4 {
+  margin-top: 20px;
+  line-height: 28px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+div.delivery-form-wrapper form .form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+div.delivery-form-wrapper form .form .time {
+  font-size: 16px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+div.delivery-form-wrapper form .form .location {
+  font-size: 16px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  margin-bottom: 10px;
+}
+div.delivery-form-wrapper form .form label {
+  font-size: 16px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+div.delivery-form-wrapper form .form input {
+  outline: none;
+  font-size: 16px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+div.delivery-form-wrapper form .form .textarea {
+  resize: none;
+  font-size: 16px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid black;
+}
+div.delivery-form-wrapper form .form .chexbox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+div.delivery-form-wrapper form .form .chexbox input {
+  width: 20px;
+  height: 20px;
+}
+div.delivery-form-wrapper form .form .chexbox span {
+  font-size: 13px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+div.delivery-form-wrapper form .orders-wrapper .orders {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+div.delivery-form-wrapper form .orders-wrapper .orders .order {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: white;
+}
+div.delivery-form-wrapper form .orders-wrapper .orders .order .top span {
+  font-size: 24px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+div.delivery-form-wrapper form .orders-wrapper .orders .order .mid {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+div.delivery-form-wrapper form .orders-wrapper .orders .order .mid span:nth-child(1) {
+  font-size: 24px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+div.delivery-form-wrapper form .orders-wrapper .orders .order .mid span:nth-child(2) {
+  font-size: 16px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+div.delivery-form-wrapper form .orders-wrapper .orders .order .bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+div.delivery-form-wrapper form .orders-wrapper .orders .order .bottom .left a {
+  text-decoration: none;
+}
+div.delivery-form-wrapper form .orders-wrapper .orders .order .bottom .left button {
+  color: rgb(214, 35, 0);
+  font-size: 14px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  background-color: transparent;
+  border: none;
+}
+div.delivery-form-wrapper form .orders-wrapper .orders .order .bottom .right {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+div.delivery-form-wrapper form .orders-wrapper .orders .order .bottom .right .decrement:disabled {
+  background-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  opacity: 0.3;
+}
+div.delivery-form-wrapper form .orders-wrapper .orders .order .bottom .right button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 999px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgb(214, 35, 0);
+  background-color: transparent;
+  color: rgb(214, 35, 0);
+  font-size: 30px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+}
+div.delivery-form-wrapper form .orders-wrapper .orders .order .bottom .right span {
+  color: rgb(214, 35, 0);
+  font-size: 15px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+}
+div.delivery-form-wrapper form .orders-wrapper a button {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: transparent;
+  border: 2px solid rgb(214, 35, 0);
+  color: rgb(214, 35, 0);
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 40px;
+}
+div.delivery-form-wrapper form .taxs-wrapper .taxs {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+div.delivery-form-wrapper form .taxs-wrapper .taxs div {
+  display: flex;
+  justify-content: space-between;
+}
+div.delivery-form-wrapper form .taxs-wrapper .taxs div span {
+  font-size: 16px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+div.delivery-form-wrapper form .taxs-wrapper .taxs div.total-tax {
+  margin-top: 5px;
+  padding-top: 15px;
+  border-top: 1px solid rgb(80, 35, 20);
+}
+div.delivery-form-wrapper form .taxs-wrapper .taxs div.total-tax span {
+  font-size: 18px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+div.delivery-form-wrapper form div.submit-wrapper {
+  display: flex;
+  justify-content: center;
+}
+div.delivery-form-wrapper form div.submit-wrapper input.submit-btn {
+  width: 300px;
+  text-align: center;
+  padding: 10px;
+  background-color: rgb(214, 35, 0);
+  font-size: 20px;
+  font-family: "Flame Sans";
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+}
+
+.payment-header {
+  display: flex;
+  align-items: center;
+  background-color: rgb(80, 35, 20);
+  height: 50px;
+  padding: 30px;
+}
+.payment-header .left a img {
+  width: 20px;
+  height: 20px;
+}
+.payment-header .right {
+  width: 100%;
+}
+.payment-header .right h4 {
+  font-size: 24px;
+  font-family: "Flame Bold";
+  color: rgb(245, 235, 220);
+  text-align: center;
+}
+
+form.payment {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+@media screen and (max-width: 1200px) {
+  form.payment {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  form.payment {
+    width: 375px;
+    margin: auto;
+  }
+}
+form.payment h4 {
+  margin-top: 20px;
+  margin-bottom: 12px;
+  font-size: 20px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  color: rgb(80, 35, 20);
+}
+form.payment div.flexs {
+  display: flex;
+  gap: 5px;
+  height: 100px;
+}
+@media screen and (max-width: 1200px) {
+  form.payment div.flexs {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 90px;
+  }
+}
+form.payment div.saveCard {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-left: 8px;
+  font-size: 16px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+form.payment div.saveCard input {
+  transition: height 200ms ease 0s, width 200ms ease 0s;
+  border-radius: 4px;
+  border-color: rgb(80, 35, 20);
+  border-width: 1px;
+  width: 20px;
+  height: 20px;
+}
+form.payment div {
+  width: 60%;
+}
+form.payment div input.submit-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 12px;
+  background-color: rgb(214, 35, 0);
+  font-size: 20px;
+  line-height: 1.5em;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 40px;
+}
+form.payment div input {
+  display: flex;
+  outline: none;
+  font-family: "Flame Sans";
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-bottom: 8px;
+  border-radius: 4px;
+  border-width: 1px;
+  width: 100%;
+  height: 50px;
+}
+form.payment div label {
+  font-size: 16px;
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+  font-family: "Flame Sans";
+}
+form.payment div.total-price {
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid rgb(80, 35, 20);
+}
+form.payment div.total-price span {
+  margin-top: 20px;
+  font-size: 16px;
+  color: rgb(80, 35, 20);
+  font-family: "Flame Sans";
+  font-weight: bold;
+}
+
+div.menu-wrapper {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  div.menu-wrapper {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  div.menu-wrapper {
+    width: 375px;
+    margin: auto;
+  }
+}
+div.menu-wrapper .menus {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 50px;
+}
+div.menu-wrapper .menus .menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 50px;
+  border-bottom: 1px solid black;
+}
+div.menu-wrapper .menus .menu span {
+  font-size: 15px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+div.menu-wrapper .menus .menu img {
+  width: 20px;
+  height: 20px;
+}
+
+.offer-wrapper {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .offer-wrapper {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .offer-wrapper {
+    width: 375px;
+    margin: auto;
+  }
+}
+.offer-wrapper h4 {
+  padding: 20px;
+  color: rgb(80, 35, 20);
+  font-size: 30px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+}
+.offer-wrapper .offers {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .offer-wrapper .offers {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+.offer-wrapper .offers .offer a {
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 15px;
+  gap: 20px;
+  padding: 10px 20px 10px 20px;
+}
+.offer-wrapper .offers .offer a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.1s ease-in-out;
+}
+.offer-wrapper .offers .offer a .left {
+  height: 80px;
+  width: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.offer-wrapper .offers .offer a .left img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.offer-wrapper .offers .offer a .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+}
+.offer-wrapper .offers .offer a .right span.name {
+  color: rgb(80, 35, 20);
+  font-size: 25px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+}
+.offer-wrapper .offers .offer a .right .prices {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.offer-wrapper .offers .offer a .right .prices span {
+  color: rgb(80, 35, 20);
+  font-size: 20px;
+  font-family: "Flame Sans";
+}
+.offer-wrapper .offers .offer a .right .prices span.offer {
+  color: red;
+  font-size: 20px;
+  font-family: "Flame Sans";
+}
+.offer-wrapper .offers .offer a .right .prices span.old-price {
+  color: rgb(80, 35, 20);
+  font-size: 20px;
+  font-family: "Flame Sans";
+  opacity: 0.7;
+  text-decoration: line-through;
+}
+
+.account-wrapper {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  margin-top: 100px;
+  justify-content: space-around;
+}
+@media screen and (max-width: 1200px) {
+  .account-wrapper {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account-wrapper {
+    width: 375px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .account-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .account-wrapper {
+    margin-top: 100px;
+    display: flex;
+    gap: 20px;
+  }
+}
+.account-wrapper .left {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+.account-wrapper .left .info-bar {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: -moz-min-content;
+  width: min-content;
+}
+.account-wrapper .left .info-bar h4 {
+  font-size: 22px;
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+  font-family: "Flame Sans";
+  font-weight: bold;
+}
+.account-wrapper .left .info-bar .info {
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  width: 350px;
+}
+.account-wrapper .left .info-bar .info span {
+  font-size: 18px;
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+  font-family: "Flame Sans";
+}
+.account-wrapper .right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.account-wrapper .right a {
+  text-decoration: none;
+}
+.account-wrapper .right a button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  padding: 12px;
+  background-color: rgb(214, 35, 0);
+  font-size: 20px;
+  line-height: 1.5em;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 40px;
+}
+
+.header-about {
+  background-color: rgb(80, 35, 20);
+}
+.header-about h4 {
+  font-size: 96px;
+  padding-top: 48px;
+  padding-bottom: 48px;
+  margin-bottom: 12px;
+  padding-right: 24px;
+  padding-left: 24px;
+  text-align: center;
+  color: rgb(245, 235, 220);
+  font-family: "Flame Sans";
+  font-weight: bold;
+}
+
+.about-wrapper {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+@media screen and (max-width: 1200px) {
+  .about-wrapper {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .about-wrapper {
+    width: 375px;
+    margin: auto;
+  }
+}
+.about-wrapper .top {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about-wrapper .top h4 {
+  font-family: "Flame Sans";
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(80, 35, 20);
+}
+.about-wrapper .top span {
+  font-family: "Flame Sans";
+  font-size: 20px;
+  color: rgb(80, 35, 20);
+}
+.about-wrapper .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.about-wrapper .bottom h4 {
+  font-family: "Flame Sans";
+  font-weight: bold;
+  font-size: 30px;
+  color: rgb(80, 35, 20);
+}
+.about-wrapper .bottom h1 {
+  font-family: "Flame Sans";
+  font-size: 20px;
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+.about-wrapper .bottom span {
+  font-family: "Flame Sans";
+  font-size: 20px;
+  color: rgb(80, 35, 20);
+}
+
+.orders-wrapper {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .orders-wrapper {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .orders-wrapper {
+    width: 375px;
+    margin: auto;
+  }
+}
+.orders-wrapper .recent-orders {
+  padding: 0 50px 0 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+.orders-wrapper .recent-orders .order {
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  padding: 20px;
+}
+.orders-wrapper .recent-orders .order .left {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.orders-wrapper .recent-orders .order .left img {
+  width: 180px;
+  height: 180px;
+}
+.orders-wrapper .recent-orders .order .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+}
+.orders-wrapper .recent-orders .order .right .info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .orders-wrapper .recent-orders .order .right .info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.orders-wrapper .recent-orders .order .right .info .name {
+  font-size: 25px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+.orders-wrapper .recent-orders .order .right .info .price {
+  font-size: 25px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.orders-wrapper .recent-orders .order .right .info .calory {
+  font-size: 25px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.orders-wrapper .recent-orders .order .right .order-btn a button {
+  width: 150px;
+  background-color: red;
+  font-size: 25px;
+  font-family: "Flame Sans";
+  color: white;
+  font-weight: bold;
+  border-radius: 30px;
+  border: none;
+  padding: 10px;
+}
+.orders-wrapper .recent-orders .order .right .order-btn a button:hover {
+  opacity: 0.5;
+  transition: 0.2S;
+}

@@ -1,0 +1,39 @@
+// @import url(https://db.onlinewebfonts.com/c/29eee6d957e73039264c9de9fd949d20?family=Flame+Sans);
+@import url(https://db.onlinewebfonts.com/c/565a681be0eb6f1d92c6bc57c629ea35?family=Flame+Bold);
+
+@import "./Base/reset";
+@import "./Base/typography";
+    
+
+@import "./Utils/mixins";
+@import "./Utils/variables";
+
+
+@import "./Layout/navbar";
+@import "./Layout/footer";
+
+
+@import "./Pages/Home";
+@import "./Pages/Location";
+@import "./Pages/Delivery";
+@import "./Pages/SignUp";
+@import "./Pages/SingIn";
+@import "./Pages/Menu";
+@import "./Pages/SubMenu";
+@import "./Pages/Detail";
+@import "./Pages/Order-Pickup";
+@import "./Pages/Order-Delivery";
+@import "./Pages/Payment";
+@import "./Pages/Burgermenu";
+@import "./Pages/Offer";
+@import "./Pages/Account";
+@import "./Pages/About";
+@import "./Pages/Recent-Order";
+
+
+
+
+
+
+
+

@@ -1,0 +1,89 @@
+.orders-wrapper {
+  @include container();
+
+  .recent-orders  {
+    padding: 0 50px 0 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    .order {
+      background-color: white;
+      border-radius: 20px;
+      display: flex;
+      
+      padding: 20px;
+      .left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 180px;
+          height: 180px;
+        }
+      }
+
+      .right {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 50px;
+        width: 100%;
+
+        .info {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+          @include for-size(tablet){
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+          }
+          .name {
+            font-size: 25px;
+            font-family: "Flame Sans";
+            color: rgb(80, 35, 20);
+            font-weight: bold;
+          }
+
+          .price {
+            font-size: 25px;
+            font-family: "Flame Sans";
+            color: rgb(80, 35, 20);
+          }
+          .calory {
+            font-size: 25px;
+            font-family: "Flame Sans";
+            color: rgb(80, 35, 20);
+          }
+        }
+
+        .order-btn{
+            a{
+                button{
+
+                    width: 150px;
+                    background-color: red;
+                    font-size: 25px;
+                    font-family: "Flame Sans";
+                    color: white;
+                    font-weight: bold;
+                    border-radius: 30px;
+                    border: none;
+                    padding: 10px;
+
+                    &:hover{
+                        opacity: 0.5;
+                        transition: 0.2S;
+                    }
+                }
+            }
+        }
+      }
+    }
+  }
+}

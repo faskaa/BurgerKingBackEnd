@@ -1,0 +1,30 @@
+@font-face {
+    font-family: "Flame-Regular";
+    src: url("../../Fonts/Flame-Regular.woff") format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Flame-RegularSans";
+    src: url("../../Fonts/Flame-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Flame Sans";
+    src: url("https://db.onlinewebfonts.com/t/29eee6d957e73039264c9de9fd949d20.eot");
+    src: url("https://db.onlinewebfonts.com/t/29eee6d957e73039264c9de9fd949d20.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/29eee6d957e73039264c9de9fd949d20.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/29eee6d957e73039264c9de9fd949d20.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/29eee6d957e73039264c9de9fd949d20.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/29eee6d957e73039264c9de9fd949d20.svg#Flame Sans")format("svg");
+}
+
+@font-face {
+    font-family: "Flame Bold";
+    src: url("https://db.onlinewebfonts.com/t/565a681be0eb6f1d92c6bc57c629ea35.eot");
+    src: url("https://db.onlinewebfonts.com/t/565a681be0eb6f1d92c6bc57c629ea35.eot?#iefix")format("embedded-opentype"),
+    url("https://db.onlinewebfonts.com/t/565a681be0eb6f1d92c6bc57c629ea35.woff2")format("woff2"),
+    url("https://db.onlinewebfonts.com/t/565a681be0eb6f1d92c6bc57c629ea35.woff")format("woff"),
+    url("https://db.onlinewebfonts.com/t/565a681be0eb6f1d92c6bc57c629ea35.ttf")format("truetype"),
+    url("https://db.onlinewebfonts.com/t/565a681be0eb6f1d92c6bc57c629ea35.svg#Flame Bold")format("svg");
+}

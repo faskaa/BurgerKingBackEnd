@@ -1,0 +1,473 @@
+body {
+  background-color: rgb(245, 235, 220);
+}
+
+
+
+.order {
+  .main-section {
+    @include container();
+    display: flex;
+    @include for-size(mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .left {
+      width: 394px;
+      height: 382px;
+      @include for-size(tablet) {
+        width: 294px;
+        height: 282px;
+      }
+
+      @include for-size(mobile) {
+        width: 100%;
+        height: 282px;
+      }
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      padding-top: 48px;
+      padding-bottom: 48px;
+      padding-right: 28px;
+      @include for-size(tablet) {
+        padding-top: 28px;
+        padding-bottom: 28px;
+        padding-right: 18px;
+      }
+
+      @include for-size(mobile) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      span {
+        font-size: 60px;
+        color: rgb(80, 35, 20);
+        font-family: "Flame Bold";
+        font-weight: bold;
+        @include for-size(tablet) {
+          font-size: 50px;
+        }
+        @include for-size(mobile) {
+          font-size: 30px;
+        }
+      }
+
+      .pickup {
+        cursor: pointer;
+        width: 300px;
+        height: 55px;
+        @include for-size(tablet) {
+          width: 100%;
+          height: 45px;
+        }
+        button {
+          &:hover {
+            opacity: 50%;
+            transition: 0.3s;
+          }
+          cursor: pointer;
+
+          background-color: rgb(214, 35, 0);
+          width: 300px;
+          height: 55px;
+          border-radius: 9999px;
+          border: none;
+          font-size: 18px;
+          color: white;
+          font-family: "Flame Sans";
+          font-weight: bold;
+          @include for-size(tablet) {
+            width: 100%;
+            height: 45px;
+          }
+
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+
+      .delivery {
+        width: 300px;
+        height: 55px;
+        border-radius: 9999px;
+        @include for-size(tablet) {
+          width: 100%;
+          height: 45px;
+        }
+        button {
+          &:hover {
+            opacity: 50%;
+            transition: 0.3s;
+          }
+          cursor: pointer;
+          border: 2px solid red;
+          background-color: transparent;
+          width: 300px;
+          height: 55px;
+          border-radius: 9999px;
+          font-size: 18px;
+          color: white;
+          font-family: "Flame Sans";
+          font-weight: bold;
+          color: rgb(214, 35, 0);
+          @include for-size(tablet) {
+            width: 100%;
+            height: 45px;
+          }
+          img {
+            width: 16px;
+            height: 16px;
+          }
+        }
+      }
+    }
+
+    .right {
+      @include for-size(mobile) {
+        display: none;
+      }
+      z-index: -1;
+      // height: 350px;
+      width: 788.787px;
+      height: 382.6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include for-size(tablet) {
+        width: 500.787px;
+        height: 300.6px;
+      }
+      img {
+        @include for-size(tablet) {
+          width: 500.787px;
+          height: 300.6px;
+        }
+        width: 700.787px;
+        height: 382.6px;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+.cards {
+  @include container();
+  padding-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  @include for-size(tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include for-size(mobile) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card {
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 1px 2.22px;
+    width: 580px;
+    height: 515px;
+    background-color: white;
+    margin-bottom: 8px;
+
+    @include for-size(mobile) {
+      width: 100%;
+      height: 315px;
+    }
+
+    .top {
+      a {
+        img {
+          border-top-right-radius: 16px;
+          border-top-left-radius: 16px;
+          width: 580px;
+          height: 290px;
+          @include for-size(mobile) {
+            width: 100%;
+            height: 190px;
+          }
+        }
+      }
+    }
+
+    .bottom {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      height: 220px;
+      @include for-size(mobile) {
+        height: 120px;
+        padding: 10px;
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+
+        h4 {
+          line-height: 28px;
+          margin-bottom: 8px;
+          font-family: "Flame Bold";
+          font-size: 24px;
+          color: rgb(80, 35, 20);
+          @include for-size(mobile) {
+            line-height: 18px;
+            margin-bottom: 2px;
+            font-family: "Flame Bold";
+            font-size: 14px;
+          }
+        }
+
+        span {
+          font-family: "Flame Sans";
+          font-size: 13px;
+          line-height: 20px;
+          color: rgb(80, 35, 20);
+          @include for-size(mobile) {
+            font-family: "Flame Sans";
+            font-size: 10px;
+            line-height: 10px;
+          }
+        }
+
+        a {
+          font-family: "Flame Sans";
+          font-size: 13px;
+          margin-top: 8px;
+          margin-bottom: 8px;
+          text-decoration-line: underline;
+          line-height: 20px;
+          color: rgb(80, 35, 20);
+          cursor: pointer;
+          &:hover {
+            opacity: 50%;
+            transition: 0.3s;
+          }
+          @include for-size(mobile) {
+            font-size: 10px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            text-decoration-line: underline;
+            line-height: 10px;
+          }
+        }
+      }
+
+      .button {
+        display: flex;
+        align-items: end;
+        justify-content: end;
+        width: 100%;
+        height: 100%;
+        button {
+          &:hover {
+            opacity: 50%;
+            transition: 0.3s;
+            background-color: rgb(255, 0, 0);
+            color: white;
+          }
+          cursor: pointer;
+          width: 100px;
+          height: 40px;
+          border: 2px solid red;
+          background-color: transparent;
+          border-radius: 9999px;
+          color: rgb(214, 35, 0);
+          font-size: 12px;
+          font-weight: bold;
+          font-family: "Flame Sans";
+          @include for-size(mobile) {
+            cursor: pointer;
+            width: 60px;
+            height: 20px;
+            border: 1px solid red;
+            background-color: transparent;
+            border-radius: 9999px;
+            color: rgb(214, 35, 0);
+            font-size: 6px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+.ads {
+  background-color: rgba(0, 0, 0, 0.04);
+  height: 450px;
+  margin-top: 200px;
+  @include for-size(tablet) {
+    margin-top: 100px;
+  }
+  @include for-size(mobile) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 250px;
+
+    margin-top: 55px;
+  }
+
+  .ad {
+    @include container();
+    display: flex;
+
+    .left {
+      padding-right: 10%;
+      padding-left: 10%;
+      padding-bottom: 40px;
+
+      @include for-size(mobile) {
+        display: none;
+      }
+      @include for-size(tablet) {
+        padding-right: 5%;
+        padding-left: 5%;
+        padding-bottom: 20px;
+      }
+      img {
+        position: relative;
+        top: -40px;
+        width: 300px;
+      }
+    }
+
+    .right {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      @include for-size(tablet) {
+        gap: 10px;
+      }
+      @include for-size(mobile) {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      h4 {
+        font-size: 48px;
+        color: rgb(80, 35, 20);
+        font-family: "Flame Bold";
+
+        @include for-size(tablet) {
+          font-size: 35px;
+          color: rgb(80, 35, 20);
+          font-family: "Flame Bold";
+        }
+
+        @include for-size(mobile) {
+          font-size: 20px;
+        }
+      }
+
+      .link {
+        display: flex;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        gap: 20px;
+
+        @include for-size(tablet) {
+          margin-top: 10px;
+          margin-bottom: 5px;
+        }
+
+        .appstore {
+          img {
+            &:hover {
+              opacity: 50%;
+              transition: 0.3s;
+            }
+            width: 200px;
+            height: 70px;
+            @include for-size(tablet) {
+              width: 150px;
+              height: 45px;
+            }
+          }
+        }
+
+        .playstore {
+          img {
+            &:hover {
+              opacity: 50%;
+              transition: 0.3s;
+            }
+            width: 200px;
+            height: 70px;
+            border-radius: 10px;
+            @include for-size(tablet) {
+              width: 150px;
+              height: 45px;
+            }
+          }
+        }
+      }
+
+      span {
+        font-family: "Flame Sans";
+        margin-top: 32px;
+        font-size: 14px;
+        line-height: 24px;
+        color: rgb(80, 35, 20);
+        text-align: left;
+
+        @include for-size(tablet) {
+          font-family: "Flame Sans";
+          margin-top: 22px;
+          font-size: 10px;
+          line-height: 20px;
+          color: rgb(80, 35, 20);
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+.terms {
+  .term {
+    background-color: rgb(80, 35, 20);
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-right: 16px;
+    padding-left: 16px;
+    text-align: center;
+    span {
+      @include container();
+      font-size: 12px;
+      font-family: "Flame Sans";
+      line-height: 24px;
+      color: rgb(245, 235, 220);
+
+      a {
+        color: rgb(245, 235, 220);
+        font-size: 12px;
+        text-decoration-line: underline;
+        font-family: "Flame Sans";
+        line-height: 24px;
+        cursor: pointer;
+        &:hover {
+          opacity: 50%;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+}
