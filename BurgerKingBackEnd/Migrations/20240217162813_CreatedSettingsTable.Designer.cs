@@ -3,6 +3,7 @@ using BurgerKingBackEnd.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BurgerKingBackEnd.Migrations
 {
     [DbContext(typeof(BurgerKingDBContext))]
-    partial class BurgerKingDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240217162813_CreatedSettingsTable")]
+    partial class CreatedSettingsTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -87,83 +89,6 @@ namespace BurgerKingBackEnd.Migrations
                     b.ToTable("Downloads");
                 });
 
-            modelBuilder.Entity("BurgerKingBackEnd.Entities.Product", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("Calory")
-                        .HasColumnType("int");
-
-                    b.Property<string>("Description")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Image")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<decimal>("Price")
-                        .HasColumnType("decimal(18,2)");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Product");
-                });
-
-            modelBuilder.Entity("BurgerKingBackEnd.Entities.Restaurant", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<bool>("IsOpen")
-                        .HasColumnType("bit");
-
-                    b.Property<string>("Title")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Restaurant");
-                });
-
-            modelBuilder.Entity("BurgerKingBackEnd.Entities.RestaurantProduct", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<int>("Count")
-                        .HasColumnType("int");
-
-                    b.Property<int>("ProductId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RestaurantId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ProductId");
-
-                    b.HasIndex("RestaurantId");
-
-                    b.ToTable("RestaurantProduct");
-                });
-
             modelBuilder.Entity("BurgerKingBackEnd.Entities.Setting", b =>
                 {
                     b.Property<int>("Id")
@@ -212,35 +137,6 @@ namespace BurgerKingBackEnd.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Sliders");
-                });
-
-            modelBuilder.Entity("BurgerKingBackEnd.Entities.RestaurantProduct", b =>
-                {
-                    b.HasOne("BurgerKingBackEnd.Entities.Product", "Product")
-                        .WithMany("RestaurantProduct")
-                        .HasForeignKey("ProductId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("BurgerKingBackEnd.Entities.Restaurant", "Restaurant")
-                        .WithMany("RestaurantProduct")
-                        .HasForeignKey("RestaurantId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Product");
-
-                    b.Navigation("Restaurant");
-                });
-
-            modelBuilder.Entity("BurgerKingBackEnd.Entities.Product", b =>
-                {
-                    b.Navigation("RestaurantProduct");
-                });
-
-            modelBuilder.Entity("BurgerKingBackEnd.Entities.Restaurant", b =>
-                {
-                    b.Navigation("RestaurantProduct");
                 });
 #pragma warning restore 612, 618
         }

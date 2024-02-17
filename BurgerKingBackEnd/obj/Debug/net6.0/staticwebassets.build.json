@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "okk23g2JqanXUJDlFda842WkXbc+hC58JGhjRkOli0g=",
+  "Hash": "MDBzVfOaWvvrMZIJCY0C2gabSeq7EGG5wwS6Me18l/A=",
   "Source": "BurgerKingBackEnd",
   "BasePath": "_content/BurgerKingBackEnd",
   "Mode": "Default",
@@ -595,6 +595,23 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Images\\condiments.png"
     },
     {
+      "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\double-whoper.webp",
+      "SourceId": "BurgerKingBackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\",
+      "BasePath": "_content/BurgerKingBackEnd",
+      "RelativePath": "Assets/Images/double-whoper.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Images\\double-whoper.webp"
+    },
+    {
       "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\download.png",
       "SourceId": "BurgerKingBackEnd",
       "SourceType": "Discovered",
@@ -697,6 +714,23 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Images\\honey-mustard-bk-royal-crispy-wrap.webp"
     },
     {
+      "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\imposibble-whoper.webp",
+      "SourceId": "BurgerKingBackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\",
+      "BasePath": "_content/BurgerKingBackEnd",
+      "RelativePath": "Assets/Images/imposibble-whoper.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Images\\imposibble-whoper.webp"
+    },
+    {
       "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\phone-ads.png",
       "SourceId": "BurgerKingBackEnd",
       "SourceType": "Discovered",
@@ -746,6 +780,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Images\\Sides.png"
+    },
+    {
+      "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\Whopper.webp",
+      "SourceId": "BurgerKingBackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\",
+      "BasePath": "_content/BurgerKingBackEnd",
+      "RelativePath": "Assets/Images/Whopper.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Images\\Whopper.webp"
     },
     {
       "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Fonts\\Flame-Bold.woff",

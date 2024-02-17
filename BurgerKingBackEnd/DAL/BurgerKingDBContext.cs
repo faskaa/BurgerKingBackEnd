@@ -13,6 +13,11 @@ namespace BurgerKingBackEnd.DAL
         public DbSet<Ad> Ads { get; set; }
         public DbSet<Slider> Sliders { get; set; }
         public DbSet<Download> Downloads { get; set; }
+        public DbSet<Setting> Settings { get; set; }
+        public DbSet<Restaurant> Restaurant { get; set; }
+        public DbSet<Product> Product { get; set; }
+        public DbSet<RestaurantProduct> RestaurantProduct { get; set; }
+
 
     }
 }

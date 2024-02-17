@@ -109,6 +109,10 @@
       "PackagePath": "staticwebassets\\Assets\\Images\\Sides.png"
     },
     {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\Whopper.webp",
+      "PackagePath": "staticwebassets\\Assets\\Images\\Whopper.webp"
+    },
+    {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\candied-bacon-whopper.webp",
       "PackagePath": "staticwebassets\\Assets\\Images\\candied-bacon-whopper.webp"
     },
@@ -145,6 +149,10 @@
       "PackagePath": "staticwebassets\\Assets\\Images\\condiments.png"
     },
     {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\double-whoper.webp",
+      "PackagePath": "staticwebassets\\Assets\\Images\\double-whoper.webp"
+    },
+    {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\download.png",
       "PackagePath": "staticwebassets\\Assets\\Images\\download.png"
     },
@@ -167,6 +175,10 @@
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\honey-mustard-bk-royal-crispy-wrap.webp",
       "PackagePath": "staticwebassets\\Assets\\Images\\honey-mustard-bk-royal-crispy-wrap.webp"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\imposibble-whoper.webp",
+      "PackagePath": "staticwebassets\\Assets\\Images\\imposibble-whoper.webp"
     },
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\phone-ads.png",

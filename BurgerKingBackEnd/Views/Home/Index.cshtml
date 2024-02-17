@@ -3,11 +3,11 @@
 <header>
     <div class="navbar">
         <div class="top">
-            <a class="burgermenu" href="~/../BurgerMenu/burgermenu.html">
-                <img src="~/./../../Assets/Icons/burger-bar.png" alt="" />
+            <a class="burgermenu" href="~/../BurgerMenu/burgermenu.htm">
+                <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBurgerBarImg")?.Value" alt="" />
             </a>
             <a class="logo" href="~/./home.html">
-                <img src="~/./../../Assets/Icons/burger-king.png" alt="" />
+                <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBurgerKingLogo")?.Value" alt="" />
             </a>
             <div class="buttons">
                 <a class="account" href="~/../Sign-Up/signup.html ">
@@ -15,7 +15,7 @@
                 </a>
                 <a class="basket" href="~/../Sign-Up/signup.html">
                     <button>
-                        <img src="~/./../../Assets/Icons/basket.png" alt="" />
+                        <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBasketImg")?.Value" alt="" />
                         $999.00
                     </button>
                 </a>
@@ -23,7 +23,7 @@
         </div>
         <div class="bottom">
             <a href="~/../Locations/location.html">
-                <img src="~/../../Assets/Icons/map.png" alt="" />
+                <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderLocationImg")?.Value" alt="" />
                 <span>For availability</span>
                 <span>Choose location</span>
             </a>
@@ -35,24 +35,24 @@
         @foreach (Slider slider in Model.Sliders)
         {
             
-        <div class="left">
-            <span>@slider.Title</span>
-            <a class="pickup" href="~/../Locations/location.html">
-                <button>
-                    <img src="~/../../Assets/Icons/@slider.OrderImage" alt="" />
-                    Order Pickup
-                </button>
-            </a>
-            <a class="delivery" href="~/../Delivery/delivery.html">
-                <button>
-                    <img src="~/../../Assets/Icons/@slider.DeliveryImage" alt="" />
-                    Order Delivery
-                </button>
-            </a>
-        </div>
-        <div class="right">
-            <img src="~/../../Assets/Icons/@slider.Image" alt="" />
-        </div>
+            <div class="left">
+                <span>@slider.Title</span>
+                <a class="pickup" href="~/../Locations/location.html">
+                    <button>
+                        <img src="~/../../Assets/Icons/@slider.OrderImage" alt="" />
+                        Order Pickup
+                    </button>
+                </a>
+                <a class="delivery" href="~/../Delivery/delivery.html">
+                    <button>
+                        <img src="~/../../Assets/Icons/@slider.DeliveryImage" alt="" />
+                        Order Delivery
+                    </button>
+                </a>
+            </div>
+            <div class="right">
+                <img src="~/../../Assets/Icons/@slider.Image" alt="" />
+            </div>
         }
     </div>
 </section>
@@ -84,32 +84,31 @@
     }
 </section>
 <section class="ads">
-    <div class="ad">
+    @foreach (Download download in Model.Downloads)
+    {
+        <div class="ad">
         <div class="left">
-            <img src="~/../../Assets/Images/phone-ads.png" alt="" />
+            <img src="~/../../Assets/Images/@download.Image" alt="" />
         </div>
         <div class="right">
             <h4>
-                Save $$$ <br />
-                With offers on demand
+                @download.Title
             </h4>
             <div class="link">
                 <a class="appstore"
-                   href="~/https://play.google.com/store/apps?hl=en_US&gl=PL&pli=1">
-                    <img src="~/../../Assets/Images/PlayStore.png" alt="" />
+                   href="@download.PlayStoreUrl">
+                    <img src="~/../../Assets/Images/@download.GooglePlayImage" alt="" />
                 </a>
-                <a class="playstore" href="~/https://www.apple.com/app-store/">
-                    <img src="~/../../Assets/Images/download.png" alt="" />
+                <a class="playstore" href="@download.AppStoreUrl">
+                    <img src="~/../../Assets/Images/@download.AppStoreImage" alt="" />
                 </a>
             </div>
             <span>
-                Apple and the Apple logo are trademarks of Apple Inc., registered
-                in the U.S. and other countries. App Store is a service mark of
-                Apple Inc. Google Play is a trademark of Google Inc. Terms
-                apply.
+                @download.Description
             </span>
         </div>
     </div>
+    }
 </section>
 <section class="terms">
     <div class="term">
@@ -123,20 +122,20 @@
     <div class="footer">
         <div>
             <a href="~/./home.html">
-                <img src="~/../../Assets/Icons/home.png" alt="" />
-                <span>Home</span>
+                <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterHomeImg")?.Value" alt="" />
+                <span>@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterHome")?.Value</span>
             </a>
         </div>
         <div>
             <a href="~/../Locations/location.html">
-                <img src="~/../../Assets/Icons/menu.png" alt="" />
-                <span>Menu</span>
+                <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterMenuImg")?.Value" alt="" />
+                <span>@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterMenu")?.Value</span>
             </a>
         </div>
         <div>
             <a href="~/../Offer/offer.html">
-                <img src="~/../../Assets/Icons/discount.png" alt="" />
-                <span>Offers</span>
+                <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterOfferImg")?.Value" alt="" />
+                <span>@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterOffer")?.Value</span>
             </a>
         </div>
     </div>

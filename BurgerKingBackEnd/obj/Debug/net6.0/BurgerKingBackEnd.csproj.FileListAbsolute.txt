@@ -64,3 +64,7 @@ C:\Users\acer\Desktop\BurgerKingBackEnd\BurgerKingBackEnd\bin\Debug\net6.0\runti
 C:\Users\acer\Desktop\BurgerKingBackEnd\BurgerKingBackEnd\obj\Debug\net6.0\BurgerKingBackEnd.csproj.AssemblyReference.cache
 C:\Users\acer\Desktop\BurgerKingBackEnd\BurgerKingBackEnd\obj\Debug\net6.0\BurgerKingBackEnd.csproj.CopyComplete
 C:\Users\acer\Desktop\BurgerKingBackEnd\BurgerKingBackEnd\bin\Debug\net6.0\BurgerKingBackEnd.staticwebassets.runtime.json
+C:\Users\acer\Desktop\BurgerKingBackEnd\BurgerKingBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\acer\Desktop\BurgerKingBackEnd\BurgerKingBackEnd\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\acer\Desktop\BurgerKingBackEnd\BurgerKingBackEnd\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\acer\Desktop\BurgerKingBackEnd\BurgerKingBackEnd\bin\Debug\net6.0\Newtonsoft.Json.Bson.dll

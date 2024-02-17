@@ -14,7 +14,7 @@ namespace BurgerKingBackEnd.Controllers
             _context = context;
         }
 
-
+        //[HttpGet]
         public IActionResult Index()
         {
             ViewBag.Title = "Home - Burger King";
@@ -23,9 +23,13 @@ namespace BurgerKingBackEnd.Controllers
             {
                 Sliders = _context.Sliders.ToList(),
                 Ads = _context.Ads.ToList(),
+                Downloads = _context.Downloads.ToList(),
+                Settings = _context.Settings.ToList(),
             };
            
             return View(model);
         }
+
+  
     }
 }

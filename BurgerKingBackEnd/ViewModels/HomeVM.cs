@@ -6,5 +6,8 @@ namespace BurgerKingBackEnd.ViewModels
     {
         public List<Ad> Ads { get; set; }
         public List<Slider> Sliders { get; set; }
+        public List<Download> Downloads { get; set; }
+        public List<Setting> Settings { get; set; }
+
     }
 }
