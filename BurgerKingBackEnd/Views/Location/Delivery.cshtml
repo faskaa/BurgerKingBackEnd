@@ -1,0 +1,115 @@
+﻿@model LocationVM
+<div class="delivery-navbar">
+    <div class="nav">
+        <span>Delivery</span>
+    </div>
+</div>
+<section class="delivery-selectors">
+    <div class="selector">
+        <div class="top">
+            <a class="pick-up" asp-controller="Location" asp-action="PickUp">
+                <button>Pick Up</button>
+            </a>
+            <a class="delivery" asp-controller="Location" asp-action="Delivery">
+                <button>Delivery</button>
+            </a>
+        </div>
+        <div class="bottom">
+            <form asp-action="Delivery" method="get" id="searchForm">
+                <div>
+                    <input type="text"
+                           class="form-control"
+                           name="search"
+                           id="searchInput"
+                           placeholder="Enter your search"
+                           aria-label="Search"
+                           aria-describedby="searchButton" />
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<section class="delivery-locations">
+    <div class="locations-menu">
+        <button class="active" onclick="showNearby()">Delivery</button>
+
+    </div>
+</section>
+
+<section style="display:block" class="nearby-content">
+    @if (Model.Restaurants.Count > 0)
+    {
+        foreach (Restaurant restaurant in Model.Restaurants)
+        {
+                  <div class="location">
+                <div class="location-top">
+                    <div class="left">
+                        <h1>@restaurant.Title</h1>
+                        <div class="mid">
+                            <span class="work">Open</span>
+                        </div>
+                        <div class="functionality">
+                            <span>Drive Thru,</span>
+                            <span>Take Out,</span>
+                            <span>Eat In</span>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <button>
+                            <img class="active" src="../../Assets/Icons/heart.png" alt="" />
+                            <img src="../../Assets/Icons/heart-red.png" alt="" />
+                        </button>
+                    </div>
+                </div>
+                <div class="location-bottom">
+                    <div class="order-menu">
+
+                        <a href="../Menu/menu.html">
+                            <button class="location-order">
+                                <img src="../../Assets/Icons/burger.png" alt="" />
+                            </button>
+                            <span>Order </span>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div style="display:flex ; align-items:center ; justify-content:center ; flex-direction:column; margin-top:100px;" id="not-found-location">
+            <img style="width:100px" src="~/Assets/Icons/no-results.png">
+            <span id="not-found-span" style="font-size:30px; color: rgb(80, 35, 20); font-weight:bold; font-family:'Flame Sans'">Enter your search</span>
+            <span id="not-found-span" style="font-size:20px;color: rgb(80, 35, 20);  margin-top:20px; font-family:'Flame Sans'">There are currently no delivery locations available.</span>
+            <span id="not-found-span" style="font-size:20px;color: rgb(80, 35, 20);  font-family:'Flame Sans'">Try entering a new address.</span>
+        </div>
+    }
+
+    <div class="hidden">
+    </div>
+
+</section>
+
+<div class="location-footer">
+    <div class="footer">
+        <div>
+            <a asp-controller="Home" asp-action="Index">
+                <img src="../../Assets/Icons/home.png" alt="" />
+                <span>Home</span>
+            </a>
+        </div>
+        <div>
+            <a asp-controller="Location" asp-action="Delivery">
+                <img src="../../Assets/Icons/menu.png" alt="" />
+                <span>Menu</span>
+            </a>
+        </div>
+        <div>
+            <a href="../Offer/offer.html">
+                <img src="../../Assets/Icons/discount.png" alt="" />
+                <span>Offers</span>
+            </a>
+        </div>
+    </div>
+</div>

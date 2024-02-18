@@ -10,5 +10,10 @@
         public int Calory { get; set; }
 
         public List<RestaurantProduct> RestaurantProduct { get; set; }
+
+
+        //public int CategoryId { get; set; }
+        //public Category Category { get; set; }
+
     }
 }

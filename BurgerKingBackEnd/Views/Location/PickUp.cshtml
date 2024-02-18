@@ -7,10 +7,10 @@
 <section class="location-selectors">
     <div class="selector">
         <div class="top">
-            <a class="pick-up" href="./location.html">
+            <a class="pick-up" asp-controller="Location" asp-action="PickUp">
                 <button>Pick Up</button>
             </a>
-            <a class="delivery" href="../Delivery/delivery.html">
+            <a class="delivery" asp-controller="Location" asp-action="Delivery">
                 <button>Delivery</button>
             </a>
         </div>
@@ -23,197 +23,6 @@
         </div>
     </div>
 </section>
-<!-- <section class="location-locations">
-  <div class="top">
-    <a href="">
-      <button class="nearby active">Nearby</button>
-    </a>
-    <a href="">
-      <button class="favorites">Favorites</button>
-    </a>
-    <a href="">
-      <button class="recents">Recents</button>
-    </a>
-  </div>
-  <div class="bottom">
-    <div class="location">
-      <div class="location-top">
-        <div class="left">
-          <h1>500 Lyons Avenue</h1>
-          <div class="mid">
-            <span class="distance">3 km</span>
-            <span class="work">~Open</span>
-          </div>
-          <div class="functionality">
-            <span>Drive Thru</span>
-            <span>Take Out</span>
-            <span>Eat In</span>
-          </div>
-        </div>
-        <div class="right">
-          <button>
-            <img class="active" src="../../Assets/Icons/heart.png" alt="" />
-            <img src="../../Assets/Icons/heart-red.png" alt="" />
-          </button>
-        </div>
-      </div>
-      <div class="location-bottom">
-        <div class="order-menu">
-          <a href="">
-            <button class="location-offers">
-              <img src="../../Assets/Icons/information.png" alt="" />
-            </button>
-            <span>Info</span>
-          </a>
-          <a href="">
-            <button class="location-order">
-              <img src="../../Assets/Icons/burger.png" alt="" />
-            </button>
-            <span>Order</span>
-          </a>
-          <a href="">
-            <button class="location-info">
-              <img src="../../Assets/Icons/order.png" alt="" />
-            </button>
-            <span>Offers</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="location">
-      <div class="location-top">
-        <div class="left">
-          <h1>500 Lyons Avenue</h1>
-          <div class="mid">
-            <span class="distance">3 km</span>
-            <span class="work">~Open</span>
-          </div>
-          <div class="functionality">
-            <span>Drive Thru</span>
-            <span>Take Out</span>
-            <span>Eat In</span>
-          </div>
-        </div>
-        <div class="right">
-          <button>
-            <img class="active" src="../../Assets/Icons/heart.png" alt="" />
-            <img src="../../Assets/Icons/heart-red.png" alt="" />
-          </button>
-        </div>
-      </div>
-      <div class="location-bottom">
-        <div class="order-menu">
-          <a href="">
-            <button class="location-offers">
-              <img src="../../Assets/Icons/information.png" alt="" />
-            </button>
-            <span>Info</span>
-          </a>
-          <a href="">
-            <button class="location-order">
-              <img src="../../Assets/Icons/burger.png" alt="" />
-            </button>
-            <span>Order</span>
-          </a>
-          <a href="">
-            <button class="location-info">
-              <img src="../../Assets/Icons/order.png" alt="" />
-            </button>
-            <span>Offers</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="location">
-      <div class="location-top">
-        <div class="left">
-          <h1>500 Lyons Avenue</h1>
-          <div class="mid">
-            <span class="distance">3 km</span>
-            <span class="work">~Open</span>
-          </div>
-          <div class="functionality">
-            <span>Drive Thru</span>
-            <span>Take Out</span>
-            <span>Eat In</span>
-          </div>
-        </div>
-        <div class="right">
-          <button>
-            <img class="active" src="../../Assets/Icons/heart.png" alt="" />
-            <img src="../../Assets/Icons/heart-red.png" alt="" />
-          </button>
-        </div>
-      </div>
-      <div class="location-bottom">
-        <div class="order-menu">
-          <a href="">
-            <button class="location-offers">
-              <img src="../../Assets/Icons/information.png" alt="" />
-            </button>
-            <span>Info</span>
-          </a>
-          <a href="">
-            <button class="location-order">
-              <img src="../../Assets/Icons/burger.png" alt="" />
-            </button>
-            <span>Order</span>
-          </a>
-          <a href="">
-            <button class="location-info">
-              <img src="../../Assets/Icons/order.png" alt="" />
-            </button>
-            <span>Offers</span>
-          </a>
-        </div>
-      </div>
-    </div>
-    <div class="location">
-      <div class="location-top">
-        <div class="left">
-          <h1>500 Lyons Avenue</h1>
-          <div class="mid">
-            <span class="distance">3 km</span>
-            <span class="work">~Open</span>
-          </div>
-          <div class="functionality">
-            <span>Drive Thru</span>
-            <span>Take Out</span>
-            <span>Eat In</span>
-          </div>
-        </div>
-        <div class="right">
-          <button>
-            <img class="active" src="../../Assets/Icons/heart.png" alt="" />
-            <img src="../../Assets/Icons/heart-red.png" alt="" />
-          </button>
-        </div>
-      </div>
-      <div class="location-bottom">
-        <div class="order-menu">
-          <a href="">
-            <button class="location-offers">
-              <img src="../../Assets/Icons/information.png" alt="" />
-            </button>
-            <span>Info</span>
-          </a>
-          <a href="">
-            <button class="location-order">
-              <img src="../../Assets/Icons/burger.png" alt="" />
-            </button>
-            <span>Order</span>
-          </a>
-          <a href="">
-            <button class="location-info">
-              <img src="../../Assets/Icons/order.png" alt="" />
-            </button>
-            <span>Offers</span>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
 <section class="location-locations">
     <div class="locations-menu">
         <button class="active" onclick="showNearby()">Nearby</button>
@@ -223,54 +32,59 @@
 </section>
 
 <section style="display:block"  class="nearby-content">
-    @foreach (Restaurant restaurant in Model.Restaurants)
-    {
-      <div style="display:block" class="location">
-        <div class="location-top">
-            <div class="left">
-                <h1>@restaurant.Title</h1>
-                <div class="mid">
-                        @if (restaurant.IsOpen == true)
-                        {
-                            <span class="work">Open</span>
-                        }
-                        else
-                        {
-                            <span class="work">Close</span>
 
-                        }
+    @if (Model.Restaurants.Count > 0)
+    {
+        @foreach (Restaurant restaurant in Model.Restaurants)
+        {
+          <div  style="display:block" class="location">
+            <div class="location-top">
+                <div class="left">
+                    <h1>@restaurant.Title</h1>
+                    <div class="mid">
+                            <span class="work">Open</span>
+                        </div>
+                    <div class="functionality">
+                        <span>Drive Thru</span>
+                        <span>Take Out</span>
+                        <span>Eat In</span>
                     </div>
-                <div class="functionality">
-                    <span>Drive Thru</span>
-                    <span>Take Out</span>
-                    <span>Eat In</span>
+                </div>
+                <div class="right">
+                    <button>
+                        <img class="active" src="../../Assets/Icons/heart.png" alt="" />
+                        <img src="../../Assets/Icons/heart-red.png" alt="" />
+                    </button>
                 </div>
             </div>
-            <div class="right">
-                <button>
-                    <img class="active" src="../../Assets/Icons/heart.png" alt="" />
-                    <img src="../../Assets/Icons/heart-red.png" alt="" />
-                </button>
+            <div class="location-bottom">
+                <div class="order-menu">
+                    <a href="../Menu/menu.html">
+                        <button class="location-order">
+                            <img src="../../Assets/Icons/burger.png" alt="" />
+                        </button>
+                        <span>Order</span>
+                    </a>
+                    <a href="../Offer/offer.html">
+                        <button class="location-info">
+                            <img src="../../Assets/Icons/order.png" alt="" />
+                        </button>
+                        <span>Offers</span>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="location-bottom">
-            <div class="order-menu">
-                <a href="../Menu/menu.html">
-                    <button class="location-order">
-                        <img src="../../Assets/Icons/burger.png" alt="" />
-                    </button>
-                    <span>Order</span>
-                </a>
-                <a href="../Offer/offer.html">
-                    <button class="location-info">
-                        <img src="../../Assets/Icons/order.png" alt="" />
-                    </button>
-                    <span>Offers</span>
-                </a>
-            </div>
-        </div>
-    </div>
         
+        }
+    }
+    else
+    {
+            <div style="display:flex ; align-items:center ; justify-content:center ; flex-direction:column; margin-top:100px;" id="not-found-location">
+                 <img style="width:100px" src="~/Assets/Icons/no-results.png">
+            <span id="not-found-span" style="font-size:30px; color: rgb(80, 35, 20); font-weight:bold; font-family:'Flame Sans'">No Nearby Locations</span>
+            <span id="not-found-span" style="font-size:20px;color: rgb(80, 35, 20);  margin-top:20px; font-family:'Flame Sans'">There are currently no nearby locations available.</span>
+            <span id="not-found-span" style="font-size:20px;color: rgb(80, 35, 20); font-family:'Flame Sans'">Try entering a new address.</span>
+            </div>
     }
 
     <div class="hidden">
@@ -287,8 +101,8 @@
                     <span class="work">~Open</span>
                 </div>
                 <div class="functionality">
-                    <span>Drive Thru</span>
-                    <span>Take Out</span>
+                    <span>Drive Thru,</span>
+                    <span>Take Out,</span>
                     <span>Eat In</span>
                 </div>
             </div>
@@ -518,13 +332,13 @@
 <div class="location-footer">
     <div class="footer">
         <div>
-            <a href="../Home/home.html">
+            <a asp-controller="Home" asp-action="Index">
                 <img src="../../Assets/Icons/home.png" alt="" />
                 <span>Home</span>
             </a>
         </div>
         <div>
-            <a href="../Locations/location.html">
+            <a asp-controller="Location" asp-action="PickUp">
                 <img src="../../Assets/Icons/menu.png" alt="" />
                 <span>Menu</span>
             </a>

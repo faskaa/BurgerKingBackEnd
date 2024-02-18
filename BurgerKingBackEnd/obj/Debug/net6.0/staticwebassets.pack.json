@@ -77,6 +77,10 @@
       "PackagePath": "staticwebassets\\Assets\\Icons\\menu.png"
     },
     {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\no-results.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\no-results.png"
+    },
+    {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\order.png",
       "PackagePath": "staticwebassets\\Assets\\Icons\\order.png"
     },

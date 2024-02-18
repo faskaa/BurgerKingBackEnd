@@ -16,6 +16,10 @@ namespace BurgerKingBackEnd.DAL
         public DbSet<Setting> Settings { get; set; }
         public DbSet<Restaurant> Restaurant { get; set; }
         public DbSet<Product> Product { get; set; }
+        public DbSet<Category> Category { get; set; }
+
+
+
         public DbSet<RestaurantProduct> RestaurantProduct { get; set; }
 
 

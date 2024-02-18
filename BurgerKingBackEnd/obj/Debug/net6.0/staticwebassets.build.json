@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MDBzVfOaWvvrMZIJCY0C2gabSeq7EGG5wwS6Me18l/A=",
+  "Hash": "hhUDIaQSdgolq28Dt5dc5luKSPW+gjeOq/6nvgdgy78=",
   "Source": "BurgerKingBackEnd",
   "BasePath": "_content/BurgerKingBackEnd",
   "Mode": "Default",
@@ -338,6 +338,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Icons\\menu.png"
+    },
+    {
+      "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\no-results.png",
+      "SourceId": "BurgerKingBackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\",
+      "BasePath": "_content/BurgerKingBackEnd",
+      "RelativePath": "Assets/Icons/no-results.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Icons\\no-results.png"
     },
     {
       "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\order.png",

@@ -6,14 +6,14 @@
             <a class="burgermenu" href="~/../BurgerMenu/burgermenu.htm">
                 <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBurgerBarImg")?.Value" alt="" />
             </a>
-            <a class="logo" href="~/./home.html">
+            <a class="logo" asp-controller="Home" asp-action="Index">
                 <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBurgerKingLogo")?.Value" alt="" />
             </a>
             <div class="buttons">
-                <a class="account" href="~/../Sign-Up/signup.html ">
+                <a class="account" asp-controller="Location" asp-action="PickUp">
                     <button>Sign Up/Sing In</button>
                 </a>
-                <a class="basket" href="~/../Sign-Up/signup.html">
+                <a class="basket" asp-controller="Location" asp-action="PickUp">
                     <button>
                         <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBasketImg")?.Value" alt="" />
                         $999.00
@@ -22,7 +22,7 @@
             </div>
         </div>
         <div class="bottom">
-            <a href="~/../Locations/location.html">
+            <a asp-controller="Location" asp-action="PickUp">
                 <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderLocationImg")?.Value" alt="" />
                 <span>For availability</span>
                 <span>Choose location</span>
@@ -37,13 +37,13 @@
             
             <div class="left">
                 <span>@slider.Title</span>
-                <a class="pickup" href="~/../Locations/location.html">
+                <a class="pickup" asp-controller="Location" asp-action="PickUp">
                     <button>
                         <img src="~/../../Assets/Icons/@slider.OrderImage" alt="" />
                         Order Pickup
                     </button>
                 </a>
-                <a class="delivery" href="~/../Delivery/delivery.html">
+                <a class="delivery" asp-controller="Location" asp-action="Delivery">
                     <button>
                         <img src="~/../../Assets/Icons/@slider.DeliveryImage" alt="" />
                         Order Delivery
@@ -62,7 +62,7 @@
     {
      <div class="card">
         <div class="top">
-            <a href="~/../Locations/location.html">
+                <a asp-controller="Location" asp-action="PickUp">
                 <img src="~/../../Assets/Images/@ad.Image" alt="" />
             </a>
         </div>
@@ -74,7 +74,7 @@
                 </span>
             </div>
             <div class="button">
-                <a href="~/../Locations/location.html">
+                    <a asp-controller="Location" asp-action="PickUp">
                     <button>Order Now</button>
                 </a>
             </div>
@@ -121,13 +121,13 @@
 <footer>
     <div class="footer">
         <div>
-            <a href="~/./home.html">
+            <a asp-controller="Home" asp-action="Index">
                 <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterHomeImg")?.Value" alt="" />
                 <span>@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterHome")?.Value</span>
             </a>
         </div>
         <div>
-            <a href="~/../Locations/location.html">
+            <a asp-controller="Location" asp-action="PickUp">
                 <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterMenuImg")?.Value" alt="" />
                 <span>@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterMenu")?.Value</span>
             </a>

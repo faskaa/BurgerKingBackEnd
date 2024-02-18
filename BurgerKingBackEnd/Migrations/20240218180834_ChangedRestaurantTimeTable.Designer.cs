@@ -4,6 +4,7 @@ using BurgerKingBackEnd.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BurgerKingBackEnd.Migrations
 {
     [DbContext(typeof(BurgerKingDBContext))]
-    partial class BurgerKingDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240218180834_ChangedRestaurantTimeTable")]
+    partial class ChangedRestaurantTimeTable
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -44,24 +46,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Ads", (string)null);
-                });
-
-            modelBuilder.Entity("BurgerKingBackEnd.Entities.Category", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<string>("Name")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("Category", (string)null);
+                    b.ToTable("Ads");
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.Download", b =>
@@ -102,7 +87,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Downloads", (string)null);
+                    b.ToTable("Downloads");
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.Product", b =>
@@ -133,7 +118,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Product", (string)null);
+                    b.ToTable("Product");
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.Restaurant", b =>
@@ -144,11 +129,11 @@ namespace BurgerKingBackEnd.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
-                    b.Property<TimeSpan>("ClosingTime")
-                        .HasColumnType("time");
+                    b.Property<DateTime>("CloseTime")
+                        .HasColumnType("datetime2");
 
-                    b.Property<TimeSpan>("OpeningTime")
-                        .HasColumnType("time");
+                    b.Property<DateTime>("OpenTime")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("Title")
                         .IsRequired()
@@ -156,7 +141,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Restaurant", (string)null);
+                    b.ToTable("Restaurant");
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.RestaurantProduct", b =>
@@ -182,7 +167,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasIndex("RestaurantId");
 
-                    b.ToTable("RestaurantProduct", (string)null);
+                    b.ToTable("RestaurantProduct");
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.Setting", b =>
@@ -203,7 +188,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Settings", (string)null);
+                    b.ToTable("Settings");
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.Slider", b =>
@@ -232,7 +217,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sliders", (string)null);
+                    b.ToTable("Sliders");
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.RestaurantProduct", b =>

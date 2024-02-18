@@ -20,10 +20,26 @@ namespace BurgerKingBackEnd.Controllers
             ViewBag.js = "Locations/location.js";
             ViewBag.title = "Locations - Burger King";
 
+            ;
+
             LocationVM model = new LocationVM
             {
                 Restaurants = _context.Restaurant.Where(r => r.Title.Contains(search)).ToList(),
             };
+
+            return View(model);
+        }
+
+        public IActionResult Delivery(string search)
+        {
+            ViewBag.js = "Delivery/delivery.js";
+            ViewBag.title = "Locations - Burger King";
+
+            LocationVM model = new LocationVM
+            {
+                Restaurants = _context.Restaurant.Where(r => r.Title.Contains(search) && r.OpeningTime<= DateTime.Now.TimeOfDay && r.ClosingTime >= DateTime.Now.TimeOfDay).ToList(),
+            };
+
 
             return View(model);
         }
