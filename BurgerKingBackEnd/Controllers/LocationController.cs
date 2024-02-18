@@ -1,4 +1,5 @@
 ﻿using BurgerKingBackEnd.DAL;
+using BurgerKingBackEnd.Entities;
 using BurgerKingBackEnd.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -20,12 +21,12 @@ namespace BurgerKingBackEnd.Controllers
             ViewBag.js = "Locations/location.js";
             ViewBag.title = "Locations - Burger King";
 
-            ;
 
             LocationVM model = new LocationVM
             {
-                Restaurants = _context.Restaurant.Where(r => r.Title.Contains(search)).ToList(),
+                Restaurants = _context.Restaurant.Where(r => r.Title.Contains(search) && r.OpeningTime <= DateTime.Now.TimeOfDay && r.ClosingTime >= DateTime.Now.TimeOfDay).ToList(),
             };
+
 
             return View(model);
         }
@@ -43,6 +44,8 @@ namespace BurgerKingBackEnd.Controllers
 
             return View(model);
         }
+
+
 
         //public IActionResult PickUp(int id)
         //{

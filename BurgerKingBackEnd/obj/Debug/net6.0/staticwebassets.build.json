@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hhUDIaQSdgolq28Dt5dc5luKSPW+gjeOq/6nvgdgy78=",
+  "Hash": "nEl6q8i/Vskl8xfPLwWjDevCGFwVBi2WNE99HzC1A/k=",
   "Source": "BurgerKingBackEnd",
   "BasePath": "_content/BurgerKingBackEnd",
   "Mode": "Default",
@@ -797,6 +797,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Images\\Sides.png"
+    },
+    {
+      "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\triple-whooper.webp",
+      "SourceId": "BurgerKingBackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\",
+      "BasePath": "_content/BurgerKingBackEnd",
+      "RelativePath": "Assets/Images/triple-whooper.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Images\\triple-whooper.webp"
     },
     {
       "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\Whopper.webp",
