@@ -1,6 +1,7 @@
 ﻿using BurgerKingBackEnd.DAL;
 using BurgerKingBackEnd.Entities;
 using BurgerKingBackEnd.ViewModels;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 //using System.Security.Cryptography.Xml;
@@ -10,10 +11,13 @@ namespace BurgerKingBackEnd.Controllers
     public class MenuController : Controller
     {
         private readonly BurgerKingDBContext _context;
+        private readonly UserManager<CustomUser> _userManager;
 
-        public MenuController(BurgerKingDBContext context)
+
+        public MenuController(BurgerKingDBContext context , UserManager<CustomUser> userManager)
         {
-          _context = context;
+            _context = context;
+            _userManager = userManager;
         }
 
         public IActionResult Index(int id)
@@ -33,7 +37,7 @@ namespace BurgerKingBackEnd.Controllers
             return View(menuVM);
         }
 
-        public IActionResult Detail(int RestaurantId , int ProductId)
+        public IActionResult Detail(int RestaurantId , int ProductId )
         {
             ViewBag.js = "Detail/detail.js";
             ViewBag.title = "Detail - Burger King";
@@ -57,12 +61,13 @@ namespace BurgerKingBackEnd.Controllers
 
 
         [HttpPost]
-        public IActionResult AddOrder(int restaurantId, int productId, int quantity , string size )
+        public async Task<IActionResult> AddOrder(int restaurantId, int productId, int quantity , string size )
         {
             Product product = _context.RestaurantProduct.Include(x=>x.Product).Include(x=>x.Restaurant).Where(x=>x.RestaurantId== restaurantId).FirstOrDefault(x=>x.ProductId==productId).Product;
-
+            CustomUser user = await _userManager.GetUserAsync(User);
             CardItem cardItem = new CardItem
             {   
+                UserId = user.Id,
                 ProductId = product.Id,
                 Title = product.Title,
                 Description = product.Description,
@@ -71,6 +76,8 @@ namespace BurgerKingBackEnd.Controllers
                 Quantity = quantity
             };
 
+            _context.Add(cardItem);
+            _context.SaveChanges();
 
             return Json(cardItem);
         }

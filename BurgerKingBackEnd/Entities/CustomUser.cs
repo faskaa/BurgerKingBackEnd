@@ -4,5 +4,7 @@ namespace BurgerKingBackEnd.Entities
 {
     public class CustomUser:IdentityUser
     {
+
+
     }
 }

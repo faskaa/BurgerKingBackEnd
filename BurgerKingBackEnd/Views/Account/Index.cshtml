@@ -1,0 +1,42 @@
+﻿@model CustomUser
+<div class="card-header">
+    <div class="left">
+        <a href="../Home/home.html">
+            <img src="../../Assets/Icons/close.png" alt="" />
+        </a>
+    </div>
+    <div class="right">
+        <h4>My Account</h4>
+    </div>
+</div>
+<div class="account-wrapper">
+    <div class="left">
+
+        <div class="info-bar">
+            <h4>Your Email</h4>
+            <div class="info">
+                <span>@Model.Email</span>
+            </div>
+        </div>
+        <div class="info-bar">
+            <h4>Name</h4>
+            <div class="info">
+                <span>@Model.UserName</span>
+            </div>
+        </div>
+  @*       <div class="info-bar">
+            <h4>Phone Number</h4>
+            <div class="info">
+                <span>@Model.PhoneNumber</span>
+            </div>
+        </div> *@
+    </div>
+    <div class="right">
+        <a asp-controller="Account" asp-action="SignOut">
+            <button type="button">Sign Out</button>
+        </a>
+        <a asp-controller="Account" asp-action="Delete">
+            <button type="button">Delete Account</button>
+        </a>
+    </div>
+</div>

@@ -1,4 +1,6 @@
-﻿<header class="sign-in">
+﻿@model LoginVM
+
+<header class="sign-in">
     <div>
         <a href="../Home/home.html">
             <button>
@@ -10,15 +12,16 @@
 <section class="section-signin">
     <div class="container">
         <h2>Sign In</h2>
-        <form class="signin-form">
-            <input class="username" placeholder="Username" type="text" id="username" name="username" required />
+        <form method="post" class="signin-form">
+            <div asp-validation-summary="All" style="font-size:15px; color: red; font-family:'Flame Sans'; margin-bottom:5px"></div>
+            <input asp-for="Username" class="username"/>
 
-            <input class="password" placeholder="Password" type="Password" id="password" name="password" required />
+            <input asp-for="Password" class="password"  />
 
             <button class="signin-btn" type="submit">Sign In</button>
         </form>
         <p class="signin-link">
-            Don't you have an account? <a href="../Sign-Up/signup.html">Sign Up</a>
+            Don't you have an account? <a asp-controller="Account" asp-action="Register">Sign Up</a>
         </p>
     </div>
 </section>

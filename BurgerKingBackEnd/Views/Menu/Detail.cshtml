@@ -93,7 +93,7 @@
                 <div>
                 <div class="detail-order">
                     <div class="top">
-                        <span>Your Order</span>
+                        <span>Your Order</spa>
                     </div>
                     <div class="middle">
                         <div class="order">
@@ -132,20 +132,55 @@
             </div>
         </section>
 
-            <div class="detail-footer">
-                <div>
-                    
-                    <button value="@Model.ProductQuantity" type="button" id="incrementBtn">+</button>
-                    <span  id="numberDisplay">@Model.ProductQuantity</span>
-                    <button type="button" id="decrementBtn">-</button>
-                      @* <input name="quantity" type="number" value="1" id="quantityInput" oninput="updateButtonValue()" /> *@
-                    <button type="submit" class="add-to-card">Add-$@Model.Product.Price*@Model.ProductQuantity</button>
-                    
+        <div class="new-detail-footer">
+            <div class="new-footer">
+                <div class="left">
+                    <button type="button" onclick="increaseValue()">+</button>
+                    <input name="quantity" type="number" id="numberInput" value="1" readonly>
+                    <button type="button" onclick="decreaseValue()">-</button>
                 </div>
-            </div>    
+                <div class="right">
+                    <button type="submit" class="add-to-card" onclick="addToCart()">Add <span id="price">$@Model.Product.Price</span></button>
+                </div>
+            </div>
+        </div>
     </form>
 </div>
 
+
+
+<script>
+    function increaseValue() {
+        var input = document.getElementById('numberInput');
+        input.value = parseInt(input.value, 10) + 1;
+        updatePrice();
+    }
+
+    function decreaseValue() {
+        var input = document.getElementById('numberInput');
+        if (parseInt(input.value, 10) > 1) {
+            input.value = parseInt(input.value, 10) - 1;
+            updatePrice();
+        }
+    }
+
+    function updatePrice() {
+        var quantity = document.getElementById('numberInput').value;
+        var unitPrice = parseFloat("@Model.Product.Price"); 
+        var price = unitPrice * quantity;
+        document.getElementById('price').innerText = '$' + price.toFixed(2);
+    }
+
+    function addToCart() {
+        var quantity = document.getElementById('numberInput').value;
+        var unitPrice = parseFloat("@Model.Product.Price"); 
+        var totalPrice = unitPrice * quantity;
+
+        console.log('Added to cart - Quantity: ' + quantity + ', Total Price: $' + totalPrice.toFixed(2));
+
+    }
+
+</script>
 
 
 @* <div class="detail-footer">

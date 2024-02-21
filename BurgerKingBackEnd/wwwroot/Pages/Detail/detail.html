@@ -2,9 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
- 
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="Icon" type="Images/Icon" href="../../Assets/Icons/burger-king.png">
+    <link
+      rel="Icon"
+      type="Images/Icon"
+      href="../../Assets/Icons/burger-king.png"
+    />
     <title>Detail - Burger King</title>
     <link
       href="https://db.onlinewebfonts.com/c/29eee6d957e73039264c9de9fd949d20?family=Flame+Sans"
@@ -63,55 +67,6 @@
         </div>
       </div>
     </section>
-    <!-- <section class="section-detail-order">
-
-      <div>
-        <div class="detail-sizes">
-          <div class="top">
-            <span>Standart Drink Sizes</span>
-          </div>
-          <div class="middle">
-            <div class="size">
-              <div class="left">
-                <img src="../../Assets/Icons/small-drink-size.webp" alt="" />
-                <div class="info">
-                  <span>Small</span>
-                  <p>240 cal</p>
-                </div>
-              </div>
-              <div class="right">
-                <button></button>
-              </div>
-            </div>
-            <div class="size">
-              <div class="left">
-                <img src="../../Assets/Icons/small-drink-size.webp" alt="" />
-                <div class="info">
-                  <span>Medium</span>
-                  <p>350 cal</p>
-                </div>
-              </div>
-              <div class="right">
-                <button></button>
-              </div>
-            </div>
-            <div class="size">
-              <div class="left">
-                <img src="../../Assets/Icons/small-drink-size.webp" alt="" />
-                <div class="info">
-                  <span>Large</span>
-                  <p>460 cal</p>
-                </div>
-              </div>
-              <div class="right">
-                <button></button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-
     <div class="form-section">
       <form>
         <div class="form">
@@ -137,7 +92,7 @@
                   <span>150 cal</span>
                 </div>
               </div>
-              <input  required  type="radio" name="gender" value="female" />
+              <input required type="radio" name="gender" value="female" />
             </label>
           </div>
           <div class="size">
@@ -149,10 +104,12 @@
                   <span>200 cal</span>
                 </div>
               </div>
-              <input  required  type="radio" name="gender" value="other" />
+              <input required type="radio" name="gender" value="other" />
             </label>
           </div>
         </div>
+
+        
         <section class="section-selected-detail-order">
           <div>
             <div class="detail-order">
@@ -173,6 +130,7 @@
             </div>
           </div>
         </section>
+
         <!-- <section class="section-detail-add-order">
           <div class="text">
             <span>Add to Order</span>
@@ -205,7 +163,8 @@
             <span
               >Calories will vary based on modifications made to item. Product
               availability, prices, offers and discounts may vary from
-              in-restaurant. BK printed coupons not valid on online orders.</span
+              in-restaurant. BK printed coupons not valid on online
+              orders.</span
             >
             <span
               >2,000 calories a day is used for general nutrition advice, but
@@ -213,101 +172,28 @@
               Allergens information.</span
             >
             <span
-              >Warning: indicates that sodium (salt) content of this item is higher
-              than the total daily recommended limit (2,300mg). High Sodium intake
-              can increase blood pressure and risk of heart disease and
-              stroke.</span
+              >Warning: indicates that sodium (salt) content of this item is
+              higher than the total daily recommended limit (2,300mg). High
+              Sodium intake can increase blood pressure and risk of heart
+              disease and stroke.</span
             >
           </div>
         </section>
 
-        <div class="detail-footer">
-          <div>
-            <button type="button" id="incrementBtn">+</button>
-            <span id="numberDisplay">1</span>
-            <button type="button" id="decrementBtn">-</button>
-            <button type="submit" class="add-to-card">Add-$2.99</button>
-          </div>
-        </div>
-
-
-      </form>
-    </div>
-
-    <!-- <section class="section-selected-detail-order">
-      <div>
-        <div class="detail-order">
-          <div class="top">
-            <span>Your Order</span>
-          </div>
-          <div class="middle">
-            <div class="order">
-              <div class="left">
-                <img src="../../Assets/Images/coca-cola.webp" alt="" />
-                <div class="info">
-                  <span>Small Coca-Cola</span>
-                  <p>240 cal</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section> -->
-    <!-- <section class="section-detail-add-order">
-      <div class="text">
-        <span>Add to Order</span>
-      </div>
-      <div class="add-order">
-        <div class="order">
-          <div class="order-left">
+        <div class="new-detail-footer">
+          <div class="new-footer" >
             <div class="left">
-              <img src="../../Assets/Images/coca-cola.webp" alt="" />
+              <button type="button" onclick="increment() ">+</button>
+              <input type="number" id="numberInput" value="1" readonly>
+              <button type="button" onclick="decrement()">-</button>
             </div>
             <div class="right">
-              <h4>HERSHEY'S® Sundae Pie</h4>
-              <div>
-                <span>$2.79</span>
-                <span>310 Cal</span>
-              </div>
+              <button type="submit" class="add-to-card">Add-$2.99</button>
             </div>
-          </div>
-          <div class="order-right">
-            <button class="order-clicked">
-              <img src="../../Assets/Icons/plus.png" alt="" />
-            </button>
+
           </div>
         </div>
-      </div>
-    </section> -->
-    <!-- <section class="section-detail-nutritional">
-      <div class="top">
-        <span>Nutritional Information</span>
-        <a href="">
-          <img src="../../Assets/Icons/right-arrow.png" alt="" />
-        </a>
-      </div>
-      <div class="bottom">
-        <span>Information</span>
-        <span
-          >Calories will vary based on modifications made to item. Product
-          availability, prices, offers and discounts may vary from
-          in-restaurant. BK printed coupons not valid on online orders.</span
-        >
-        <span
-          >2,000 calories a day is used for general nutrition advice, but
-          calorie needs vary. Click for additional Nutrition information and
-          Allergens information.</span
-        >
-        <span
-          >Warning: indicates that sodium (salt) content of this item is higher
-          than the total daily recommended limit (2,300mg). High Sodium intake
-          can increase blood pressure and risk of heart disease and
-          stroke.</span
-        >
-      </div>
-    </section> -->
-
-
+      </form>
+    </div>
   </body>
 </html>

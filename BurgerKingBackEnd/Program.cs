@@ -22,7 +22,7 @@ builder.Services.AddIdentity<CustomUser, IdentityRole>(options =>
     options.Password.RequiredUniqueChars = 1;
 
     // Lockout settings.
-    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(1);
     options.Lockout.MaxFailedAccessAttempts = 5;
     options.Lockout.AllowedForNewUsers = true;
 
@@ -36,10 +36,12 @@ var app = builder.Build();
 
 
 
+app.UseStaticFiles();
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseRouting();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute("Default", "{controller=Home}/{action=Index}/{id?}");
 });
-app.UseStaticFiles();
 app.Run();

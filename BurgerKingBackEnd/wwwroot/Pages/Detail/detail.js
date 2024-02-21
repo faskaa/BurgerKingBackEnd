@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
 
     });
-
+    
 });
 
 
@@ -51,3 +51,20 @@ document.getElementById('decrementBtn').addEventListener('click', function() {
 });
 
 
+function increment() {
+    var numberInput = document.getElementById("numberInput");
+    if (parseInt(numberInput.value) < 99) {
+        numberInput.value = parseInt(numberInput.value) + 1;
+    }
+}
+
+function decrement() {
+    var numberInput = document.getElementById("numberInput");
+    if (parseInt(numberInput.value) > 1) {
+        numberInput.value = parseInt(numberInput.value) - 1;
+    }
+    
+    if (parseInt(numberInput.value) > 1) {
+        
+    }
+}

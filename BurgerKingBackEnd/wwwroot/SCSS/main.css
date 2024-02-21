@@ -20,6 +20,7 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
+/* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
   display: block;
@@ -3023,41 +3024,35 @@ body {
   margin-top: 10px;
 }
 
-.detail-footer {
+.new-detail-footer {
   box-shadow: rgba(0, 0, 0, 0.1) 0px -1px 1px;
   background-color: rgb(245, 235, 220);
   height: 90px;
   position: sticky;
   bottom: 0;
 }
-.detail-footer div {
+.new-detail-footer div.new-footer {
   width: 1200px;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
   height: 100%;
 }
 @media screen and (max-width: 1200px) {
-  .detail-footer div {
+  .new-detail-footer div.new-footer {
     width: 767px;
     margin: auto;
   }
 }
 @media screen and (max-width: 767px) {
-  .detail-footer div {
+  .new-detail-footer div.new-footer {
     width: 375px;
     margin: auto;
   }
 }
-.detail-footer div span {
-  color: rgb(80, 35, 20);
-  font-size: 16px;
-  font-family: "Flame Sans";
-  padding: 10px;
-}
-.detail-footer div button {
+.new-detail-footer div.new-footer .left button {
   border-radius: 9999px;
   width: 40px;
   height: 40px;
@@ -3065,10 +3060,10 @@ body {
   color: red;
   font-size: 20px;
 }
-.detail-footer div button:disabled {
+.new-detail-footer div.new-footer .left button:disabled {
   opacity: 0.1;
 }
-.detail-footer div button:nth-child(4) {
+.new-detail-footer div.new-footer .left button:nth-child(4) {
   width: 200px;
   height: 50px;
   background-color: rgb(214, 35, 0);
@@ -3076,6 +3071,29 @@ body {
   font-size: 16px;
   font-family: "Flame Sans";
   font-weight: bold;
+}
+.new-detail-footer div.new-footer .left #numberInput {
+  padding: 10px;
+  width: 60px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease;
+  outline: none;
+  text-align: center;
+  background-color: transparent;
+}
+.new-detail-footer div.new-footer .right .add-to-card {
+  border-radius: 9999px;
+  width: 200px;
+  height: 50px;
+  background-color: rgb(214, 35, 0);
+  color: white;
+  font-size: 16px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  border: 1px solid rgb(214, 35, 0);
 }
 
 div.pickup-form-wrapper {

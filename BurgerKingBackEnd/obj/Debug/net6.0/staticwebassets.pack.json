@@ -101,10 +101,6 @@
       "PackagePath": "staticwebassets\\Assets\\Icons\\small-drink-size.webp"
     },
     {
-      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\AppStore.png",
-      "PackagePath": "staticwebassets\\Assets\\Images\\AppStore.png"
-    },
-    {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\PlayStore.png",
       "PackagePath": "staticwebassets\\Assets\\Images\\PlayStore.png"
     },
@@ -115,22 +111,6 @@
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\Whopper.webp",
       "PackagePath": "staticwebassets\\Assets\\Images\\Whopper.webp"
-    },
-    {
-      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\candied-bacon-whopper.webp",
-      "PackagePath": "staticwebassets\\Assets\\Images\\candied-bacon-whopper.webp"
-    },
-    {
-      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\card-1.png",
-      "PackagePath": "staticwebassets\\Assets\\Images\\card-1.png"
-    },
-    {
-      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\card-2.png",
-      "PackagePath": "staticwebassets\\Assets\\Images\\card-2.png"
-    },
-    {
-      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\card-3.png",
-      "PackagePath": "staticwebassets\\Assets\\Images\\card-3.png"
     },
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\card-4.png",
