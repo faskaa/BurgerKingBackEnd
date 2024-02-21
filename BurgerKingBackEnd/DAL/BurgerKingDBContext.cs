@@ -1,9 +1,10 @@
 ﻿using BurgerKingBackEnd.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace BurgerKingBackEnd.DAL
 {
-    public class BurgerKingDBContext : DbContext
+    public class BurgerKingDBContext : IdentityDbContext<CustomUser>
     {
         public BurgerKingDBContext( DbContextOptions<BurgerKingDBContext> options) : base(options)
         {
@@ -17,6 +18,7 @@ namespace BurgerKingBackEnd.DAL
         public DbSet<Restaurant> Restaurant { get; set; }
         public DbSet<Product> Product { get; set; }
         public DbSet<Category> Category { get; set; }
+        public DbSet<CustomUser> CustomUsers { get; set; }
 
 
 

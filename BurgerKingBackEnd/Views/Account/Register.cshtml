@@ -1,0 +1,39 @@
+﻿@model RegisterVM
+
+<header class="sign-up">
+    <div>
+        <a href="../Home/home.html">
+            <button>
+                <img src="../../Assets/Icons/close.png" alt="" />
+            </button>
+        </a>
+    </div>
+</header>
+<section class="section-signup">
+    <div style="height:max-content; padding-top:10px; padding-bottom:10px;" class="container">
+        <h2>Sign Up</h2>
+        <form method="post" class="signup-form">
+            <div asp-validation-summary="All" style="font-size:15px; color: red; font-family:'Flame Sans'; margin-bottom:5px"></div>
+            <input  class="email"asp-for="Email" />
+
+            <input  class="username" asp-for="Username" />
+
+            <input  class="password" asp-for="Password" />
+
+            <input  class="repassword" asp-for="ConfirmPassword" />
+
+
+            <button class="signup-btn" type="submit">Sign Up</button>
+        </form>
+
+        <p class="signup-link">
+            Do you already have an account? <a href="../Sign-in/signin.html">Sign In</a>
+        </p>
+    </div>
+</section>
+
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity = "sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin = "anonymous" referrerpolicy = "no-referrer" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.20.0/jquery.validate.min.js" integrity="sha512-WMEKGZ7L5LWgaPeJtw9MBM4i5w5OSBlSjTjCtSnvFJGSVD26gE5+Td12qN5pvWXhuWaWcVwF++F7aqu9cvqP0A==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js" integrity="sha512-xq+Vm8jC94ynOikewaQXMEkJIOBp7iArs3IhFWSWdRT3Pq8wFz46p+ZDFAR7kHnSFf+zUv52B3prRYnbDRdgog==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+

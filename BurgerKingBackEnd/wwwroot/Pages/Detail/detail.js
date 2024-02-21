@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
         })
 
     });
-    
+
 });
 
 
@@ -49,6 +49,5 @@ document.getElementById('incrementBtn').addEventListener('click', function() {
 document.getElementById('decrementBtn').addEventListener('click', function() {
     updateNumber('-');
 });
-
 
 

@@ -41,7 +41,7 @@
         @foreach (RestaurantProduct restaurantProduct in Model.RestaurantProducts)
         {
           <div class="eat-card">
-            <a asp-controller="Menu" asp-action="Detail" asp-route-id= "@restaurantProduct.Product.Id">
+            <a asp-controller="Menu" asp-action="Detail" asp-route-RestaurantId= "@restaurantProduct.Restaurant.Id" asp-route-ProductId="@restaurantProduct.Product.Id">
                 <img src="../../Assets/Images/@restaurantProduct.Product.Image" alt="" />
                 <span>@restaurantProduct.Product.Title</span>
                 <div>

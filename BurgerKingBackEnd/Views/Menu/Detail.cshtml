@@ -1,4 +1,4 @@
-﻿@model List<RestaurantProduct>
+﻿@model MenuVM
 
 <header>
     <div class="navbar">
@@ -34,23 +34,22 @@
     <div></div>
 </section>
 <section class="section-detail-info">
-    @foreach (RestaurantProduct product in Model)
-    {
         
         <div>
-            <img src="../../Assets/Images/@product.Product.Image" alt="" />
+            <img src="../../Assets/Images/@Model.Product.Image" alt="" />
             <div class="detail-info">
-                <h4>@product.Product.Title</h4>
+                <h4>@Model.Product.Title</h4>
                 <div>
-                    <span>$@product.Product.Price</span>
-                    <p>@product.Product.Calory cal</p>
+                    <span>$@Model.Product.Price</span>
+                    <p>@Model.Product.Calory cal</p>
                 </div>
             </div>
         </div>
-    }
+    
 </section>
 <div class="form-section">
-    <form>
+    <form asp-controller="Menu" asp-action="AddOrder" asp-route-restaurantId="@Model.Restaurants.Id" asp-route-productId="@Model.Product.Id" method="post">
+
         <div class="form">
             <h4>Standart Drink Size</h4>
             <div class="size">
@@ -62,7 +61,7 @@
                             <span>100 cal</span>
                         </div>
                     </div>
-                    <input required type="radio" name="gender" value="male" />
+                    <input required type="radio" name="size" value="Small" />
                 </label>
             </div>
             <div class="size">
@@ -74,7 +73,7 @@
                             <span>150 cal</span>
                         </div>
                     </div>
-                    <input required type="radio" name="gender" value="female" />
+                    <input required type="radio" name="size" value="Medium" />
                 </label>
             </div>
             <div class="size">
@@ -86,13 +85,11 @@
                             <span>200 cal</span>
                         </div>
                     </div>
-                    <input required type="radio" name="gender" value="other" />
+                    <input required type="radio" name="size" value="Large" />
                 </label>
             </div>
         </div>
         <section class="section-selected-detail-order">
-            @foreach (RestaurantProduct restaurantProduct in Model)
-            {
                 <div>
                 <div class="detail-order">
                     <div class="top">
@@ -101,44 +98,18 @@
                     <div class="middle">
                         <div class="order">
                             <div class="left">
-                                <img src="../../Assets/Images/@restaurantProduct.Product.Image" alt="" />
+                                <img src="../../Assets/Images/@Model.Product.Image" alt="" />
                                 <div class="info">
-                                    <span>@* Small  *@@restaurantProduct.Product.Title</span>
-                                    <p>@restaurantProduct.Product.Calory cal</p>
+                                    <span>@* Small  *@@Model.Product.Title</span>
+                                    <p>@Model.Product.Calory cal</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            }
         </section>
-        <!-- <section class="section-detail-add-order">
-          <div class="text">
-            <span>Add to Order</span>
-          </div>
-          <div class="add-order">
-            <div class="order">
-              <div class="order-left">
-                <div class="left">
-                  <img src="../../Assets/Images/coca-cola.webp" alt="" />
-                </div>
-                <div class="right">
-                  <h4>HERSHEY'S® Sundae Pie</h4>
-                  <div>
-                    <span>$2.79</span>
-                    <span>310 Cal</span>
-                  </div>
-                </div>
-              </div>
-              <div class="order-right">
-                <button type="button" class="order-clicked">
-                  <img src="../../Assets/Icons/plus.png" alt="" />
-                </button>
-              </div>
-            </div>
-          </div>
-        </section> -->
+
         <section class="section-detail-nutritional">
             <div class="bottom">
                 <span>Information</span>
@@ -161,15 +132,44 @@
             </div>
         </section>
 
-        <div class="detail-footer">
-            <div>
-                <button type="button" id="incrementBtn">+</button>
-                <span id="numberDisplay">1</span>
-                <button type="button" id="decrementBtn">-</button>
-                <button type="submit" class="add-to-card">Add-$2.99</button>
-            </div>
-        </div>
-
-
+            <div class="detail-footer">
+                <div>
+                    
+                    <button value="@Model.ProductQuantity" type="button" id="incrementBtn">+</button>
+                    <span  id="numberDisplay">@Model.ProductQuantity</span>
+                    <button type="button" id="decrementBtn">-</button>
+                      @* <input name="quantity" type="number" value="1" id="quantityInput" oninput="updateButtonValue()" /> *@
+                    <button type="submit" class="add-to-card">Add-$@Model.Product.Price*@Model.ProductQuantity</button>
+                    
+                </div>
+            </div>    
     </form>
 </div>
+
+
+
+@* <div class="detail-footer">
+    <div>
+        <input name="quantity" type="number" value="1" id="quantityInput" oninput="updateButtonValue()" />
+        <button type="submit" class="add-to-card" id="addToCartButton">Add-$7.99</button>
+    </div>
+</div>
+
+<script>
+    function updateButtonValue() {
+        // Get the input element and button element
+        var quantityInput = document.getElementById('quantityInput');
+        var addToCartButton = document.getElementById('addToCartButton');
+
+        // Ensure input value is not negative or 0
+        var inputValue = Math.max(1, quantityInput.value);
+
+        // Update the input value to ensure it's positive
+        quantityInput.value = inputValue;
+
+        // Update the button text based on the input value
+        addToCartButton.innerText = "Add-$" + (7.99 * inputValue).toFixed(2);
+    }
+</script>
+
+ *@
