@@ -3,6 +3,7 @@ using BurgerKingBackEnd.Entities;
 using BurgerKingBackEnd.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BurgerKingBackEnd.Controllers
 {
@@ -21,11 +22,30 @@ namespace BurgerKingBackEnd.Controllers
         }
 
 
-        public IActionResult Index(CardVM card)
+        public async Task<IActionResult> PickUp()
         {
-           var cardItems =  _context.CardItems.Where(x=>x.UserId == card.customUser.Id).ToList();
+            //var cardItems =  _context.CardItems.ToList();
+            //CardVM cardVM = new CardVM
+            //{
+            //    cardItems = _context.CardItems.ToList(),
+            //    customUser = await _userManager.GetUserAsync(User)
+            //};
 
-            return Json(cardItems);
+            //var user = await _userManager.GetUserAsync(User);
+            //CardVM cardVM = new CardVM
+            //{
+            //    cardItems = _context.CardItems.Contains(X)
+            //}
+
+            var customUser = await _userManager.GetUserAsync(User);
+
+
+            CardVM cardVM = new CardVM
+            {
+                cardItems = _context.CardItems.Where(x=>x.UserId == customUser.Id ).ToList(),
+            };
+
+            return View(cardVM);
         }
     }
 }

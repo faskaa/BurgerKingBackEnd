@@ -1,0 +1,90 @@
+﻿@model CardVM
+<div class="card-header">
+    <div class="left">
+        <a href="../Home/home.html">
+            <img src="../../Assets/Icons/close.png" alt="" />
+        </a>
+    </div>
+    <div class="right">
+        <h4>Order Pick Up</h4>
+    </div>
+</div>
+<div class="pickup-form-wrapper">
+    <form method="post">
+        <div class="restoran-details">
+            <h4>Restaurant Details</h4>
+            <div class="detail">
+                <span>15 Muar Street</span>
+            </div>
+            <div class="form">
+                <label>
+                    <input required type="radio" name="option" value="option1" />Drive Thru
+                </label>
+                <label>
+                    <input required type="radio" name="option" value="option2" />Pick Up
+                </label>
+                <label>
+                    <input required type="radio" name="option" value="option3" />Dine In
+                </label>
+            </div>
+        </div>
+        <!-- <div class="pick-up-time">
+          <h4>Pick up time</h4>
+          <div class="times">
+            <input value="Now" type="button" onclick="selectButton(this)">
+            <input value="10 minute" type="button" onclick="selectButton(this)">
+            <input value="15 minute" type="button" onclick="selectButton(this)">
+            <input value="20 minute" type="button" onclick="selectButton(this)">
+          </div>
+        </div> -->
+
+        <div class="orders-wrapper">
+            <h4>Your Card</h4>
+            <div class="orders">
+                @foreach (var item in Model.cardItems)
+                {
+                    <div class="order ">
+                        <div class="top">
+                            <span class="name">@item.Title</span>
+                        </div>
+                        <div class="mid">
+                            <span class="total-price">Item Total</span>
+                            <span class="price">$@item.Price</span>
+                        </div>
+                        <div class="bottom">
+                            <div class="left">
+
+                                <button type="button" class="remove">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <a href="../Locations/location.html">
+                <button type="button">+ Add Items</button>
+            </a>
+        </div>
+        <div class="taxs-wrapper">
+            <div class="taxs">
+                <div class="subtotal-tax">
+                    <span>Subtotal</span>
+                    <span> $8.79</span>
+                </div>
+                <div class="delivery-tax">
+                    <span>Delivery Fee</span>
+                    <span> $1.00</span>
+                </div>
+                <div class="total-tax">
+                    <span>Total</span>
+                    <span> $14.96</span>
+                </div>
+            </div>
+        </div>
+        <div class="submit-wrapper">
+            <a href="#">
+                <input class="submit-btn" type="submit" placeholder="Continue" name="Continue" id="" />
+            </a>
+        </div>
+        <!-- <button type="submit">Submit</button> -->
+    </form>
+</div>
