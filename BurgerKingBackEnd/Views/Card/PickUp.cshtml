@@ -63,9 +63,13 @@
                     </div>
                 }
             </div>
-            <a asp-controller="Location" asp-action="PickUp">
-                <button type="button">+ Add Items</button>
-            </a>
+            @foreach (var item in Model.cardItems)
+            {
+               <a asp-controller="Menu" asp-action="Index" asp-route-Id="@item.RestaurantId">
+                       <button type="button">+ Add Items</button>
+               </a>
+                
+            }
         </div>
         <div class="taxs-wrapper">
             <div class="taxs">

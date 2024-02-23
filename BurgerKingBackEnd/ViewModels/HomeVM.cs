@@ -8,6 +8,8 @@ namespace BurgerKingBackEnd.ViewModels
         public List<Slider> Sliders { get; set; }
         public List<Download> Downloads { get; set; }
         public List<Setting> Settings { get; set; }
+        public CustomUser CustomUser { get; set; } = null!;
+        public decimal CardItemTotalPrice { get; set; } 
 
     }
 }

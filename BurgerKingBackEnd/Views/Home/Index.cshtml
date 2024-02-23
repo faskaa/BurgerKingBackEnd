@@ -27,7 +27,7 @@
                     <a class="basket" asp-controller="Card" asp-action="PickUp">
                         <button>
                             <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBasketImg")?.Value" alt="" />
-                            $999.00
+                            $@Model.CardItemTotalPrice
                         </button>
                     </a>
                 }
@@ -36,7 +36,7 @@
                     <a class="basket" asp-controller="Account" asp-action="Register">
                         <button>
                             <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBasketImg")?.Value" alt="" />
-                            $999.00
+                            Card
                         </button>
                     </a>
                 }
@@ -47,11 +47,23 @@
         <div class="bottom">
             @if (User.Identity.IsAuthenticated)
             {
-                <a asp-controller="Location" asp-action="PickUp">
-                    <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderLocationImg")?.Value" alt="" />
-                    <span>For availability</span>
-                    <span>Choose location</span>
-                </a>
+                if (Model.CustomUser.SelectedRestaurantId == 0 || Model.CustomUser.SelectedRestaurantId == null)
+                {
+                    <a asp-controller="Location" asp-action="PickUp">
+                        <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderLocationImg")?.Value" alt="" />
+                        <span>For availability</span>
+                        <span>Choose location</span>
+                    </a>
+                }
+                else
+                {
+                    <a asp-controller="Menu" asp-action="DeleteUserOrders" onclick="confirmLocationChange()">
+                        <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderLocationImg")?.Value" alt="" />
+                        <span>Change </span>
+                        <span>Your location</span>
+                    </a>
+                }
+
 
             }
             else
@@ -74,7 +86,39 @@
                 <span>@slider.Title</span>
                 @if (User.Identity.IsAuthenticated)
                 {
-                    <a class="pickup" asp-controller="Location" asp-action="PickUp">
+
+                    if (Model.CustomUser.SelectedRestaurantId == 0 || Model.CustomUser.SelectedRestaurantId == null)
+                    {
+                        <a class="pickup" asp-controller="Location" asp-action="PickUp">
+                            <button>
+                                <img src="~/../../Assets/Icons/@slider.OrderImage" alt="" />
+                                Order Pickup
+                            </button>
+                        </a>
+                        <a class="delivery" asp-controller="Location" asp-action="Delivery">
+                            <button>
+                                <img src="~/../../Assets/Icons/@slider.DeliveryImage" alt="" />
+                                Order Delivery
+                            </button>
+                        </a>
+                    }
+                    else
+                    {
+                        <a class="pickup" asp-controller="Menu" asp-action="Index" asp-route-id="@Model.CustomUser.SelectedRestaurantId">
+                            <button>
+                                <img src="~/../../Assets/Icons/@slider.OrderImage" alt="" />
+                                Order Pickup
+                            </button>
+                        </a>
+                        <a class="delivery" asp-controller="Location" asp-action="Delivery">
+                            <button>
+                                <img src="~/../../Assets/Icons/@slider.DeliveryImage" alt="" />
+                                Order Delivery
+                            </button>
+                        </a>
+                    }
+                    
+                    @* <a class="pickup" asp-controller="Location" asp-action="PickUp">
                         <button>
                             <img src="~/../../Assets/Icons/@slider.OrderImage" alt="" />
                             Order Pickup
@@ -85,7 +129,7 @@
                             <img src="~/../../Assets/Icons/@slider.DeliveryImage" alt="" />
                             Order Delivery
                         </button>
-                    </a>
+                    </a> *@
                 }
                 else
                 {
@@ -117,7 +161,7 @@
              <div class="card">
                 <div class="top">
                         <a asp-controller="Location" asp-action="PickUp">
-                        <img src="~/../../Assets/Images/@ad.Image" alt="" />
+                        <img src="~/Assets/Images/@ad.Image" alt="" />
                     </a>
                 </div>
                 <div class="bottom">
@@ -244,3 +288,16 @@
         }
     </div>
 </footer>
+
+
+<script>
+    function confirmLocationChange() {
+        var confirmation = confirm("If you change your location, your products will be deleted. Are you sure?");
+        if (confirmation) {
+
+            
+        } else {
+
+        }
+    }
+</script>

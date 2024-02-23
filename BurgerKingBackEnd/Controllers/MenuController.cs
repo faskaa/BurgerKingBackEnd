@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Cryptography.X509Certificates;
 //using System.Security.Cryptography.Xml;
 
 namespace BurgerKingBackEnd.Controllers
@@ -29,7 +30,7 @@ namespace BurgerKingBackEnd.Controllers
             if (id == 0) return BadRequest();
             MenuVM menuVM = new MenuVM
             {
-                RestaurantProducts = _context.RestaurantProduct.Where(x => x.RestaurantId == id).Include(x => x.Product).ToList(),
+                RestaurantProducts = _context.RestaurantProduct.Where(x => x.RestaurantId == id).Where(x=>x.Count>0).Include(x => x.Product).ToList(),
                 Restaurants = _context.Restaurant.FirstOrDefault(x=>x.Id == id)!
             };
 
@@ -80,6 +81,7 @@ namespace BurgerKingBackEnd.Controllers
                 {
                     UserId = user.Id,
                     ProductId = product.Id,
+                    RestaurantId = restaurantId,
                     Title = product.Title,
                     Description = product.Description,
                     Price = product.Price * quantity,
@@ -89,9 +91,33 @@ namespace BurgerKingBackEnd.Controllers
                 _context.Add(cardItem);
                 _context.SaveChanges();
 
+                user.SelectedRestaurantId = restaurantId;
+                _context.SaveChanges();
+
+
                return RedirectToAction("PickUp" , "Card");
             }
 
+
         }
+
+        public async Task<IActionResult> DeleteUserOrders()
+        {
+            CustomUser user = await _userManager.GetUserAsync(User);
+            List<CardItem> items = _context.CardItems.Where(x=>x.UserId == user.Id).ToList();
+            //foreach (var item in items)
+            //{
+            //    _context.Remove(item);
+
+            //     _context.SaveChanges();
+
+            //}
+            _context.CardItems.RemoveRange(items);
+            await _context.SaveChangesAsync();
+
+
+            return RedirectToAction("PickUp", "Location");
+        }
+
     }
 }

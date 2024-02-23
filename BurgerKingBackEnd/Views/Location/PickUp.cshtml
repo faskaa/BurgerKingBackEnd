@@ -37,6 +37,7 @@
     {
         @foreach (Restaurant restaurant in Model.Restaurants)
         {
+           
           <div  style="display:block" class="location">
             <div class="location-top">
                 <div class="left">
@@ -59,6 +60,8 @@
             </div>
             <div class="location-bottom">
                 <div class="order-menu">
+                    <button>
+
                     <a asp-controller="Menu" asp-action="Index" asp-route-id="@restaurant.Id">
                         <button class="location-order">
                             <img src="../../Assets/Icons/burger.png" alt="" />
@@ -71,6 +74,7 @@
                         </button>
                         <span>Offers</span>
                     </a>
+                    </button>
                 </div>
             </div>
         </div>

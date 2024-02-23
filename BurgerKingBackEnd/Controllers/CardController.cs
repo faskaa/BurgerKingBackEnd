@@ -18,7 +18,7 @@ namespace BurgerKingBackEnd.Controllers
         public CardController(BurgerKingDBContext context, UserManager<CustomUser> userManager)
         {
             _context = context;
-            _userManager = userManager;;
+            _userManager = userManager;
         }
 
 
@@ -27,19 +27,27 @@ namespace BurgerKingBackEnd.Controllers
 
 
             var customUser = await _userManager.GetUserAsync(User);
-
-            List<CardItem> cardItem = _context.CardItems.Where(x => x.UserId == customUser.Id).ToList();
+           
+            List<CardItem> cardItem = _context.CardItems.Where(x => x.UserId == customUser.Id).Where(x=>x.RestaurantId== customUser.SelectedRestaurantId).ToList();
             List<CardItem> uniqueCardItems = cardItem.DistinctBy(x => x.Title).Select(
                 uniqueItem => new CardItem
                 {
+                    ProductId = uniqueItem.ProductId,
+                    Description = uniqueItem.Description,
+                    UserId = customUser.Id,
+                    Size = uniqueItem.Size,
                     Title = uniqueItem.Title,
                     Quantity = cardItem.Where(x => x.Title == uniqueItem.Title).Sum(x => x.Quantity),
-                    Price = cardItem.Where(x => x.Title == uniqueItem.Title).Sum(x => x.Price)
+                    Price = cardItem.Where(x => x.Title == uniqueItem.Title).Sum(x => x.Price),
+                    RestaurantId = uniqueItem.RestaurantId
+                    
                 }).ToList();
+
+
 
             CardVM cardVM = new CardVM
             {
-                cardItems = uniqueCardItems
+                cardItems = uniqueCardItems,
             };
 
 
