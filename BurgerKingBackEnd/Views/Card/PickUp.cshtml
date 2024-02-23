@@ -41,8 +41,11 @@
         <div class="orders-wrapper">
             <h4>Your Card</h4>
             <div class="orders">
+
+
                 @foreach (var item in Model.cardItems)
                 {
+
                     <div class="order ">
                         <div class="top">
                             <span class="name">@item.Title</span>
@@ -60,7 +63,7 @@
                     </div>
                 }
             </div>
-            <a href="../Locations/location.html">
+            <a asp-controller="Location" asp-action="PickUp">
                 <button type="button">+ Add Items</button>
             </a>
         </div>

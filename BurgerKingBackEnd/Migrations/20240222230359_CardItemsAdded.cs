@@ -4,7 +4,7 @@
 
 namespace BurgerKingBackEnd.Migrations
 {
-    public partial class test : Migration
+    public partial class CardItemsAdded : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

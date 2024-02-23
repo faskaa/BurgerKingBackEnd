@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BurgerKingBackEnd.Migrations
 {
     [DbContext(typeof(BurgerKingDBContext))]
-    [Migration("20240221233602_test")]
-    partial class test
+    [Migration("20240222230359_CardItemsAdded")]
+    partial class CardItemsAdded
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

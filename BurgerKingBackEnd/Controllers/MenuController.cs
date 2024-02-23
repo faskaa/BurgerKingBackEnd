@@ -3,6 +3,7 @@ using BurgerKingBackEnd.Entities;
 using BurgerKingBackEnd.ViewModels;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis;
 using Microsoft.EntityFrameworkCore;
 //using System.Security.Cryptography.Xml;
 
@@ -60,26 +61,37 @@ namespace BurgerKingBackEnd.Controllers
 
 
 
-        [HttpPost]
+        [HttpPost]  
         public async Task<IActionResult> AddOrder(int restaurantId, int productId, int quantity , string size )
         {
+            
+          
             Product product = _context.RestaurantProduct.Include(x=>x.Product).Include(x=>x.Restaurant).Where(x=>x.RestaurantId== restaurantId).FirstOrDefault(x=>x.ProductId==productId).Product;
+            if (product is null) return BadRequest();
+            var currentQuantity = _context.RestaurantProduct.Where(x => x.RestaurantId == restaurantId).FirstOrDefault(x=>x.ProductId== productId).Count;
             CustomUser user = await _userManager.GetUserAsync(User);
-            CardItem cardItem = new CardItem
-            {   
-                UserId = user.Id,
-                ProductId = product.Id,
-                Title = product.Title,
-                Description = product.Description,
-                Price = product.Price* quantity,
-                Size = size,
-                Quantity = quantity
-            };
+            if (quantity > currentQuantity)
+            {
+                TempData["ErrorMessage"] = "The amount you have entered is more than the available amount..";
+                return RedirectToAction("Detail", new { RestaurantId = restaurantId, ProductId = productId });
+            }
+            {
+                CardItem cardItem = new CardItem
+                {
+                    UserId = user.Id,
+                    ProductId = product.Id,
+                    Title = product.Title,
+                    Description = product.Description,
+                    Price = product.Price * quantity,
+                    Size = size,
+                    Quantity = quantity
+                };
+                _context.Add(cardItem);
+                _context.SaveChanges();
 
-            _context.Add(cardItem);
-            _context.SaveChanges();
+               return RedirectToAction("PickUp" , "Card");
+            }
 
-            return Json(cardItem);
         }
     }
 }

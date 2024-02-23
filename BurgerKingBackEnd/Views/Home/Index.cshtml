@@ -22,12 +22,26 @@
                         <button>Sign Up/Sing In</button>
                     </a>
                 }
-                <a class="basket" asp-controller="Location" asp-action="PickUp">
-                    <button>
-                        <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBasketImg")?.Value" alt="" />
-                        $999.00
-                    </button>
-                </a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="basket" asp-controller="Card" asp-action="PickUp">
+                        <button>
+                            <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBasketImg")?.Value" alt="" />
+                            $999.00
+                        </button>
+                    </a>
+                }
+                else
+                {
+                    <a class="basket" asp-controller="Account" asp-action="Register">
+                        <button>
+                            <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBasketImg")?.Value" alt="" />
+                            $999.00
+                        </button>
+                    </a>
+                }
+ 
+       
             </div>
         </div>
         <div class="bottom">

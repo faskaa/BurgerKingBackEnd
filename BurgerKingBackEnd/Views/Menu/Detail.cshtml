@@ -43,11 +43,26 @@
                     <span>$@Model.Product.Price</span>
                     <p>@Model.Product.Calory cal</p>
                 </div>
+
+            @if (TempData.ContainsKey("ErrorMessage"))
+            {
+                <div id="customAlert" style="  padding: 20px; border: 2px solid #ff6666; border-radius: 10px; background-color: #ffcccc; color: #990000; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); z-index: 9999;">
+
+                    <div style="text-align: center;">
+                        <p id="alertMessage">
+                            @TempData["ErrorMessage"]
+                        </p>
+                    </div>
+                </div>
+
+            }
+
             </div>
         </div>
     
 </section>
 <div class="form-section">
+
     <form asp-controller="Menu" asp-action="AddOrder" asp-route-restaurantId="@Model.Restaurants.Id" asp-route-productId="@Model.Product.Id" method="post">
 
         <div class="form">
@@ -131,8 +146,9 @@
                 </span>
             </div>
         </section>
-
+  
         <div class="new-detail-footer">
+
             <div class="new-footer">
                 <div class="left">
                     <button type="button" onclick="increaseValue()">+</button>
@@ -140,7 +156,7 @@
                     <button type="button" onclick="decreaseValue()">-</button>
                 </div>
                 <div class="right">
-                    <button type="submit" class="add-to-card" onclick="addToCart()">Add <span id="price">$@Model.Product.Price</span></button>
+                    <button  type="submit" class="add-to-card" onclick="addToCart()">Add <span id="price">$@Model.Product.Price</span></button>
                 </div>
             </div>
         </div>
@@ -179,6 +195,9 @@
         console.log('Added to cart - Quantity: ' + quantity + ', Total Price: $' + totalPrice.toFixed(2));
 
     }
+   
+
+ 
 
 </script>
 

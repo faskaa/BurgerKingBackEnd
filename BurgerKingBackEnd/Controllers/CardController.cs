@@ -24,26 +24,25 @@ namespace BurgerKingBackEnd.Controllers
 
         public async Task<IActionResult> PickUp()
         {
-            //var cardItems =  _context.CardItems.ToList();
-            //CardVM cardVM = new CardVM
-            //{
-            //    cardItems = _context.CardItems.ToList(),
-            //    customUser = await _userManager.GetUserAsync(User)
-            //};
 
-            //var user = await _userManager.GetUserAsync(User);
-            //CardVM cardVM = new CardVM
-            //{
-            //    cardItems = _context.CardItems.Contains(X)
-            //}
 
             var customUser = await _userManager.GetUserAsync(User);
 
+            List<CardItem> cardItem = _context.CardItems.Where(x => x.UserId == customUser.Id).ToList();
+            List<CardItem> uniqueCardItems = cardItem.DistinctBy(x => x.Title).Select(
+                uniqueItem => new CardItem
+                {
+                    Title = uniqueItem.Title,
+                    Quantity = cardItem.Where(x => x.Title == uniqueItem.Title).Sum(x => x.Quantity),
+                    Price = cardItem.Where(x => x.Title == uniqueItem.Title).Sum(x => x.Price)
+                }).ToList();
 
             CardVM cardVM = new CardVM
             {
-                cardItems = _context.CardItems.Where(x=>x.UserId == customUser.Id ).ToList(),
+                cardItems = uniqueCardItems
             };
+
+
 
             return View(cardVM);
         }
