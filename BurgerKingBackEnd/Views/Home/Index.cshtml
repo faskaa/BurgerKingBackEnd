@@ -110,7 +110,7 @@
                                 Order Pickup
                             </button>
                         </a>
-                        <a class="delivery" asp-controller="Location" asp-action="Delivery">
+                        <a class="delivery" asp-controller="Menu" asp-action="DeliveryIndex" asp-route-id="@Model.CustomUser.SelectedRestaurantId">
                             <button>
                                 <img src="~/../../Assets/Icons/@slider.DeliveryImage" alt="" />
                                 Order Delivery

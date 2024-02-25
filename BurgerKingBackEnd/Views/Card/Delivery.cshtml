@@ -71,23 +71,27 @@
                     
                 }
             </div>
-            <a href="../Locations/location.html">
+            <a style="text-decoration:none" asp-controller="Menu" asp-action="DeliveryIndex" asp-route-id="@Model.RestaurantId">
                 <button type="button">+ Add Items</button>
             </a>
+            <a style="text-decoration:none" asp-controller="Menu" asp-action="DeleteDeliveryCardItem">
+                <button type="button">- Delete Items</button>
+            </a>
         </div>
+
         <div class="taxs-wrapper">
             <div class="taxs">
-                <div class="subtotal-tax">
+ @*                <div class="subtotal-tax">
                     <span>Subtotal</span>
                     <span> $8.79</span>
                 </div>
                 <div class="delivery-tax">
                     <span>Delivery Fee</span>
                     <span> $1.00</span>
-                </div>
+                </div> *@
                 <div class="total-tax">
                     <span>Total</span>
-                    <span> $14.96</span>
+                    <span> $@Model.TotalPrice</span>
                 </div>
             </div>
         </div>

@@ -222,5 +222,27 @@ namespace BurgerKingBackEnd.Controllers
             return RedirectToAction("PickUp", "Card");
         }
 
+        public async Task<IActionResult> DeletePickupCardItem()
+        {
+            CustomUser user = await _userManager.GetUserAsync(User);
+            List<CardItem> items = _context.CardItems.Where(x => x.UserId == user.Id).Where(x=>x.OrderType == true).ToList();
+
+            _context.CardItems.RemoveRange(items);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("PickUp", "Card");
+        }
+
+        public async Task<IActionResult> DeleteDeliveryCardItem()
+        {
+            CustomUser user = await _userManager.GetUserAsync(User);
+            List<CardItem> items = _context.CardItems.Where(x => x.UserId == user.Id).Where(x => x.OrderType == false).ToList();
+
+            _context.CardItems.RemoveRange(items);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Delivery", "Card");
+        }
+
     }
 }
