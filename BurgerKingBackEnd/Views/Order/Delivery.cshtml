@@ -1,5 +1,76 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
+﻿<div class="payment-header">
+    <div class="left">
+        <a href="../Home/home.html">
+            <img src="../../Assets/Icons/close.png" alt="" />
+        </a>
+    </div>
+    <div class="right">
+        <h4>Order Payment</h4>
+    </div>
+</div>
+<form class="payment" action="/submit" method="post">
+    <div>
+        <h4>Payment Details</h4>
+    </div>
+    <div>
+        <label for="nameOnCard">Name on Card:</label>
+        <input type="text" id="nameOnCard" name="nameOnCard" required /><br />
+    </div>
+    <div>
+        <label for="creditCardNumber">Credit Card Number:</label>
+        <input type="text"
+               id="creditCardNumber"
+               name="creditCardNumber"
+               pattern="[0-9]{16}"
+               title="16 digits numeric card number"
+               required /><br />
+    </div>
+    <div class="flexs">
+        <div>
+            <label for="expirationDate">Card Expiration Date:</label>
+            <input type="text"
+                   id="expirationDate"
+                   name="expirationDate"
+                   placeholder="MM/YY"
+                   pattern="(0[1-9]|1[0-2])\/\d{2}"
+                   title="MM/YY format"
+                   required />
+        </div>
+        <div>
+            <label for="cvv">CVV:</label>
+            <input type="text"
+                   id="cvv"
+                   name="cvv"
+                   pattern="[0-9]{3,4}"
+                   title="3 or 4 digits CVV"
+                   required /><br />
+        </div>
+    </div>
+    <div>
+        <label for="zipcode">Zipcode:</label>
+        <input type="text"
+               id="zipcode"
+               name="zipcode"
+               pattern="[0-9]{5}"
+               title="5 digits numeric zipcode"
+               required /><br />
+    </div>
+    <div class="saveCard">
+        <input class="chexbox"
+               type="checkbox"
+               id="saveCard"
+               name="saveCard" /><br />
+        <span>
+            Save Card, by saving your card you consent for your card to be stored
+            and used for purchases.
+        </span>
+    </div>
+
+    <div class="total-price">
+        <span>Total</span>
+        <span>$22.88</span>
+    </div>
+    <div>
+        <input class="submit-btn" type="submit" value="Submit" />
+    </div>
+</form>
