@@ -59,8 +59,8 @@
                 {
                     <a asp-controller="Menu" asp-action="DeleteUserOrders" onclick="confirmLocationChange()">
                         <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderLocationImg")?.Value" alt="" />
-                        <span>Change </span>
-                        <span>Your location</span>
+                        <span>Your location: @Model.Restaurant.Title </span>
+                        <span>Change our location</span>
                     </a>
                 }
 

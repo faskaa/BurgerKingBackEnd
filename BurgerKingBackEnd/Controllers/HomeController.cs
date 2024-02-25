@@ -35,6 +35,7 @@ namespace BurgerKingBackEnd.Controllers
                     Settings = _context.Settings.ToList(),
                     CardItemTotalPrice = _context.CardItems.Where(x => x.UserId == customUser.Id).Sum(x => x.Price),
                     CustomUser = _context.CustomUsers.FirstOrDefault(x => x.Id == customUser.Id) ?? null,
+                    Restaurant = _context.Restaurant.FirstOrDefault(x=>x.Id == customUser.SelectedRestaurantId)
 
                 };
 
@@ -58,22 +59,10 @@ namespace BurgerKingBackEnd.Controllers
 
             }
 
-
-
-            //HomeVM model = new HomeVM
-            //{
-            //    Sliders = _context.Sliders.ToList(),
-            //    Ads = _context.Ads.ToList(),
-            //    Downloads = _context.Downloads.ToList(),
-            //    Settings = _context.Settings.ToList(),
-            //    CardItemTotalPrice = _context.CardItems.Where(x => x.UserId == customUser.Id).Sum(x=>x.Price),
-            //    CustomUser = _context.CustomUsers.FirstOrDefault(x=>x.Id == customUser.Id) ?? null,
-
-            //};
-
-            //return View(model);
         }
 
-  
+       
+
+
     }
 }

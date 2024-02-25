@@ -23,13 +23,14 @@
         </div>
     </div>
 </section>
-<section class="location-locations">
+<section class="delivery-locations">
     <div class="locations-menu">
-        <button class="active" onclick="showNearby()">Nearby</button>
-        <button onclick="showFavorites()">Favorites</button>
-        <button onclick="showRecents()">Recents</button>
+        <button class="active" onclick="showNearby()">Pick Up</button>
+
     </div>
 </section>
+
+
 
 <section style="display:block"  class="nearby-content">
 
@@ -60,7 +61,6 @@
             </div>
             <div class="location-bottom">
                 <div class="order-menu">
-                    <button>
 
                     <a asp-controller="Menu" asp-action="Index" asp-route-id="@restaurant.Id">
                         <button class="location-order">
@@ -74,7 +74,6 @@
                         </button>
                         <span>Offers</span>
                     </a>
-                    </button>
                 </div>
             </div>
         </div>
@@ -95,7 +94,7 @@
     </div>
 </section>
 
-<section class="favorites-content">
+@* <section class="favorites-content">
     <div  class="location">
         <div class="location-top">
             <div class="left">
@@ -331,7 +330,7 @@
     </div>
     <div class="hidden">
     </div>
-</section>
+</section> *@
 
 <div class="location-footer">
     <div class="footer">

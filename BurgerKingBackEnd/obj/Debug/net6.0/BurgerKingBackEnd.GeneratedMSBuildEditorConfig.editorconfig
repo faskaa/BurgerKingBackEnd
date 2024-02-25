@@ -28,6 +28,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/acer/Desktop/BurgerKingBackEnd/BurgerKingBackEnd/Views/Card/Delivery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxEZWxpdmVyeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/acer/Desktop/BurgerKingBackEnd/BurgerKingBackEnd/Views/Card/PickUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2FyZFxQaWNrVXAuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,6 +46,14 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/acer/Desktop/BurgerKingBackEnd/BurgerKingBackEnd/Views/Location/PickUp.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9jYXRpb25cUGlja1VwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/Desktop/BurgerKingBackEnd/BurgerKingBackEnd/Views/Menu/DeliveryDetail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxEZWxpdmVyeURldGFpbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/Desktop/BurgerKingBackEnd/BurgerKingBackEnd/Views/Menu/DeliveryIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWVudVxEZWxpdmVyeUluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/acer/Desktop/BurgerKingBackEnd/BurgerKingBackEnd/Views/Menu/Detail.cshtml]

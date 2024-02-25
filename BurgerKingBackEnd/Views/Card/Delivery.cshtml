@@ -1,0 +1,100 @@
+﻿@model CardVM
+
+<div class="card-header">
+    <div class="left">
+        <a href="../Home/home.html">
+            <img src="../../Assets/Icons/close.png" alt="" />
+        </a>
+    </div>
+    <div class="right">
+        <h4>Order Delivery</h4>
+    </div>
+</div>
+<div class="delivery-form-wrapper">
+    <h4>Delivery Details</h4>
+    <form  method="post">
+        <div class="form">
+            <span class="time">Eta: 1 hour</span>
+            <span class="location">15 Muar Street</span>
+
+            <label for="unit">Unit (Optional):</label>
+            <input type="text" id="unit" name="unit" />
+
+            <br />
+
+            <label for="instructions">Delivery Instructions (Optional):</label>
+            <textarea class="textarea"
+                      id="instructions"
+                      name="instructions"
+                      rows="4"
+                      cols="50"></textarea>
+
+            <br />
+
+            <label for="phone">Phone Number (Required):</label>
+            <input type="tel" id="phone" name="phone" required />
+
+            <br />
+            <div class="chexbox">
+                <input type="checkbox" />
+                <span>
+                    Save My Information. Please save my phone number and delivery
+                    address for faster checkout the next time I place an order.
+                </span>
+            </div>
+        </div>
+        <div class="orders-wrapper">
+            <h4>Your Card</h4>
+            <div class="orders">
+                @foreach (var item in Model.cardItems)
+                {
+                  <div class="order">
+                    <div class="top">
+                        <span class="name">@item.Title</span>
+                    </div>
+                    <div class="mid">
+                        <span class="total-price">Item Total</span>
+                        <span class="price">$8.79</span>
+                    </div>
+                    <div class="bottom">
+                        <div class="left">
+
+                            <button type="button" class="remove">Remove</button>
+                        </div>
+                        <div class="right">
+                            <button class="increment" type="button">+</button>
+                            <span class="display">1</span>
+                            <button type="button" class="decrement">-</button>
+                        </div>
+                    </div>
+                </div>
+                    
+                }
+            </div>
+            <a href="../Locations/location.html">
+                <button type="button">+ Add Items</button>
+            </a>
+        </div>
+        <div class="taxs-wrapper">
+            <div class="taxs">
+                <div class="subtotal-tax">
+                    <span>Subtotal</span>
+                    <span> $8.79</span>
+                </div>
+                <div class="delivery-tax">
+                    <span>Delivery Fee</span>
+                    <span> $1.00</span>
+                </div>
+                <div class="total-tax">
+                    <span>Total</span>
+                    <span> $14.96</span>
+                </div>
+            </div>
+        </div>
+        <div class="submit-wrapper">
+            <a href="#">
+                <input class="submit-btn" type="submit" placeholder="Continue" name="Continue" id="" />
+            </a>
+        </div>
+    </form>
+</div>

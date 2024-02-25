@@ -21,12 +21,12 @@
                 </a>
             </div>
         </div>
-@*         <div class="bottom">
-            <a href="../Locations/location.html">
-                <img src="../../Assets/Icons/map.png" alt="" />
-                <span>For availability</span>
-                <span>Choose location</span>
-            </a>
+        @*         <div class="bottom">
+        <a href="../Locations/location.html">
+        <img src="../../Assets/Icons/map.png" alt="" />
+        <span>For availability</span>
+        <span>Choose location</span>
+        </a>
         </div> *@
     </div>
 </header>
@@ -34,15 +34,15 @@
     <div></div>
 </section>
 <section class="section-detail-info">
-        
-        <div>
-            <img src="../../Assets/Images/@Model.Product.Image" alt="" />
-            <div class="detail-info">
-                <h4>@Model.Product.Title</h4>
-                <div>
-                    <span>$@Model.Product.Price</span>
-                    <p>@Model.Product.Calory cal</p>
-                </div>
+
+    <div>
+        <img src="../../Assets/Images/@Model.Product.Image" alt="" />
+        <div class="detail-info">
+            <h4>@Model.Product.Title</h4>
+            <div>
+                <span>$@Model.Product.Price</span>
+                <p>@Model.Product.Calory cal</p>
+            </div>
 
             @if (TempData.ContainsKey("ErrorMessage"))
             {
@@ -57,13 +57,13 @@
 
             }
 
-            </div>
         </div>
-    
+    </div>
+
 </section>
 <div class="form-section">
 
-    <form asp-controller="Menu" asp-action="AddOrder" asp-route-restaurantId="@Model.Restaurants.Id" asp-route-productId="@Model.Product.Id" method="post">
+    <form asp-controller="Menu" asp-action="DeliveryAddOrder" asp-route-restaurantId="@Model.Restaurants.Id" asp-route-productId="@Model.Product.Id" method="post">
 
         <div class="form">
             <h4>Standart Drink Size</h4>
@@ -105,7 +105,7 @@
             </div>
         </div>
         <section class="section-selected-detail-order">
-                <div>
+            <div>
                 <div class="detail-order">
                     <div class="top">
                         <span>Your Order</spa>
@@ -146,7 +146,7 @@
                 </span>
             </div>
         </section>
-  
+
         <div class="new-detail-footer">
 
             <div class="new-footer">
@@ -156,7 +156,7 @@
                     <button type="button" onclick="decreaseValue()">-</button>
                 </div>
                 <div class="right">
-                    <button  type="submit" class="add-to-card" onclick="addToCart()">Add <span id="price">$@Model.Product.Price</span></button>
+                    <button type="submit" class="add-to-card" onclick="addToCart()">Add <span id="price">$@Model.Product.Price</span></button>
                 </div>
             </div>
         </div>
@@ -182,22 +182,22 @@
 
     function updatePrice() {
         var quantity = document.getElementById('numberInput').value;
-        var unitPrice = parseFloat("@Model.Product.Price"); 
+        var unitPrice = parseFloat("@Model.Product.Price");
         var price = unitPrice * quantity;
         document.getElementById('price').innerText = '$' + price.toFixed(2);
     }
 
     function addToCart() {
         var quantity = document.getElementById('numberInput').value;
-        var unitPrice = parseFloat("@Model.Product.Price"); 
+        var unitPrice = parseFloat("@Model.Product.Price");
         var totalPrice = unitPrice * quantity;
 
         console.log('Added to cart - Quantity: ' + quantity + ', Total Price: $' + totalPrice.toFixed(2));
 
     }
-   
 
- 
+
+
 
 </script>
 

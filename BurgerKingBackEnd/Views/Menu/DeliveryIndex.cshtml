@@ -21,12 +21,12 @@
                 </a>
             </div>
         </div>
-@*         <div class="bottom">
-            <a asp-controller="Location" asp-action="PickUp">
-                <img src="../../Assets/Icons/map.png" alt="" />
-                <span>Your Location</span>
-                <span>@Model.Restaurants.Title</span>
-            </a>
+        @*         <div class="bottom">
+        <a asp-controller="Location" asp-action="PickUp">
+        <img src="../../Assets/Icons/map.png" alt="" />
+        <span>Your Location</span>
+        <span>@Model.Restaurants.Title</span>
+        </a>
         </div> *@
     </div>
 </header>
@@ -34,16 +34,16 @@
     <div class="eat-cards">
         @foreach (RestaurantProduct restaurantProduct in Model.RestaurantProducts)
         {
-          <div class="eat-card">
-            <a asp-controller="Menu" asp-action="Detail" asp-route-RestaurantId= "@restaurantProduct.Restaurant.Id" asp-route-ProductId="@restaurantProduct.Product.Id">
-                <img src="../../Assets/Images/@restaurantProduct.Product.Image" alt="" />
-                <span>@restaurantProduct.Product.Title</span>
-                <div>
-                    <span>$@restaurantProduct.Product.Price</span>
-                    <p>@restaurantProduct.Product.Calory cal</p>
-                </div>
-            </a>
-        </div>
+            <div class="eat-card">
+                <a asp-controller="Menu" asp-action="DeliveryDetail" asp-route-RestaurantId="@restaurantProduct.Restaurant.Id" asp-route-ProductId="@restaurantProduct.Product.Id">
+                    <img src="../../Assets/Images/@restaurantProduct.Product.Image" alt="" />
+                    <span>@restaurantProduct.Product.Title</span>
+                    <div>
+                        <span>$@restaurantProduct.Product.Price</span>
+                        <p>@restaurantProduct.Product.Calory cal</p>
+                    </div>
+                </a>
+            </div>
         }
     </div>
 

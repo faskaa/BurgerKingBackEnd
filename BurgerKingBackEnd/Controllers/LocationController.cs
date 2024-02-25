@@ -1,6 +1,7 @@
 ﻿using BurgerKingBackEnd.DAL;
 using BurgerKingBackEnd.Entities;
 using BurgerKingBackEnd.ViewModels;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,21 +11,28 @@ namespace BurgerKingBackEnd.Controllers
     {
 
         private readonly BurgerKingDBContext _context;
+        private readonly UserManager<CustomUser> _userManager;
 
-        public LocationController(BurgerKingDBContext context)
+
+        public LocationController(BurgerKingDBContext context , UserManager<CustomUser> userManager)
         {
             _context = context;
+            _userManager = userManager;
+
         }
 
-        public IActionResult PickUp(string search)
+        public async Task<IActionResult> PickUp(string search)
         {
             ViewBag.js = "Locations/location.js";
             ViewBag.title = "Locations - Burger King";
 
+            CustomUser user = await _userManager.GetUserAsync(User);
+            
 
             LocationVM model = new LocationVM
             {
                 Restaurants = _context.Restaurant.Where(r => r.Title.Contains(search) && r.OpeningTime <= DateTime.Now.TimeOfDay && r.ClosingTime >= DateTime.Now.TimeOfDay).ToList(),
+                customUser = user,
             };
 
 
