@@ -21,6 +21,7 @@ namespace BurgerKingBackEnd.DAL
         public DbSet<CustomUser> CustomUsers { get; set; }
         public DbSet<CardItem> CardItems { get; set; }
         public DbSet<Order> Orders { get; set; }
+        public DbSet<Card> Cards { get; set; }
 
 
 

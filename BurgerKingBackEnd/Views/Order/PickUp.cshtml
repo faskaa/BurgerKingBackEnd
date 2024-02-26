@@ -8,7 +8,7 @@
         <h4>Order Payment</h4>
     </div>
 </div>
-<form class="payment" asp-controller="Order" asp-action="DeliveryPayment" method="post">
+<form class="payment" asp-controller="Order" asp-action="PickUpPayment" method="post">
     <div>
         <h4>Payment Details</h4>
     </div>
@@ -19,10 +19,10 @@
     <div>
         <label for="creditCardNumber">Credit Card Number:</label>
         <input type="text"
-               id="creditCardNumber"
+            @*    id="creditCardNumber" *@
                name="creditCardNumber"
-               pattern="[0-9]{16}"
-               title="16 digits numeric card number"
+            @*    pattern="[0-9]{16}"
+               title="16 digits numeric card number" *@
                required /><br />
     </div>
     <div class="flexs">

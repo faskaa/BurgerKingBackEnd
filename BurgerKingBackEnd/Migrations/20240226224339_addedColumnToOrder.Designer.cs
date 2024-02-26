@@ -4,6 +4,7 @@ using BurgerKingBackEnd.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BurgerKingBackEnd.Migrations
 {
     [DbContext(typeof(BurgerKingDBContext))]
-    partial class BurgerKingDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240226224339_addedColumnToOrder")]
+    partial class addedColumnToOrder
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -266,9 +268,6 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.Property<string>("DeliveryInstruction")
                         .HasColumnType("nvarchar(max)");
-
-                    b.Property<bool>("IsSubmited")
-                        .HasColumnType("bit");
 
                     b.Property<int?>("PhoneNumber")
                         .HasColumnType("int");

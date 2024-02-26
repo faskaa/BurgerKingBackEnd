@@ -7,11 +7,17 @@
         public string? DeliveryInstruction { get; set; }
         public int? PhoneNumber { get; set; }
         public bool? PickUpType { get; set; }
+        public string? PickUpOption { get; set; }
+        public bool IsSubmited { get; set; }
 
         public List<CardItem> cardItems { get; set; }
 
         public string CustomUserId { get; set; }
         public CustomUser CustomUser { get; set; }
+
+        public Card Card { get; set; }
+
+
 
     }
 }
