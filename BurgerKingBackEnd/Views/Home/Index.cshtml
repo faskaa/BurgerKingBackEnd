@@ -3,7 +3,7 @@
 <header>
     <div class="navbar">
         <div class="top">
-            <a class="burgermenu" href="~/../BurgerMenu/burgermenu.htm">
+            <a class="burgermenu" asp-controller="BurgerMenu" asp-action="Index">
                 <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBurgerBarImg")?.Value" alt="" />
             </a>
             <a class="logo" asp-controller="Home" asp-action="Index">
@@ -57,10 +57,11 @@
                 }
                 else
                 {
-                    <a asp-controller="Menu" asp-action="DeleteUserOrders" onclick="confirmLocationChange()">
+
+                    <a id="changeLocationLink" asp-controller="Menu" asp-action="DeleteUserOrders">
                         <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderLocationImg")?.Value" alt="" />
-                        <span>Your location: @Model.Restaurant.Title </span>
-                        <span>Change our location</span>
+                        <span>@Model.Restaurant.Title </span>
+                        <span>Change your location</span>
                     </a>
                 }
 
@@ -158,26 +159,52 @@
     {
         @foreach (Ad ad in Model.Ads)
         {
-             <div class="card">
-                <div class="top">
-                        <a asp-controller="Location" asp-action="PickUp">
-                        <img src="~/Assets/Images/@ad.Image" alt="" />
-                    </a>
-                </div>
-                <div class="bottom">
-                    <div class="info">
-                        <h4>@ad.Title</h4>
-                        <span>
-                            @ad.Description
-                        </span>
-                    </div>
-                    <div class="button">
+            if (Model.CustomUser.SelectedRestaurantId == 0 || Model.CustomUser.SelectedRestaurantId == null)
+            {
+                <div class="card">
+                    <div class="top">
                             <a asp-controller="Location" asp-action="PickUp">
-                            <button>Order Now</button>
+                            <img src="~/Assets/Images/@ad.Image" alt="" />
                         </a>
                     </div>
+                    <div class="bottom">
+                        <div class="info">
+                            <h4>@ad.Title</h4>
+                            <span>
+                                @ad.Description
+                            </span>
+                        </div>
+                        <div class="button">
+                                <a asp-controller="Location" asp-action="PickUp">
+                                <button>Order Now</button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            }
+            else
+            {
+                <div class="card">
+                    <div class="top">
+                        <a asp-controller="Menu" asp-action="Index" asp-route-id="@Model.CustomUser.SelectedRestaurantId">
+                            <img src="~/Assets/Images/@ad.Image" alt="" />
+                        </a>
+                    </div>
+                    <div class="bottom">
+                        <div class="info">
+                            <h4>@ad.Title</h4>
+                            <span>
+                                @ad.Description
+                            </span>
+                        </div>
+                        <div class="button">
+                            <a asp-controller="Menu" asp-action="Index" asp-route-id="@Model.CustomUser.SelectedRestaurantId">
+                                <button>Order Now</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            }
         }
     }
     else
@@ -252,12 +279,24 @@
                     <span>@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterHome")?.Value</span>
                 </a>
             </div>
-            <div>
-                <a asp-controller="Location" asp-action="PickUp">
-                    <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterMenuImg")?.Value" alt="" />
-                    <span>@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterMenu")?.Value</span>
-                </a>
-            </div>
+            if (Model.CustomUser.SelectedRestaurantId == 0 || Model.CustomUser.SelectedRestaurantId == null)
+            {
+                <div>
+                    <a asp-controller="Location" asp-action="PickUp">
+                        <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterMenuImg")?.Value" alt="" />
+                        <span>@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterMenu")?.Value</span>
+                    </a>
+                </div>
+            }
+            else
+            {
+                <div>
+                    <a asp-controller="Menu" asp-action="Index" asp-route-id="@Model.CustomUser.SelectedRestaurantId">
+                        <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterMenuImg")?.Value" alt="" />
+                        <span>@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterMenu")?.Value</span>
+                    </a>
+                </div>
+            }
             <div>
                 <a href="~/../Offer/offer.html">
                     <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterOfferImg")?.Value" alt="" />
@@ -291,13 +330,13 @@
 
 
 <script>
-    function confirmLocationChange() {
-        var confirmation = confirm("If you change your location, your products will be deleted. Are you sure?");
-        if (confirmation) {
 
-            
-        } else {
+    document.getElementById('changeLocationLink').addEventListener('click', function (e) {
+        e.preventDefault(); 
 
+        alert('If you change your location, your orders will be deleted');
+        if (confirm('Are you sure?')) {
+            window.location.href = this.href; 
         }
-    }
+    });
 </script>

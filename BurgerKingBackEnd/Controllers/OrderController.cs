@@ -22,6 +22,14 @@ namespace BurgerKingBackEnd.Controllers
         }
 
 
+        public async Task<IActionResult> Index()
+        {
+            CustomUser user = await _userManager.GetUserAsync(User);
+            List<Order> order = _context.Orders.Where(x => x.CustomUserId == user.Id).Where(x => x.IsSubmited == true).Include(x=>x.cardItems).ToList();
+
+            return Json(order);
+        }
+
         [HttpPost]
         public async Task<IActionResult> Delivery(string unit , string instructions , int phone)
         {
@@ -49,7 +57,7 @@ namespace BurgerKingBackEnd.Controllers
         public async Task<IActionResult> PickUp(string option)
         {
             CustomUser user = await _userManager.GetUserAsync(User);
-            List<CardItem> cardItems = _context.CardItems.Where(x => x.UserId == user.Id).Where(x => x.OrderType == false).ToList();
+            List<CardItem> cardItems = _context.CardItems.Where(x => x.UserId == user.Id).Where(x => x.OrderType == true).ToList();
             Order order = new Order
             {
                 IsSubmited = false,
@@ -71,16 +79,13 @@ namespace BurgerKingBackEnd.Controllers
         [HttpPost]
         public async Task<IActionResult> DeliveryPayment(string nameOnCard, int creditCardNumber , DateTime expirationDate , int cvv , int zipcode)
         {
-           
-
             CustomUser user = await _userManager.GetUserAsync(User);
             //Order order = _context.Orders.Where(x=>x.PickUpType == false).Where(x=>x.IsSubmited == true).FirstOrDefault(x => x.CustomUserId == user.Id);
-            Order order = _context.Orders.Where(x=>x.CustomUserId == user.Id).FirstOrDefault(x=>x.IsSubmited == false);
+            Order order = _context.Orders.Where(x=>x.CustomUserId == user.Id).Where(x => x.PickUpType == false).FirstOrDefault(x=>x.IsSubmited == false);
             if (order is null)
             {
                 return BadRequest();
             }
-
             order.IsSubmited = true;
             _context.SaveChanges();
 
@@ -95,6 +100,8 @@ namespace BurgerKingBackEnd.Controllers
                 CVV = cvv,
                 ZipCode = zipcode,
                 OrderId = order.Id,
+                
+               
 
             };
             await _context.AddAsync(card);
@@ -124,7 +131,7 @@ namespace BurgerKingBackEnd.Controllers
         {
             CustomUser user = await _userManager.GetUserAsync(User);
             //Order order = _context.Orders.Where(x=>x.PickUpType == true).Where(x=>x.IsSubmited==true).FirstOrDefault(x => x.CustomUserId == user.Id);
-            Order order = _context.Orders.Where(x => x.CustomUserId == user.Id).FirstOrDefault(x => x.IsSubmited == false);
+            Order order = _context.Orders.Where(x => x.CustomUserId == user.Id).Where(x => x.PickUpType == true).FirstOrDefault(x => x.IsSubmited == false)!;
             if (order is null)
             {
                 return BadRequest();
@@ -146,6 +153,7 @@ namespace BurgerKingBackEnd.Controllers
                 OrderId = order.Id,
 
             };
+
             await _context.AddAsync(card);
             await _context.SaveChangesAsync();
 

@@ -1,0 +1,93 @@
+﻿@model BurgerMenuVM
+<header>
+    <div class="navbar">
+        <div class="top">
+            <a class="burgermenu" asp-controller="Home" asp-action="Index">
+                <img src="./../../Assets/Icons/close.png" alt="" />
+            </a>
+           @*  <a class="logo" href="../Home/home.html">
+                <img src="./../../Assets/Icons/burger-king.png" alt="" />
+            </a> *@
+            <div class="buttons">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="account" asp-controller="Account" asp-action="Index">
+                        <button>@User.Identity.Name</button>
+                    </a>
+
+                }
+                else
+                {
+                    <a class="account" asp-controller="Account" asp-action="Register">
+                        <button>Sign Up/Sign In</button>
+                    </a>
+                }
+                @* <a class="basket" href="../Sign-Up/signup.html">
+                    <button>
+                        <img src="./../../Assets/Icons/basket.png" alt="" />
+                        $0.00
+                    </button>
+                </a> *@
+            </div>
+        </div>
+@*         <div class="bottom">
+            <a href="../Locations/location.html">
+                <img src="../../Assets/Icons/map.png" alt="" />
+                <span>For availability</span>
+                <span>Choose location</span>
+            </a>
+        </div> *@
+    </div>
+    <div class="menu-wrapper">
+        <div class="menus">
+            <div class="menu">
+                <span>About</span>
+                <a asp-controller="About" asp-action="Index">
+                    <img src="../../Assets/Icons/right-arrow.png" alt="" />
+                </a>
+            </div>
+            <div class="menu">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <span>Account Info</span>
+                    <a asp-controller="Account" asp-action="Index">
+                        <img src="../../Assets/Icons/right-arrow.png" alt="" />
+                    </a>
+
+                }
+                else
+                {
+                    <span>Account Info</span>
+                    <a asp-controller="Account" asp-action="Register">
+                        <img src="../../Assets/Icons/right-arrow.png" alt="" />
+                    </a>
+                }
+            </div>
+          @*   @if (User.Identity.IsAuthenticated)
+            {
+                <div class="menu">
+                    <span>Recent Orders</span>
+                    <a asp-controller="RecentOrder" asp-action="Index">
+                        <img src="../../Assets/Icons/right-arrow.png" alt="" />
+                    </a>
+                </div>
+            }
+            else
+            {
+                <div class="menu">
+                    <span>Recent Orders</span>
+                    <a asp-controller="Account" asp-action="Register">
+                        <img src="../../Assets/Icons/right-arrow.png" alt="" />
+                    </a>
+                </div>
+            } *@
+          
+@*             <div class="menu">
+                <span>Find a Restaurant</span>
+                <a href="../Locations/location.html">
+                    <img src="../../Assets/Icons/right-arrow.png" alt="" />
+                </a>
+            </div> *@
+        </div>
+    </div>
+</header>

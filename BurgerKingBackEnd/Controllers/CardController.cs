@@ -44,7 +44,6 @@ namespace BurgerKingBackEnd.Controllers
                     RestaurantId = uniqueItem.RestaurantId,
                     OrderType = uniqueItem.OrderType,
                     
-                    
                 }).ToList();
 
 
