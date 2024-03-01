@@ -1,0 +1,31 @@
+﻿@model DeliveryVM
+
+<div class="delivery-job-hiring-header">
+    <div>
+        <div>
+            <a href="">
+                <button><img src="../../Assets/Icons/close.png" alt="" /></button>
+            </a>
+        </div>
+        <div>
+            <div>Join Our Team</div>
+        </div>
+        <div></div>
+    </div>
+</div>
+<div class="delivery-orders-index">
+    @foreach (Order order in Model.Orders)
+    {
+        <div class="orders-index">
+            <div class="detail">
+                <span>@Model.Restaurant.FirstOrDefault(x=>x.Id == order.CustomUser.SelectedRestaurantId).Title</span>
+                <span>Price of products: @order.cardItems.Sum(x=>x.Price)</span>
+                <span>Your earning: @Math.Round(order.cardItems.Sum(x => x.Price) * 0.1m, 2)</span>
+            </div>
+            <a asp-controller="Delivery" asp-action="Detail" asp-route-id="@order.Id">
+
+               <button asp-controller="Delivery" asp-action="Detail" asp-route-id="@order.Id">Detail</button>
+            </a>
+        </div>
+    }
+</div>

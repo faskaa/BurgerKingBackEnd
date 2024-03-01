@@ -1,0 +1,182 @@
+.delivery-job-hiring-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(80, 35, 20);
+  height: 60px;
+  margin-bottom: 50px;
+  div {
+    @include container();
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: "Flame Sans";
+      text-decoration: none;
+      font-weight: bold;
+      color: white;
+      font-size: 30px;
+      width: 100%;
+      @include for-size(mobile){
+        font-family: "Flame Sans";
+        text-decoration: none;
+        font-weight: bold;
+        color: white;
+        font-size: 17px;
+        width: 100%;
+      }
+      a {
+
+        button {
+          cursor: pointer;
+          background-color: transparent;
+          border: none;
+          &:hover {
+            transition: 0.2s;
+            opacity: 0.5;
+          }
+
+          img {
+            width: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.delivery-job-hiring {
+  @include container();
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 375px;
+
+  label {
+    font-family: "Flame Sans";
+    line-height: 20px;
+    color: rgb(80, 35, 20);
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  input {
+    width: 100%;
+
+    margin-bottom: 20px;
+    outline: none;
+    cursor: auto;
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    border: 2px solid rgb(245, 235, 220);
+    border-radius: 12px;
+    &:hover {
+      border: 2px solid rgb(136, 136, 99);
+      transition: 0.3s;
+    }
+    padding-left: 10px;
+    &::placeholder {
+      font-size: 14px;
+      font-family: "Flame Sans";
+      color: rgb(80, 35, 20);
+    }
+  }
+
+  select {
+    width: 100%;
+
+    margin-bottom: 20px;
+    outline: none;
+    cursor: auto;
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    border: 2px solid rgb(245, 235, 220);
+    border-radius: 12px;
+    &:hover {
+      border: 2px solid rgb(136, 136, 99);
+      transition: 0.3s;
+    }
+    padding-left: 10px;
+    &::placeholder {
+      font-size: 14px;
+      font-family: "Flame Sans";
+      color: rgb(80, 35, 20);
+    }
+
+    option {
+      width: 100%;
+
+      margin-bottom: 20px;
+      outline: none;
+      cursor: auto;
+      background-color: rgb(255, 255, 255);
+      height: 50px;
+      border: 2px solid rgb(245, 235, 220);
+      border-radius: 12px;
+      &:hover {
+        border: 2px solid rgb(136, 136, 99);
+        transition: 0.3s;
+      }
+      padding-left: 10px;
+      &::placeholder {
+        font-size: 14px;
+        font-family: "Flame Sans";
+        color: rgb(80, 35, 20);
+      }
+    }
+  }
+
+  textarea {
+    width: 100%;
+
+    margin-bottom: 20px;
+    outline: none;
+    cursor: auto;
+    background-color: rgb(255, 255, 255);
+    height: 50px;
+    border: 2px solid rgb(245, 235, 220);
+    border-radius: 12px;
+    &:hover {
+      border: 2px solid rgb(136, 136, 99);
+      transition: 0.3s;
+    }
+    padding-left: 10px;
+    &::placeholder {
+      font-size: 14px;
+      font-family: "Flame Sans";
+      color: rgb(80, 35, 20);
+    }
+  }
+
+  button {
+    background-color: red;
+    height: 48px;
+    width: 50%;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+      rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+    border: none;
+    font-size: 15px;
+    font-family: "Flame Sans";
+    color: rgb(80, 35, 20);
+    margin-bottom: 20px;
+    &:hover {
+      border: 1px solid rgb(136, 136, 99);
+      transition: 0.2s;
+      opacity: 0.5;
+    }
+
+    font-family: "Flame Sans";
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 20px;
+  }
+}

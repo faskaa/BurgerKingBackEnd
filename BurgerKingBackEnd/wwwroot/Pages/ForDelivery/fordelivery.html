@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../../SCSS/main.css" />
+    <link
+      href="https://db.onlinewebfonts.com/c/29eee6d957e73039264c9de9fd949d20?family=Flame+Sans"
+      rel="stylesheet"
+    />
+    <link
+      href="https://db.onlinewebfonts.com/c/565a681be0eb6f1d92c6bc57c629ea35?family=Flame+Bold"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="delivery-job-hiring-header">
+      <div>
+        <div>
+          <a href="">
+            <button><img src="../../Assets/Icons/close.png" alt="" /></button>
+          </a>
+        </div>
+        <div>
+          <div>Join Our Team</div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <div class="div">
+      <form class="delivery-job-hiring" method="post">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required />
+
+        <label for="phone">Phone Number:</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          pattern="[0-9]{10}"
+          required
+        />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" required></textarea>
+
+        <label for="license">Driver's License Number:</label>
+        <input type="text" id="license" name="license" required />
+
+        <label for="experience">Driving Experience (years):</label>
+        <input
+          type="number"
+          id="experience"
+          name="experience"
+          min="0"
+          required
+        />
+
+        <label for="vehicle">Vehicle Type:</label>
+        <select id="vehicle" name="vehicle" required>
+          <option value="car">Car</option>
+          <option value="motorcycle">Motorcycle</option>
+          <option value="van">Van</option>
+        </select>
+
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </body>
+</html>

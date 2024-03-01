@@ -1,4 +1,5 @@
-﻿@model BurgerMenuVM
+﻿@using BurgerKingBackEnd.Helpers;
+@model BurgerMenuVM
 <header>
     <div class="navbar">
         <div class="top">
@@ -46,7 +47,7 @@
                     <img src="../../Assets/Icons/right-arrow.png" alt="" />
                 </a>
             </div>
-            <div class="menu">
+@*             <div class="menu">
                 @if (User.Identity.IsAuthenticated)
                 {
                     <span>Account Info</span>
@@ -62,29 +63,40 @@
                         <img src="../../Assets/Icons/right-arrow.png" alt="" />
                     </a>
                 }
-            </div>
-          @*   @if (User.Identity.IsAuthenticated)
+            </div> *@
+            @if (User.Identity.IsAuthenticated)
             {
-                <div class="menu">
-                    <span>Recent Orders</span>
-                    <a asp-controller="RecentOrder" asp-action="Index">
-                        <img src="../../Assets/Icons/right-arrow.png" alt="" />
-                    </a>
-                </div>
+                @if (Model.IsCourier == true)
+               {
+                    <div class="menu">
+                        <span>Work</span>
+                        <a asp-controller="Delivery" asp-action="Orders">
+                            <img src="../../Assets/Icons/right-arrow.png" alt="" />
+                        </a>
+                    </div>
+                }
+                else
+                {
+                    <div class="menu">
+                        <span>Work</span>
+                        <a asp-controller="Delivery" asp-action="Index">
+                            <img src="../../Assets/Icons/right-arrow.png" alt="" />
+                        </a>
+                    </div>
+                }
             }
             else
             {
                 <div class="menu">
-                    <span>Recent Orders</span>
+                    <span>Work</span>
                     <a asp-controller="Account" asp-action="Register">
                         <img src="../../Assets/Icons/right-arrow.png" alt="" />
                     </a>
                 </div>
-            } *@
-          
-@*             <div class="menu">
-                <span>Find a Restaurant</span>
-                <a href="../Locations/location.html">
+            }
+          @*   <div class="menu">
+                <span>Work</span>
+                <a asp-controller="Delivery" asp-action="Index">
                     <img src="../../Assets/Icons/right-arrow.png" alt="" />
                 </a>
             </div> *@

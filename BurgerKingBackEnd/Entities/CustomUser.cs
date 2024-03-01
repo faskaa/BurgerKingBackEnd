@@ -6,6 +6,7 @@ namespace BurgerKingBackEnd.Entities
     {
         public int SelectedRestaurantId { get; set; }
         public List<Order> Orders { get; set; }
+        public Courier Courier { get; set; }
 
     }
 }

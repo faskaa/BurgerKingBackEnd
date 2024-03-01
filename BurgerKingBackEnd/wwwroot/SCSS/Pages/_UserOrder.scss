@@ -1,0 +1,36 @@
+.user-order-detail {
+  @include container();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+
+  .progress-bar {
+    margin-top: 100px;
+    width: 80%; /* Adjust the width as needed */
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    .progress {
+      height: 100%;
+      background-color: #3498db;
+      transition: width 0.3s ease-in-out;
+    }
+  }
+
+
+  .order-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 320px;
+    span {
+      font-size: 20px;
+      font-family: "Flame Sans";
+      color: rgb(80, 35, 20);
+      font-weight: bold;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+﻿@model Order
+<div class="delivery-job-hiring-header">
+    <div>
+        <div>
+            <a href="">
+                <button><img src="../../Assets/Icons/close.png" alt="" /></button>
+            </a>
+        </div>
+        <div>
+            <div>Delivery Detail</div>
+        </div>
+        <div></div>
+    </div>
+</div>
+<div class="delivery-order-detail">
+    <div class="user-detail">
+        <span>Orderer's User Name: @Model.CustomUser.UserName</span>
+        <span>Orderer's Email:  @Model.CustomUser.Email</span>
+        <span>Orderer's Unit:  @Model.Unit</span>
+        <span>Orderer's Delivery Instructuions:  @Model.DeliveryInstruction</span>
+        <span>Orderer's Phone Number:  @Model.PhoneNumber</span>
+    </div>
+    <div class="items">
+        @foreach (var item in Model.cardItems)
+        {
+            
+        <div class="item">
+            <span>@item.Title</span>
+            <span>@item.Quantity</span>
+        </div>
+        }
+    </div>
+    <div class="delivery-code">
+        <span>Your Code:</span>
+        <span>12305</span>
+    </div>
+    <div class="submitbtn">
+        <button>Take</button>
+    </div>
+</div>

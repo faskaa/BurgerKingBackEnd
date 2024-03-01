@@ -4094,3 +4094,422 @@ div.menu-wrapper .menus .menu img {
   opacity: 0.5;
   transition: 0.2S;
 }
+
+.delivery-job-hiring-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: rgb(80, 35, 20);
+  height: 60px;
+  margin-bottom: 50px;
+}
+.delivery-job-hiring-header div {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 1200px) {
+  .delivery-job-hiring-header div {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .delivery-job-hiring-header div {
+    width: 375px;
+    margin: auto;
+  }
+}
+.delivery-job-hiring-header div div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Flame Sans";
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  width: 100%;
+}
+@media screen and (max-width: 767px) {
+  .delivery-job-hiring-header div div {
+    font-family: "Flame Sans";
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 17px;
+    width: 100%;
+  }
+}
+.delivery-job-hiring-header div div a button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+.delivery-job-hiring-header div div a button:hover {
+  transition: 0.2s;
+  opacity: 0.5;
+}
+.delivery-job-hiring-header div div a button img {
+  width: 20px;
+}
+
+.delivery-job-hiring {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 375px;
+}
+@media screen and (max-width: 1200px) {
+  .delivery-job-hiring {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .delivery-job-hiring {
+    width: 375px;
+    margin: auto;
+  }
+}
+.delivery-job-hiring label {
+  font-family: "Flame Sans";
+  line-height: 20px;
+  color: rgb(80, 35, 20);
+  text-decoration: none;
+  font-weight: bold;
+}
+.delivery-job-hiring input {
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  cursor: auto;
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  border: 2px solid rgb(245, 235, 220);
+  border-radius: 12px;
+  padding-left: 10px;
+}
+.delivery-job-hiring input:hover {
+  border: 2px solid rgb(136, 136, 99);
+  transition: 0.3s;
+}
+.delivery-job-hiring input::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.delivery-job-hiring input::placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.delivery-job-hiring select {
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  cursor: auto;
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  border: 2px solid rgb(245, 235, 220);
+  border-radius: 12px;
+  padding-left: 10px;
+}
+.delivery-job-hiring select:hover {
+  border: 2px solid rgb(136, 136, 99);
+  transition: 0.3s;
+}
+.delivery-job-hiring select::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.delivery-job-hiring select::placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.delivery-job-hiring select option {
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  cursor: auto;
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  border: 2px solid rgb(245, 235, 220);
+  border-radius: 12px;
+  padding-left: 10px;
+}
+.delivery-job-hiring select option:hover {
+  border: 2px solid rgb(136, 136, 99);
+  transition: 0.3s;
+}
+.delivery-job-hiring select option::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.delivery-job-hiring select option::placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.delivery-job-hiring textarea {
+  width: 100%;
+  margin-bottom: 20px;
+  outline: none;
+  cursor: auto;
+  background-color: rgb(255, 255, 255);
+  height: 50px;
+  border: 2px solid rgb(245, 235, 220);
+  border-radius: 12px;
+  padding-left: 10px;
+}
+.delivery-job-hiring textarea:hover {
+  border: 2px solid rgb(136, 136, 99);
+  transition: 0.3s;
+}
+.delivery-job-hiring textarea::-moz-placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.delivery-job-hiring textarea::placeholder {
+  font-size: 14px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.delivery-job-hiring button {
+  background-color: red;
+  height: 48px;
+  width: 50%;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border: none;
+  font-size: 15px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  margin-bottom: 20px;
+  font-family: "Flame Sans";
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  font-size: 20px;
+}
+.delivery-job-hiring button:hover {
+  border: 1px solid rgb(136, 136, 99);
+  transition: 0.2s;
+  opacity: 0.5;
+}
+
+.delivery-orders-index {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .delivery-orders-index {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .delivery-orders-index {
+    width: 375px;
+    margin: auto;
+  }
+}
+.delivery-orders-index .orders-index {
+  width: 100%;
+  height: 100px;
+  border-radius: 20px;
+  background-color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.delivery-orders-index .orders-index .detail {
+  display: flex;
+  flex-direction: column;
+}
+.delivery-orders-index .orders-index .detail span {
+  font-size: 20px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+.delivery-orders-index .orders-index button {
+  border: none;
+  height: 50px;
+  width: 250px;
+  background-color: red;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-family: "Flame Sans";
+  color: white;
+  font-weight: bold;
+}
+.delivery-orders-index .orders-index button:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+
+.delivery-order-detail {
+  width: 1200px;
+  margin: auto;
+  background-color: white;
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+@media screen and (max-width: 1200px) {
+  .delivery-order-detail {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .delivery-order-detail {
+    width: 375px;
+    margin: auto;
+  }
+}
+.delivery-order-detail .user-detail {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 50px;
+  margin-bottom: 20px;
+}
+.delivery-order-detail .user-detail span {
+  font-size: 20px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+.delivery-order-detail span {
+  font-size: 20px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+.delivery-order-detail .items {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.delivery-order-detail .items .item {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: antiquewhite;
+  border-radius: 20px;
+  padding: 5px;
+  width: 100%;
+}
+.delivery-order-detail .items .item span {
+  font-size: 20px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}
+.delivery-order-detail .delivery-code {
+  margin-top: 20px;
+}
+.delivery-order-detail .delivery-code span:nth-child(1) {
+  font-size: 20px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.delivery-order-detail .delivery-code span:nth-child(2) {
+  font-size: 20px;
+  font-family: "Flame Sans";
+  color: rgb(255, 64, 0);
+  font-weight: bold;
+}
+.delivery-order-detail .submitbtn {
+  margin-top: 20px;
+}
+.delivery-order-detail .submitbtn button {
+  font-size: 20px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+  border: none;
+  height: 50px;
+  width: 250px;
+  background-color: red;
+  border-radius: 40px;
+  color: white;
+  font-weight: bold;
+}
+.delivery-order-detail .submitbtn button:hover {
+  opacity: 50%;
+  transition: 0.3s;
+}
+
+.user-order-detail {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .user-order-detail {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .user-order-detail {
+    width: 375px;
+    margin: auto;
+  }
+}
+.user-order-detail .progress-bar {
+  margin-top: 100px;
+  width: 80%; /* Adjust the width as needed */
+  height: 20px;
+  background-color: #e0e0e0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.user-order-detail .progress-bar .progress {
+  height: 100%;
+  background-color: #3498db;
+  transition: width 0.3s ease-in-out;
+}
+.user-order-detail .order-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 320px;
+}
+.user-order-detail .order-info span {
+  font-size: 20px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+  font-weight: bold;
+}

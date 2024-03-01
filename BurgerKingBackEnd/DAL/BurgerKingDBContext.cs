@@ -22,6 +22,7 @@ namespace BurgerKingBackEnd.DAL
         public DbSet<CardItem> CardItems { get; set; }
         public DbSet<Order> Orders { get; set; }
         public DbSet<Card> Cards { get; set; }
+        public DbSet<Courier> Courier { get; set; }
 
 
 

@@ -213,6 +213,14 @@
       "PackagePath": "staticwebassets\\Pages\\BurgerMenu\\burgermenu.html"
     },
     {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Delivery-Orders\\derliveryorders.html",
+      "PackagePath": "staticwebassets\\Pages\\Delivery-Orders\\derliveryorders.html"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\DeliveryOrderDetail\\derliveryorderdetail.html",
+      "PackagePath": "staticwebassets\\Pages\\DeliveryOrderDetail\\derliveryorderdetail.html"
+    },
+    {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Delivery\\delivery.html",
       "PackagePath": "staticwebassets\\Pages\\Delivery\\delivery.html"
     },
@@ -227,6 +235,10 @@
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Detail\\detail.js",
       "PackagePath": "staticwebassets\\Pages\\Detail\\detail.js"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\ForDelivery\\fordelivery.html",
+      "PackagePath": "staticwebassets\\Pages\\ForDelivery\\fordelivery.html"
     },
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Home\\home.html",
@@ -293,6 +305,10 @@
       "PackagePath": "staticwebassets\\Pages\\Sub-menu\\submenu.html"
     },
     {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\UserOrders\\userorders.html",
+      "PackagePath": "staticwebassets\\Pages\\UserOrders\\userorders.html"
+    },
+    {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Base\\_reset.scss",
       "PackagePath": "staticwebassets\\SCSS\\Base\\_reset.scss"
     },
@@ -325,8 +341,20 @@
       "PackagePath": "staticwebassets\\SCSS\\Pages\\_Delivery.scss"
     },
     {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_DeliveryOrderDetail.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_DeliveryOrderDetail.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_DeliveryOrders.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_DeliveryOrders.scss"
+    },
+    {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Detail.scss",
       "PackagePath": "staticwebassets\\SCSS\\Pages\\_Detail.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_ForDelivery.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_ForDelivery.scss"
     },
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Home.scss",
@@ -371,6 +399,10 @@
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_SubMenu.scss",
       "PackagePath": "staticwebassets\\SCSS\\Pages\\_SubMenu.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_UserOrder.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_UserOrder.scss"
     },
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Utils\\_mixins.scss",
