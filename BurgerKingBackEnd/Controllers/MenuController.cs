@@ -152,27 +152,77 @@ namespace BurgerKingBackEnd.Controllers
         }
 
 
+        //[HttpPost]
+        //public async Task<IActionResult> DeliveryAddOrder(int restaurantId, int productId, int quantity, string size)
+        //{
+
+
+        //    CustomUser user = await _userManager.GetUserAsync(User);
+        //    List<CardItem> items = _context.CardItems.Where(x => x.UserId == user.Id).Where(x => x.RestaurantId == restaurantId).Where(x => x.OrderType == false).ToList();
+        //    Product product = _context.RestaurantProduct.Include(x => x.Product).Include(x => x.Restaurant).Where(x => x.RestaurantId == restaurantId).FirstOrDefault(x => x.ProductId == productId)!.Product;
+        //    if (product is null) return BadRequest();
+        //    var currentQuantity = _context.RestaurantProduct.Where(x => x.RestaurantId == restaurantId).FirstOrDefault(x => x.ProductId == productId)!.Count;
+        //    var itemsQuantitySum = items.Sum(x => x.Quantity);
+        //    var resultQuantity = quantity + itemsQuantitySum;
+        //    if (quantity > currentQuantity)
+        //    {
+        //        TempData["ErrorMessage"] = "The amount you have entered is more than the available amount..";
+        //        return RedirectToAction("DeliveryDetail", new { RestaurantId = restaurantId, ProductId = productId });
+        //    }
+        //    if (resultQuantity > currentQuantity)
+        //    {
+        //        TempData["ErrorMessage"] = "The amount you have entered is more than the available amount..";
+        //        return RedirectToAction("DeliveryDetail", new { RestaurantId = restaurantId, ProductId = productId });
+        //    }
+        //    {
+        //        CardItem cardItem = new CardItem
+        //        {
+        //            UserId = user.Id,
+        //            ProductId = product.Id,
+        //            RestaurantId = restaurantId,
+        //            Title = product.Title,
+        //            Description = product.Description,
+        //            Price = product.Price * quantity,
+        //            Size = size,
+        //            Quantity = quantity,
+        //            OrderType = false
+
+
+        //        };
+
+        //        _context.Add(cardItem);
+        //        _context.SaveChanges();
+
+        //        user.SelectedRestaurantId = restaurantId;
+        //        _context.SaveChanges();
+
+        //        return RedirectToAction("Delivery", "Card");
+        //    }
+        //}
+
+
         [HttpPost]
         public async Task<IActionResult> DeliveryAddOrder(int restaurantId, int productId, int quantity, string size)
         {
 
 
             CustomUser user = await _userManager.GetUserAsync(User);
-            List<CardItem> items = _context.CardItems.Where(x => x.UserId == user.Id).Where(x => x.RestaurantId == restaurantId).Where(x => x.OrderType == true).ToList();
+            List<CardItem> items = _context.CardItems.Where(x => x.UserId == user.Id).Where(x => x.RestaurantId == restaurantId).Where(x => x.OrderType == false).ToList();
             Product product = _context.RestaurantProduct.Include(x => x.Product).Include(x => x.Restaurant).Where(x => x.RestaurantId == restaurantId).FirstOrDefault(x => x.ProductId == productId)!.Product;
             if (product is null) return BadRequest();
             var currentQuantity = _context.RestaurantProduct.Where(x => x.RestaurantId == restaurantId).FirstOrDefault(x => x.ProductId == productId)!.Count;
-            var itemsQuantitySum = items.Sum(x => x.Quantity);
+            List<CardItem> item = _context.CardItems.Where(x => x.UserId == user.Id).Where(x => x.RestaurantId == restaurantId).Where(x => x.OrderType == false).Where(x => x.ProductId == productId).ToList();
+            var itemsQuantitySum = item.Sum(x => x.Quantity);
             var resultQuantity = quantity + itemsQuantitySum;
             if (quantity > currentQuantity)
             {
                 TempData["ErrorMessage"] = "The amount you have entered is more than the available amount..";
-                return RedirectToAction("Detail", new { RestaurantId = restaurantId, ProductId = productId });
+                return RedirectToAction("DeliveryDetail", new { RestaurantId = restaurantId, ProductId = productId });
             }
             if (resultQuantity > currentQuantity)
             {
                 TempData["ErrorMessage"] = "The amount you have entered is more than the available amount..";
-                return RedirectToAction("Detail", new { RestaurantId = restaurantId, ProductId = productId });
+                return RedirectToAction("DeliveryDetail", new { RestaurantId = restaurantId, ProductId = productId });
             }
             {
                 CardItem cardItem = new CardItem
@@ -199,6 +249,9 @@ namespace BurgerKingBackEnd.Controllers
                 return RedirectToAction("Delivery", "Card");
             }
         }
+
+
+
 
         public async Task<IActionResult> DeleteUserOrders()
         {

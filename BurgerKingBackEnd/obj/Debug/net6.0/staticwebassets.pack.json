@@ -293,6 +293,10 @@
       "PackagePath": "staticwebassets\\Pages\\Recent-Orders\\recent-order.html"
     },
     {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Selector\\selector.html",
+      "PackagePath": "staticwebassets\\Pages\\Selector\\selector.html"
+    },
+    {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Sign-Up\\signup.html",
       "PackagePath": "staticwebassets\\Pages\\Sign-Up\\signup.html"
     },
@@ -387,6 +391,10 @@
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Recent-Order.scss",
       "PackagePath": "staticwebassets\\SCSS\\Pages\\_Recent-Order.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Selector.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_Selector.scss"
     },
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_SignUp.scss",

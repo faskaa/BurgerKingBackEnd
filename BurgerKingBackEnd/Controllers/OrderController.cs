@@ -177,6 +177,78 @@ namespace BurgerKingBackEnd.Controllers
 
         }
 
+        public async Task<IActionResult> MyOrders()
+        {
+            
+
+            CustomUser user = await _userManager.GetUserAsync(User);
+            List<Order> orders = _context.Orders.Where(x=>x.CustomUserId == user.Id).Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Include(x => x.cardItems).Include(x => x.CustomUser).ToList();
+            List<Restaurant> restaurants = _context.Restaurant.ToList();
+            if (orders.Count > 0)
+            {
+                OrderVM orderVM = new OrderVM
+                {
+
+                    CustomUser = user,
+                    Orders = orders,
+                    Restaurant = restaurants,
+                };
+
+                return View(orderVM);
+
+            }
+            else
+            {
+                return BadRequest() ;
+            }
+        }
+        
+
+        public async Task<IActionResult> Detail(int id)
+        {
+
+
+            CustomUser user = await _userManager.GetUserAsync(User);
+            if (id == 0) return BadRequest();
+            Order order = _context.Orders.Where(x => x.CustomUserId == user.Id).Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Include(x => x.cardItems).Include(x => x.CustomUser).FirstOrDefault(x=>x.Id == id);
+            if (order == null ) return NotFound();
+            
+            List<Restaurant> restaurants = _context.Restaurant.ToList();
+
+            //OrderVM orderVM = new OrderVM
+            //{
+
+            //    CustomUser = user,
+            //    Orders = orde,
+            //    Restaurant = restaurants,
+            //};
+
+            return View(order);
+        }
+
+        public async Task<IActionResult> TakeOrder(int id)
+        {
+
+
+            CustomUser user = await _userManager.GetUserAsync(User);
+            if (id == 0) return BadRequest();
+            Order order = _context.Orders.Where(x => x.CustomUserId == user.Id).Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Include(x => x.cardItems).Include(x => x.CustomUser).FirstOrDefault(x => x.Id == id);
+            if (order == null) return NotFound();
+
+            order.Status = false;
+            await _context.SaveChangesAsync();
+            //List<Restaurant> restaurants = _context.Restaurant.ToList();
+
+            //OrderVM orderVM = new OrderVM
+            //{
+
+            //    CustomUser = user,
+            //    Orders = orde,
+            //    Restaurant = restaurants,
+            //};
+
+            return View(order);
+        }
 
     }
 }

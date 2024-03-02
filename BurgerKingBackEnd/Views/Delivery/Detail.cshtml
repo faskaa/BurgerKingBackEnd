@@ -35,6 +35,8 @@
         <span>12305</span>
     </div>
     <div class="submitbtn">
-        <button>Take</button>
+        <a asp-controller="Order" asp-action="TakeOrder" asp-route-id="@Model.Id">
+            <button>Take</button>
+        </a>
     </div>
 </div>

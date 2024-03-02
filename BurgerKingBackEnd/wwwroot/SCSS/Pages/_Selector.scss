@@ -1,0 +1,30 @@
+.selector-card-item-type{
+    @include container();
+    display: flex;
+    justify-content: space-around ;
+    div{
+
+        a{
+
+
+            button {
+                &:hover {
+                  opacity: 50%;
+                  transition: 0.3s;
+                }
+                cursor: pointer;
+      
+                background-color: rgb(214, 35, 0);
+                width: 300px;
+                height: 55px;
+                border-radius: 9999px;
+                border: none;
+                font-size: 18px;
+                color: white;
+                font-family: "Flame Sans";
+                font-weight: bold;
+               
+              }
+        }
+    }
+}

@@ -25,12 +25,14 @@ namespace BurgerKingBackEnd.Controllers
         {
             CustomUser user = await _userManager.GetUserAsync(User);
             //IList<string> userRole = await _userManager.GetRolesAsync(user);
+            List<Order> orders = _context.Orders.Where(x => x.CustomUserId == user.Id).Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).ToList();
             if (user == null)
             {
                 BurgerMenuVM burgerMenuVM = new BurgerMenuVM
                 {
                     CustomUser = user,
                     IsCourier = false,
+                    Order = orders
                 };
                 return View(burgerMenuVM);
             }
@@ -41,6 +43,7 @@ namespace BurgerKingBackEnd.Controllers
                 {
                     CustomUser = user,
                     IsCourier = userRole,
+                    Order = orders
                 };
 
               return View(burgerMenuVM);

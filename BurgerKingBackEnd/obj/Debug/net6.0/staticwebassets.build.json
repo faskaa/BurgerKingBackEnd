@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "n4OMwbcg0EX+a4RNYtK6fwA6GncEOipHALNOnPDpT/Y=",
+  "Hash": "43ahgDlnhUTSwPEfnWSE+8iZPb7MmlgXe22F3TbcSDE=",
   "Source": "BurgerKingBackEnd",
   "BasePath": "_content/BurgerKingBackEnd",
   "Mode": "Default",
@@ -1258,6 +1258,23 @@
       "OriginalItemSpec": "wwwroot\\Pages\\Recent-Orders\\recent-order.html"
     },
     {
+      "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Selector\\selector.html",
+      "SourceId": "BurgerKingBackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\",
+      "BasePath": "_content/BurgerKingBackEnd",
+      "RelativePath": "Pages/Selector/selector.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Pages\\Selector\\selector.html"
+    },
+    {
       "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Sign-in\\signin.html",
       "SourceId": "BurgerKingBackEnd",
       "SourceType": "Discovered",
@@ -1698,6 +1715,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\SCSS\\Pages\\_Recent-Order.scss"
+    },
+    {
+      "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Selector.scss",
+      "SourceId": "BurgerKingBackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\",
+      "BasePath": "_content/BurgerKingBackEnd",
+      "RelativePath": "SCSS/Pages/_Selector.scss",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\SCSS\\Pages\\_Selector.scss"
     },
     {
       "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_SignUp.scss",

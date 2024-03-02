@@ -1,0 +1,53 @@
+﻿@model Order
+    <div class="delivery-job-hiring-header">
+      <div>
+        <div>
+          <a href="">
+            <button><img src="../../Assets/Icons/close.png" alt="" /></button>
+          </a>
+        </div>
+        <div>
+          <div>Your Order</div>
+        </div>
+        <div></div>
+      </div>
+    </div>
+    <div class="user-order-detail">
+        <div class="progress-bar">
+        @if (Model.Status==null)
+        {
+            <div class="progress" id="progress" style="width: 8%;"></div>
+        }
+        @if (Model.Status == false)
+        {
+            <div class="progress" id="progress" style="width: 50%;"></div>
+        }
+        @if (Model.Status == true)
+        {
+            <div class="progress" id="progress" style="width: 100%;"></div>
+        }
+        </div>
+        <div class="order-info">
+        @if (Model.Status == null)
+        {
+            <span>Processing</span>
+            <span style="opacity:0.5">En Route</span>
+            <span style="opacity:0.5">Delivered</span>
+            
+        }
+        @if (Model.Status == false)
+        {
+            <span>Processing</span>
+            <span>En Route</span>
+            <span style="opacity:0.5">Delivered</span>
+
+        }
+        @if (Model.Status == true)
+        {
+            <span>Processing</span>
+            <span>En Route</span>
+            <span>Delivered</span>
+
+        }
+        </div>
+    </div>

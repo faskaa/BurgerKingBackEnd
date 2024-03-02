@@ -307,6 +307,59 @@ body {
   background-color: rgb(245, 235, 220);
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+  background-color: rgb(167, 27, 0);
+  border-radius: 9999px;
+  border: none;
+  width: 115px;
+  height: 34px;
+  color: white;
+  font-size: 12px;
+  font-family: "Flame Sans";
+  padding: 10px;
+}
+.dropdown span {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  right: -70px;
+  top: 35px;
+  z-index: 1;
+}
+.dropdown-content div {
+  display: inline-block;
+  background-color: rgb(167, 27, 0);
+  border-radius: 9999px;
+  border: none;
+  width: 115px;
+  height: 34px;
+  padding: 10px;
+  margin-top: 5px;
+}
+.dropdown-content div a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  text-align: center;
+  color: white;
+  font-size: 12px;
+  font-family: "Flame Sans";
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .order .main-section {
   width: 1200px;
   margin: auto;
@@ -4512,4 +4565,39 @@ div.menu-wrapper .menus .menu img {
   font-family: "Flame Sans";
   color: rgb(80, 35, 20);
   font-weight: bold;
+}
+
+.selector-card-item-type {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width: 1200px) {
+  .selector-card-item-type {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .selector-card-item-type {
+    width: 375px;
+    margin: auto;
+  }
+}
+.selector-card-item-type div a button {
+  cursor: pointer;
+  background-color: rgb(214, 35, 0);
+  width: 300px;
+  height: 55px;
+  border-radius: 9999px;
+  border: none;
+  font-size: 18px;
+  color: white;
+  font-family: "Flame Sans";
+  font-weight: bold;
+}
+.selector-card-item-type div a button:hover {
+  opacity: 50%;
+  transition: 0.3s;
 }

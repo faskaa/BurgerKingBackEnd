@@ -2,7 +2,60 @@ body {
   background-color: rgb(245, 235, 220);
 }
 
+.dropdown {
+  position: relative;
+  display: inline-block;
+  background-color: rgb(167, 27, 0);
+  border-radius: 9999px;
+  border: none;
+  width: 115px;
+  height: 34px;
+  color: white;
+  font-size: 12px;
+  font-family: "Flame Sans";
+  padding: 10px;
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ 
+  }
+}
 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: transparent;
+  min-width: 160px;
+  right: -70px;
+  top: 35px;
+  z-index: 1;
+  div {
+    display: inline-block;
+    background-color: rgb(167, 27, 0);
+    border-radius: 9999px;
+    border: none;
+    width: 115px;
+    height: 34px;
+    padding: 10px;
+    margin-top: 5px;
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      text-align: center;
+      color: white;
+      font-size: 12px;
+      font-family: "Flame Sans";
+    }
+  }
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  
+}
 
 .order {
   .main-section {

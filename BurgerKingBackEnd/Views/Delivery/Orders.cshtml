@@ -8,24 +8,37 @@
             </a>
         </div>
         <div>
-            <div>Join Our Team</div>
+            <div>Orders</div>
         </div>
         <div></div>
     </div>
 </div>
 <div class="delivery-orders-index">
+    @if (Model.Orders.Count>0)
+    {
+        
     @foreach (Order order in Model.Orders)
     {
+        
         <div class="orders-index">
             <div class="detail">
                 <span>@Model.Restaurant.FirstOrDefault(x=>x.Id == order.CustomUser.SelectedRestaurantId).Title</span>
                 <span>Price of products: @order.cardItems.Sum(x=>x.Price)</span>
                 <span>Your earning: @Math.Round(order.cardItems.Sum(x => x.Price) * 0.1m, 2)</span>
             </div>
-            <a asp-controller="Delivery" asp-action="Detail" asp-route-id="@order.Id">
-
+            <a style="text-decoration:none" asp-controller="Delivery" asp-action="Detail" asp-route-id="@order.Id">
                <button asp-controller="Delivery" asp-action="Detail" asp-route-id="@order.Id">Detail</button>
             </a>
+        </div>
+        }
+    }
+    else
+    {
+        <div style="display:flex ; align-items:center ; justify-content:center ; flex-direction:column; margin-top:100px;" id="not-found-location">
+            <img style="width:100px" src="~/Assets/Icons/no-results.png">
+            <span id="not-found-span" style="font-size:30px; color: rgb(80, 35, 20); font-weight:bold; font-family:'Flame Sans'">No order yet</span>
+            <span id="not-found-span" style="font-size:20px;color: rgb(80, 35, 20);  margin-top:20px; font-family:'Flame Sans'">There are currently no orders available.</span>
+            <span id="not-found-span" style="font-size:20px;color: rgb(80, 35, 20); font-family:'Flame Sans'">Try another time</span>
         </div>
     }
 </div>

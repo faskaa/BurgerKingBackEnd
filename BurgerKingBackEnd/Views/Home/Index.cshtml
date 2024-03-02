@@ -24,22 +24,57 @@
                 }
                 @if (User.Identity.IsAuthenticated)
                 {
-                    <a class="basket" asp-controller="Card" asp-action="PickUp">
+
+
+                    <div class="dropdown">
+                        <span> Card</span>
+                        <div class="dropdown-content">
+                            <div>
+                                <a asp-controller="Card" asp-action="PickUp">Pick-Up</a>
+                            </div>
+                            <div>
+                                <a asp-controller="Card" asp-action="Delivery">Delivery</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+
+
+                   @*  <a class="basket" asp-controller="Card" asp-action="PickUp">
                         <button>
                             <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBasketImg")?.Value" alt="" />
                             $@Model.CardItemTotalPrice
                         </button>
-                    </a>
+                    </a> *@
                 }
                 else
                 {
-                    <a class="basket" asp-controller="Account" asp-action="Register">
+
+
+                    <div class="dropdown">
+                        <span> Card</span>
+                        <div class="dropdown-content">
+                            <div>
+                                <a asp-controller="Account" asp-action="Register">Pick-Up</a>
+                            </div>
+                            <div>
+                                <a asp-controller="Account" asp-action="Register">Delivery</a>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                   @*  <a class="basket" asp-controller="Account" asp-action="Register">
                         <button>
                             <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBasketImg")?.Value" alt="" />
                             Card
                         </button>
-                    </a>
+                    </a> *@
                 }
+
  
        
             </div>
