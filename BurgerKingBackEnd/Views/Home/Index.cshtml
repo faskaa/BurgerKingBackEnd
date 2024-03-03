@@ -3,9 +3,19 @@
 <header>
     <div class="navbar">
         <div class="top">
-            <a class="burgermenu" asp-controller="BurgerMenu" asp-action="Index">
-                <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBurgerBarImg")?.Value" alt="" />
-            </a>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a class="burgermenu" asp-controller="BurgerMenu" asp-action="Index">
+                    <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBurgerBarImg")?.Value" alt="" />
+                </a>
+
+            }
+            else
+            {
+                <a class="burgermenu" asp-controller="Account" asp-action="Register">
+                    <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBurgerBarImg")?.Value" alt="" />
+                </a>
+            }
             <a class="logo" asp-controller="Home" asp-action="Index">
                 <img src="~/./../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "HeaderBurgerKingLogo")?.Value" alt="" />
             </a>
@@ -24,20 +34,38 @@
                 }
                 @if (User.Identity.IsAuthenticated)
                 {
+                    @if (Model.CustomUser.SelectedRestaurantId == 0 || Model.CustomUser.SelectedRestaurantId == null)
+                    {
+                        <div class="dropdown">
+                            <span> Card</span>
+                            <div class="dropdown-content">
+                                <div>
+                                    <a asp-controller="Location" asp-action="PickUp">Pick-Up</a>
+                                </div>
+                                <div>
+                                    <a asp-controller="Location" asp-action="Delivery">Delivery</a>
 
-
-                    <div class="dropdown">
-                        <span> Card</span>
-                        <div class="dropdown-content">
-                            <div>
-                                <a asp-controller="Card" asp-action="PickUp">Pick-Up</a>
-                            </div>
-                            <div>
-                                <a asp-controller="Card" asp-action="Delivery">Delivery</a>
-
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    }
+                    else
+                    {
+                        
+                        <div class="dropdown">
+                            <span> Card</span>
+                            <div class="dropdown-content">
+                                <div>
+                                    <a asp-controller="Card" asp-action="PickUp">Pick-Up</a>
+                                </div>
+                                <div>
+                                    <a asp-controller="Card" asp-action="Delivery">Delivery</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    }
+
 
 
 
@@ -332,12 +360,12 @@
                     </a>
                 </div>
             }
-            <div>
+           @*  <div>
                 <a href="~/../Offer/offer.html">
                     <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterOfferImg")?.Value" alt="" />
                     <span>@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterOffer")?.Value</span>
                 </a>
-            </div>
+            </div> *@
         }
         else
         {
@@ -353,12 +381,12 @@
                     <span>@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterMenu")?.Value</span>
                 </a>
             </div>
-            <div>
+           @*  <div>
                 <a href="~/../Offer/offer.html">
                     <img src="~/../../Assets/Icons/@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterOfferImg")?.Value" alt="" />
                     <span>@Model.Settings.FirstOrDefault(bm=>bm.Key== "FooterOffer")?.Value</span>
                 </a>
-            </div>
+            </div> *@
         }
     </div>
 </footer>

@@ -32,21 +32,44 @@ namespace BurgerKingBackEnd.Controllers
                 {
                     CustomUser = user,
                     IsCourier = false,
-                    Order = orders
+                    Order = orders,
+                    Courier = null
+                    
                 };
                 return View(burgerMenuVM);
             }
             else
             {
-              bool userRole = await _userManager.IsInRoleAsync(user, Roles.Courier.ToString());
-                BurgerMenuVM burgerMenuVM = new BurgerMenuVM
-                {
-                    CustomUser = user,
-                    IsCourier = userRole,
-                    Order = orders
-                };
 
-              return View(burgerMenuVM);
+              bool userRole = await _userManager.IsInRoleAsync(user, Roles.Courier.ToString());
+                Courier courier = _context.Courier.FirstOrDefault(x=>x.CustomUserId==user.Id);
+                if (courier == null)
+                {
+
+                    BurgerMenuVM burgerMenuVM = new BurgerMenuVM
+                    {
+                        CustomUser = user,
+                        IsCourier = userRole,
+                        Order = orders,
+                        Courier = null
+                        
+                    };
+
+                  return View(burgerMenuVM);
+                }
+                else
+                {
+                    BurgerMenuVM burgerMenuVM = new BurgerMenuVM
+                    {
+                        CustomUser = user,
+                        IsCourier = userRole,
+                        Order = orders,
+                        Courier = courier
+
+                    };
+
+                    return View(burgerMenuVM);
+                }
 
             }
         }

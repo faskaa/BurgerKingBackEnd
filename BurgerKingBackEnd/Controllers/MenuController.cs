@@ -110,7 +110,8 @@ namespace BurgerKingBackEnd.Controllers
             Product product = _context.RestaurantProduct.Include(x=>x.Product).Include(x=>x.Restaurant).Where(x=>x.RestaurantId== restaurantId).FirstOrDefault(x=>x.ProductId==productId)!.Product;
             if (product is null) return BadRequest();
             var currentQuantity = _context.RestaurantProduct.Where(x => x.RestaurantId == restaurantId).FirstOrDefault(x=>x.ProductId== productId)!.Count;
-            var itemsQuantitySum = items.Sum(x => x.Quantity);
+            List<CardItem> item = _context.CardItems.Where(x => x.UserId == user.Id).Where(x => x.RestaurantId == restaurantId).Where(x => x.OrderType == false).Where(x => x.ProductId == productId).ToList();
+            var itemsQuantitySum = item.Sum(x => x.Quantity);
             var resultQuantity = quantity + itemsQuantitySum;
 
             if (quantity > currentQuantity)

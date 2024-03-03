@@ -22,12 +22,12 @@
 
             <br />
 
-            <label  for="instructions">Delivery Instructions (Optional):</label>
+            <label for="instructions">Delivery Instructions (Required):</label>
             <textarea class="textarea"
                       id="instructions"
                       name="instructions"
                       rows="4"
-                      cols="50"></textarea>
+                      cols="50" required></textarea>
 
             <br />
 
@@ -35,13 +35,13 @@
             <input type="tel" id="phone" name="phone" required />
 
             <br />
-            <div class="chexbox">
+            @* <div class="chexbox">
                 <input type="checkbox" />
                 <span>
                     Save My Information. Please save my phone number and delivery
                     address for faster checkout the next time I place an order.
                 </span>
-            </div>
+            </div> *@
         </div>
         <div class="orders-wrapper">
             <h4>Your Card</h4>
@@ -54,7 +54,7 @@
                     </div>
                     <div class="mid">
                         <span class="total-price">Item Total</span>
-                        <span class="price">$@item.Quantity</span>
+                        <span class="price">$@item.Price</span>
                     </div>
 @*                     <div class="bottom">
                         <div class="left">

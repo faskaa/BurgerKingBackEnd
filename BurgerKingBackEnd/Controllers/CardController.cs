@@ -29,7 +29,7 @@ namespace BurgerKingBackEnd.Controllers
             var customUser = await _userManager.GetUserAsync(User);
            
             int restaurantId= _context.Restaurant.FirstOrDefault(r=>r.Id== customUser.SelectedRestaurantId).Id;                                                     //new
-            List<CardItem> cardItem = _context.CardItems.Where(x => x.UserId == customUser.Id).Where(x=>x.RestaurantId== customUser.SelectedRestaurantId).Where(x=>x.OrderType == true).ToList();
+            List<CardItem> cardItem = _context.CardItems.Where(x => x.UserId == customUser.Id).Where(x=>x.RestaurantId== customUser.SelectedRestaurantId).Where(x=>x.OrderType == true).Where(x => x.IsSubmited == false).ToList();
             List<CardItem> uniqueCardItems = cardItem.DistinctBy(x => x.Title).Select(
                 uniqueItem => new CardItem
                 {
@@ -43,6 +43,7 @@ namespace BurgerKingBackEnd.Controllers
                     Price = cardItem.Where(x => x.Title == uniqueItem.Title).Sum(x => x.Price),
                     RestaurantId = uniqueItem.RestaurantId,
                     OrderType = uniqueItem.OrderType,
+                    IsSubmited = uniqueItem.IsSubmited,
                     
                 }).ToList();
 
@@ -69,7 +70,7 @@ namespace BurgerKingBackEnd.Controllers
             var customUser = await _userManager.GetUserAsync(User);
 
             int restaurantId = _context.Restaurant.FirstOrDefault(r => r.Id == customUser.SelectedRestaurantId).Id;
-            List<CardItem> cardItem = _context.CardItems.Where(x => x.UserId == customUser.Id).Where(x => x.RestaurantId == customUser.SelectedRestaurantId).Where(x => x.OrderType == false).ToList();
+            List<CardItem> cardItem = _context.CardItems.Where(x => x.UserId == customUser.Id).Where(x => x.RestaurantId == customUser.SelectedRestaurantId).Where(x => x.OrderType == false).Where(x=>x.IsSubmited==false).ToList();
             List<CardItem> uniqueCardItems = cardItem.DistinctBy(x => x.Title).Select(
                 uniqueItem => new CardItem
                 {
@@ -83,6 +84,7 @@ namespace BurgerKingBackEnd.Controllers
                     Price = cardItem.Where(x => x.Title == uniqueItem.Title).Sum(x => x.Price),
                     RestaurantId = uniqueItem.RestaurantId,
                     OrderType = uniqueItem.OrderType,
+                    IsSubmited = uniqueItem.IsSubmited,
 
 
                 }).ToList();

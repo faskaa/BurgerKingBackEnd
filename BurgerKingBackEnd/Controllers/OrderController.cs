@@ -47,6 +47,7 @@ namespace BurgerKingBackEnd.Controllers
                 CustomUser = user,
             };
 
+            
             await _context.AddAsync(order);
             await _context.SaveChangesAsync();
 
@@ -89,7 +90,9 @@ namespace BurgerKingBackEnd.Controllers
             order.IsSubmited = true;
             _context.SaveChanges();
 
+
             List<Order> carditems = _context.Orders.Where(x => x.CustomUserId == user.Id).Include(x=>x.cardItems).ToList();
+            
             List<CardItem> cardItems = _context.CardItems.Where(x => x.UserId == user.Id).Where(x => x.OrderType == false).ToList();
             Card card = new Card
             {
@@ -100,8 +103,6 @@ namespace BurgerKingBackEnd.Controllers
                 CVV = cvv,
                 ZipCode = zipcode,
                 OrderId = order.Id,
-                
-               
 
             };
             await _context.AddAsync(card);
@@ -120,6 +121,16 @@ namespace BurgerKingBackEnd.Controllers
                 _context.SaveChanges();
             }
 
+            List<Order> submitedOrders = _context.Orders.Include(x=>x.cardItems).Where(x => x.CustomUserId == user.Id).Where(x => x.PickUpType == false).Where(x => x.IsSubmited == true).ToList();
+            foreach (var item in submitedOrders)
+            {
+                foreach (var item1 in item.cardItems)
+                {
+                    item1.IsSubmited = true;
+                    await _context.SaveChangesAsync();
+
+                }
+            }
             //_context.RemoveRange(order.cardItems);
             //_context.SaveChanges();
 
@@ -170,6 +181,17 @@ namespace BurgerKingBackEnd.Controllers
                 _context.SaveChanges();
             }
 
+
+            List<Order> submitedOrders = _context.Orders.Include(x => x.cardItems).Where(x => x.CustomUserId == user.Id).Where(x => x.PickUpType == true).Where(x => x.IsSubmited == true).ToList();
+            foreach (var item in submitedOrders)
+            {
+                foreach (var item1 in item.cardItems)
+                {
+                    item1.IsSubmited = true;
+                    await _context.SaveChangesAsync();
+
+                }
+            }
             //_context.RemoveRange(order.cardItems);
             //_context.SaveChanges();
 
@@ -226,29 +248,29 @@ namespace BurgerKingBackEnd.Controllers
             return View(order);
         }
 
-        public async Task<IActionResult> TakeOrder(int id)
-        {
+        //public async Task<IActionResult> TakeOrder(int id)
+        //{
 
 
-            CustomUser user = await _userManager.GetUserAsync(User);
-            if (id == 0) return BadRequest();
-            Order order = _context.Orders.Where(x => x.CustomUserId == user.Id).Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Include(x => x.cardItems).Include(x => x.CustomUser).FirstOrDefault(x => x.Id == id);
-            if (order == null) return NotFound();
+        //    CustomUser user = await _userManager.GetUserAsync(User);
+        //    if (id == 0) return BadRequest();
+        //    Order order = _context.Orders.Where(x => x.CustomUserId == user.Id).Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Include(x => x.cardItems).Include(x => x.CustomUser).FirstOrDefault(x => x.Id == id);
+        //    if (order == null) return NotFound();
 
-            order.Status = false;
-            await _context.SaveChangesAsync();
-            //List<Restaurant> restaurants = _context.Restaurant.ToList();
+        //    order.Status = false;
+        //    await _context.SaveChangesAsync();
+        //    //List<Restaurant> restaurants = _context.Restaurant.ToList();
 
-            //OrderVM orderVM = new OrderVM
-            //{
+        //    //OrderVM orderVM = new OrderVM
+        //    //{
 
-            //    CustomUser = user,
-            //    Orders = orde,
-            //    Restaurant = restaurants,
-            //};
+        //    //    CustomUser = user,
+        //    //    Orders = orde,
+        //    //    Restaurant = restaurants,
+        //    //};
 
-            return View(order);
-        }
+        //    return View(order);
+        //}
 
     }
 }

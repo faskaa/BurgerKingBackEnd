@@ -4601,3 +4601,57 @@ div.menu-wrapper .menus .menu img {
   opacity: 50%;
   transition: 0.3s;
 }
+
+.order-delivered {
+  width: 1200px;
+  margin: auto;
+}
+@media screen and (max-width: 1200px) {
+  .order-delivered {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .order-delivered {
+    width: 375px;
+    margin: auto;
+  }
+}
+.order-delivered div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.order-delivered div span {
+  font-size: 20px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  color: rgb(80, 35, 20);
+}
+.order-delivered div a {
+  margin-top: 20px;
+  text-decoration: none;
+}
+.order-delivered div a button {
+  font-family: "Flame Sans";
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  border: none;
+  height: 50px;
+  width: 500px;
+  background-color: red;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.order-delivered div a button:hover {
+  border: 2px solid rgb(136, 136, 99);
+  transition: 0.3s;
+}
+.order-delivered .order-delivered-trip {
+  margin-top: 50px;
+}

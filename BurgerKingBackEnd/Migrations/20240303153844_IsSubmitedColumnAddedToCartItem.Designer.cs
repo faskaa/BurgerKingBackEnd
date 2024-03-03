@@ -4,6 +4,7 @@ using BurgerKingBackEnd.DAL;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BurgerKingBackEnd.Migrations
 {
     [DbContext(typeof(BurgerKingDBContext))]
-    partial class BurgerKingDBContextModelSnapshot : ModelSnapshot
+    [Migration("20240303153844_IsSubmitedColumnAddedToCartItem")]
+    partial class IsSubmitedColumnAddedToCartItem
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -158,17 +160,11 @@ namespace BurgerKingBackEnd.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<int?>("DeliveringOrderId")
-                        .HasColumnType("int");
-
                     b.Property<int>("DriverLicenseNumber")
                         .HasColumnType("int");
 
                     b.Property<int>("DrivingExperience")
                         .HasColumnType("int");
-
-                    b.Property<bool>("IsDelivering")
-                        .HasColumnType("bit");
 
                     b.Property<string>("Name")
                         .IsRequired()

@@ -73,11 +73,78 @@ namespace BurgerKingBackEnd.Controllers
 
 
         public async Task<IActionResult> Detail(int id)
-        {
+        {   
             CustomUser user = await _userManager.GetUserAsync(User);
-            Order order = _context.Orders.Where(x=>x.PickUpType==false).Include(x=>x.cardItems).Include(x=>x.CustomUser).FirstOrDefault(x => x.Id == id);
+            Order order = _context.Orders.Where(x=>x.PickUpType==false).Include(x=>x.cardItems).Include(x=>x.CustomUser).Include(x=>x.cardItems).FirstOrDefault(x => x.Id == id);
+            if (order == null) return NotFound();
+            //Restaurant restaurant = _context.Restaurant.FirstOrDefault(x => x.Id == user.SelectedRestaurantId);
 
+           
+                
+            
             return View(order);
+        }
+
+        public async Task<IActionResult> Delivered(int id)
+        {
+
+            CustomUser user = await _userManager.GetUserAsync(User);
+            if (id == 0) return BadRequest();
+            Order order = _context.Orders.Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Include(x => x.cardItems).Include(x => x.CustomUser).FirstOrDefault(x => x.Id == id);
+            if (order == null) return NotFound();
+
+            order.Status = false;
+            await _context.SaveChangesAsync();
+
+            Courier courier = _context.Courier.FirstOrDefault(x => x.CustomUserId == user.Id);
+            courier.IsDelivering = true;
+            await _context.SaveChangesAsync();
+
+            courier.DeliveringOrderId = id;
+            await _context.SaveChangesAsync();
+            //List<Restaurant> restaurants = _context.Restaurant.ToList();
+
+            //OrderVM orderVM = new OrderVM
+            //{
+
+            //    CustomUser = user,
+            //    Orders = orde,
+            //    Restaurant = restaurants,
+            //};
+
+
+            Order Deliveryorder = _context.Orders.Where(x => x.PickUpType == false).Include(x => x.cardItems).Include(x => x.CustomUser).Include(x => x.cardItems).FirstOrDefault(x => x.Id == id);
+            if (order == null) return NotFound();
+
+            DeliveryDetailVM deliveryDetailVM = new DeliveryDetailVM
+            {
+                CustomUser = user,
+                Order = Deliveryorder,
+
+            };
+
+
+            return View(deliveryDetailVM);
+        }
+
+        public async Task<IActionResult> EndDelivering(int id)
+        {
+
+            CustomUser user = await _userManager.GetUserAsync(User);
+            if (id == 0) return BadRequest();
+            Order order = _context.Orders.Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Include(x => x.cardItems).Include(x => x.CustomUser).FirstOrDefault(x => x.Id == id);
+            if (order == null) return NotFound();
+
+            order.Status = true;
+            await _context.SaveChangesAsync();
+
+
+            Courier courier = _context.Courier.FirstOrDefault(x => x.CustomUserId == user.Id);
+            courier.IsDelivering = false;
+            await _context.SaveChangesAsync();
+
+
+            return RedirectToAction("Index", "Home");
         }
     }
 

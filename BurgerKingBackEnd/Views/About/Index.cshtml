@@ -1,31 +1,50 @@
-﻿<header>
+﻿@model List<Setting>
+<header>
     <div class="navbar">
         <div class="top">
-            <a class="burgermenu" href="../BurgerMenu/burgermenu.html">
-                <img src="./../../Assets/Icons/burger-bar.png" alt="" />
+            <a class="burgermenu" asp-controller="Home" asp-action="Index">
+                <img src="./../../Assets/Icons/close.png" alt="" />
             </a>
-            <a class="logo" href="../Home/home.html">
+            @* <a class="logo" asp-controller="Home" asp-action="Index">
                 <img src="./../../Assets/Icons/burger-king.png" alt="" />
-            </a>
+            </a> *@
+            @if (User.Identity.IsAuthenticated)
+            {
+                
             <div class="buttons">
-                <a class="account" href="../Sign-Up/signup.html ">
-                    <button>Sign Up/Sing In</button>
+                <a class="account" asp-controller="Account" asp-action="Index">
+                    <button>@User.Identity.Name</button>
                 </a>
-                <a class="basket" href="../Sign-Up/signup.html">
+               @*  <a class="basket" href="../Sign-Up/signup.html">
                     <button>
                         <img src="./../../Assets/Icons/basket.png" alt="" />
                         $999.00
                     </button>
-                </a>
-            </div>
+                </a> *@
+                </div>
+            }
+            else
+            {
+                <div class="buttons">
+                    <a class="account" asp-controller="Account" asp-action="Register">
+                        <button>Sign Up/Sing In</button>
+                    </a>
+                    @*  <a class="basket" href="../Sign-Up/signup.html">
+                <button>
+                <img src="./../../Assets/Icons/basket.png" alt="" />
+                $999.00
+                </button>
+                </a> *@
+                </div>
+            }
         </div>
-        <div class="bottom">
+       @*  <div class="bottom">
             <a href="../Locations/location.html">
                 <img src="../../Assets/Icons/map.png" alt="" />
                 <span>For availability</span>
                 <span>Choose location</span>
             </a>
-        </div>
+        </div> *@
     </div>
 </header>
 <div class="header-about">
@@ -47,6 +66,6 @@
     <div class="bottom">
         <h4>Contact</h4>
         <h1>Burger King Corporation</h1>
-        <span>Phone Number: 1-866-394-2493</span>
+        <span>Phone Number: @Model.FirstOrDefault(bm=>bm.Key== "AboutPhoneNumber")?.Value</span>
     </div>
 </div>

@@ -11,11 +11,12 @@
         public string Size { get; set; }
         public decimal Price { get; set; }
         public int Quantity { get; set; }
+        //true = pickup , false = delivery 
         public bool OrderType { get; set; }
+        public bool IsSubmited { get; set; }
 
 
         public List<Order> Orders { get; set; }
-        //true = pickup , false = delivery 
 
 
 

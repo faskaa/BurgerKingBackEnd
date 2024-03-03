@@ -1,0 +1,31 @@
+﻿@model DeliveryDetailVM
+
+<div class="delivery-job-hiring-header">
+    <div>
+        <div>
+            <a href="">
+                <button><img src="../../Assets/Icons/close.png" alt="" /></button>
+            </a>
+        </div>
+        <div>
+            <div>Delivery Detail</div>
+        </div>
+        <div></div>
+    </div>
+</div>
+<div class="order-delivered">
+    <div class="order-delivered-info">
+        <span>@Model.CustomUser.UserName's Phone : @Model.Order.PhoneNumber</span>
+        <span>@Model.CustomUser.UserName's Unit : @Model.Order.Unit</span>
+        <span>@Model.CustomUser.UserName's Delivery Instruction : @Model.Order.DeliveryInstruction</span>
+    </div>
+    <div class="order-delivered-trip">
+        <span>Your destination: @Model.Order.DeliveryInstruction</span>
+        <span>Have a good journey :)</span>
+    </div>
+    <div class="order-delivered-submit">
+        <a asp-controller="Delivery" asp-action="EndDelivering" asp-route-id="@Model.Order.Id">
+            <button type="submit">I am at the specified address</button>
+        </a>
+    </div>
+</div>

@@ -68,12 +68,25 @@
             {
                 @if (Model.IsCourier == true)
                {
-                    <div class="menu">
-                        <span>Work</span>
-                        <a asp-controller="Delivery" asp-action="Orders">
-                            <img src="../../Assets/Icons/right-arrow.png" alt="" />
-                        </a>
-                    </div>
+                   @if (Model.Courier.IsDelivering == false)
+                    {
+                        
+                        <div class="menu">
+                            <span>Work</span>
+                            <a asp-controller="Delivery" asp-action="Orders">
+                                <img src="../../Assets/Icons/right-arrow.png" alt="" />
+                            </a>
+                         </div>
+                    }
+                    else
+                    {
+                        <div class="menu">
+                            <span>Work</span>
+                            <a asp-controller="Delivery" asp-action="Delivered" asp-route-id="@Model.Courier.DeliveringOrderId">
+                                <img src="../../Assets/Icons/right-arrow.png" alt="" />
+                            </a>
+                        </div>
+                    }
                 }
                 else
                 {

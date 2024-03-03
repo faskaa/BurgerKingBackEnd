@@ -26,16 +26,18 @@
             
         <div class="item">
             <span>@item.Title</span>
-            <span>@item.Quantity</span>
+            <span>@item.Quantity </span>
         </div>
         }
     </div>
     <div class="delivery-code">
-        <span>Your Code:</span>
-        <span>12305</span>
+        <span>@{
+                Random newRandom = new Random();
+            }</span>
+        <span>Your code : @newRandom.Next(0,1000)</span>
     </div>
     <div class="submitbtn">
-        <a asp-controller="Order" asp-action="TakeOrder" asp-route-id="@Model.Id">
+        <a asp-controller="Delivery" asp-action="Delivered" asp-route-id="@Model.Id">
             <button>Take</button>
         </a>
     </div>
