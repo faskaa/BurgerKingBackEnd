@@ -209,6 +209,10 @@
       "PackagePath": "staticwebassets\\Pages\\About\\about.html"
     },
     {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\Admin-Panel\\adminpanel.html",
+      "PackagePath": "staticwebassets\\Pages\\Admin-Panel\\adminpanel.html"
+    },
+    {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Pages\\BurgerMenu\\burgermenu.html",
       "PackagePath": "staticwebassets\\Pages\\BurgerMenu\\burgermenu.html"
     },
@@ -339,6 +343,10 @@
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Account.scss",
       "PackagePath": "staticwebassets\\SCSS\\Pages\\_Account.scss"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_AdminPanel.scss",
+      "PackagePath": "staticwebassets\\SCSS\\Pages\\_AdminPanel.scss"
     },
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\SCSS\\Pages\\_Burgermenu.scss",

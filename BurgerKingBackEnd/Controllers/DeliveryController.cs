@@ -56,7 +56,7 @@ namespace BurgerKingBackEnd.Controllers
         public async Task<IActionResult> Orders()
         {
             CustomUser user = await _userManager.GetUserAsync(User);
-            List<Order> orders = _context.Orders.Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Include(x=>x.cardItems).Include(x=>x.CustomUser).ToList();
+            List<Order> orders = _context.Orders.Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Where(x=>x.Status == null).Include(x=>x.cardItems).Include(x=>x.CustomUser).ToList();
             List<Restaurant> restaurants = _context.Restaurant.ToList();
             
             

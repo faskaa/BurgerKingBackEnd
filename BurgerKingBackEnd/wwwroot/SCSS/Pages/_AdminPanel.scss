@@ -1,0 +1,119 @@
+.admin-panel-header {
+  background-color: rgb(80, 35, 20);
+  height: 60px;
+  div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h4 {
+      font-size: 30px;
+      font-family: "Flame Sans";
+      font-weight: bold;
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+
+.admin-panel {
+  display: flex;
+  justify-content: space-between;
+  @include for-size(tablet){
+    display: flex;
+    flex-direction: column;
+  }
+  .admin-panel-left {
+    @include for-size(tablet){
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+    width: 20%;
+    height: 100%;
+    padding: 30px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    .links {
+      a {
+        text-decoration: none;
+        font-size: 20px;
+        font-family: "Flame Sans";
+        font-weight: bold;
+        color: rgb(80, 35, 20);
+
+        &:hover {
+          opacity: 0.5;
+          color: black;
+        }
+      }
+
+      .crud {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+
+        .crud-link {
+          text-decoration: none;
+          color: #fff;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+        button {
+          border-radius: 10px;
+          &:hover {
+            opacity: 0.5;
+            transition: 0.4;
+          }
+        }
+
+        .create {
+          background-color: #4caf50;
+        }
+
+        .read {
+          background-color: #2196f3;
+        }
+
+        .update {
+          background-color: #ff9800;
+        }
+
+        .delete {
+          background-color: #f44336;
+        }
+      }
+    }
+  }
+  .admin-panel-right {
+    padding: 20px;
+    h4 {
+      padding: 20px;
+      font-size: 50px;
+      font-family: "Flame Sans";
+      font-weight: bold;
+      color: rgb(80, 35, 20);
+    }
+
+    .staticts {
+      display: flex;
+      flex-direction: column;
+      background-color: white;
+      width: 100%;
+      border-radius: 20px;
+      span {
+        padding: 20px;
+        font-size: 30px;
+        font-family: "Flame Sans";
+        color: rgb(80, 35, 20);
+        &:hover {
+            opacity: 0.5;
+            color: black;
+          }
+
+      }
+    }
+  }
+}

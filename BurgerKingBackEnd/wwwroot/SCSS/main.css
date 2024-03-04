@@ -4655,3 +4655,116 @@ div.menu-wrapper .menus .menu img {
 .order-delivered .order-delivered-trip {
   margin-top: 50px;
 }
+
+.admin-panel-header {
+  background-color: rgb(80, 35, 20);
+  height: 60px;
+}
+.admin-panel-header div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.admin-panel-header div h4 {
+  font-size: 30px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.admin-panel {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1200px) {
+  .admin-panel {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.admin-panel .admin-panel-left {
+  width: 20%;
+  height: 100%;
+  padding: 30px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media screen and (max-width: 1200px) {
+  .admin-panel .admin-panel-left {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+.admin-panel .admin-panel-left .links a {
+  text-decoration: none;
+  font-size: 20px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  color: rgb(80, 35, 20);
+}
+.admin-panel .admin-panel-left .links a:hover {
+  opacity: 0.5;
+  color: black;
+}
+.admin-panel .admin-panel-left .links .crud {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.admin-panel .admin-panel-left .links .crud .crud-link {
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.admin-panel .admin-panel-left .links .crud button {
+  border-radius: 10px;
+}
+.admin-panel .admin-panel-left .links .crud button:hover {
+  opacity: 0.5;
+  transition: 0.4;
+}
+.admin-panel .admin-panel-left .links .crud .create {
+  background-color: #4caf50;
+}
+.admin-panel .admin-panel-left .links .crud .read {
+  background-color: #2196f3;
+}
+.admin-panel .admin-panel-left .links .crud .update {
+  background-color: #ff9800;
+}
+.admin-panel .admin-panel-left .links .crud .delete {
+  background-color: #f44336;
+}
+.admin-panel .admin-panel-right {
+  padding: 20px;
+}
+.admin-panel .admin-panel-right h4 {
+  padding: 20px;
+  font-size: 50px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  color: rgb(80, 35, 20);
+}
+.admin-panel .admin-panel-right .staticts {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 100%;
+  border-radius: 20px;
+}
+.admin-panel .admin-panel-right .staticts span {
+  padding: 20px;
+  font-size: 30px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+.admin-panel .admin-panel-right .staticts span:hover {
+  opacity: 0.5;
+  color: black;
+}
