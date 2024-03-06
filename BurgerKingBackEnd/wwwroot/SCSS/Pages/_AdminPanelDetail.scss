@@ -1,0 +1,40 @@
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 16px;
+  text-align: left;
+  @include container();
+  
+  background-color: rgb(123, 123, 123);
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+//   @include for-size(tablet){
+//     border-bottom: 1px solid #ddd;
+//     font-size: 15px;
+//     font-family: "Flame Sans";
+//     color: rgb(80, 35, 20);
+//   }
+  @include for-size(mobile){
+    border-bottom: 1px solid #ddd;
+    font-size: 6px;
+    font-weight: bold;
+    font-family: "Flame Sans";
+    color: rgb(80, 35, 20);
+  }
+}
+
+.styled-table th {
+  background-color: #f2f2f2;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f5f5f5;
+}

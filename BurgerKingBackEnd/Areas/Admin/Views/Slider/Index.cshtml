@@ -1,0 +1,80 @@
+﻿@using BurgerKingBackEnd.Entities;
+@model List<Slider>
+
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="delivery-job-hiring-header">
+    <div>
+        <div>
+            <a href="">
+                <button><img src="../../Assets/Icons/close.png" alt="" /></button>
+            </a>
+        </div>
+        <div>
+            <div>Join Our Team</div>
+        </div>
+        <div></div>
+    </div>
+</div>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Crud</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Slider slider in Model)
+        {
+            <tr>
+                <td>@{
+                        var count = 0;
+                        ++count;
+                    }@count</td>
+                <td>@slider.Title</td>
+            <td>
+                <div class="crud">
+                    <button class="create">
+                            <a asp-area="Admin" asp-controller="Slider" asp-action="Create" class="crud-link" >Create</a>
+                    </button>
+                    <button class="read">
+                            <a class="crud-link" asp-area="Admin" asp-controller="Slider" asp-action="Detail" asp-route-id="@slider.Id" >Read</a>
+                    </button>
+                    <button class="update">
+                        <a class="crud-link" href="">Update</a>
+                    </button>
+                        <button class="delete" onclick="return confirmDelete('@slider.Id')">
+                            <a class="crud-link" asp-area="Admin" asp-controller="Slider" asp-action="Delete" asp-route-id="@slider.Id">Delete</a>
+                    </button>
+                </div>
+            </td>
+
+        </tr>
+        }
+
+        <!-- <tr>
+          <td>2</td>
+          <td>Jane Smith</td>
+          <td>30</td>
+          <td>jane@example.com</td>
+        </tr> -->
+    </tbody>
+</table>
+
+
+<script>
+    function confirmDelete(sliderId) {
+        var result = confirm("Are you sure you want to delete this Slider?");
+
+        if (result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>

@@ -4676,69 +4676,69 @@ div.menu-wrapper .menus .menu img {
 
 .admin-panel {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 }
-@media screen and (max-width: 1200px) {
-  .admin-panel {
-    display: flex;
-    flex-direction: column;
-  }
-}
 .admin-panel .admin-panel-left {
-  width: 20%;
+  padding: 20px;
+}
+.admin-panel .admin-panel-left h4 {
+  padding-bottom: 20px;
+  font-size: 30px;
+  font-family: "Flame Sans";
+  font-weight: bold;
+  color: rgb(80, 35, 20);
+}
+.admin-panel .admin-panel-left .list-links {
+  width: 100%;
   height: 100%;
   padding: 30px;
   background-color: white;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  text-decoration: none;
+  border-radius: 20px;
 }
-@media screen and (max-width: 1200px) {
-  .admin-panel .admin-panel-left {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-  }
-}
-.admin-panel .admin-panel-left .links a {
+.admin-panel .admin-panel-left .list-links .links a {
   text-decoration: none;
   font-size: 20px;
   font-family: "Flame Sans";
   font-weight: bold;
   color: rgb(80, 35, 20);
 }
-.admin-panel .admin-panel-left .links a:hover {
+.admin-panel .admin-panel-left .list-links .links a:hover {
   opacity: 0.5;
   color: black;
 }
-.admin-panel .admin-panel-left .links .crud {
+.admin-panel .admin-panel-left .list-links .links .crud {
   display: flex;
   flex-direction: column;
   gap: 5px;
 }
-.admin-panel .admin-panel-left .links .crud .crud-link {
+.admin-panel .admin-panel-left .list-links .links .crud .crud-link {
   text-decoration: none;
   color: #fff;
   border-radius: 5px;
   cursor: pointer;
 }
-.admin-panel .admin-panel-left .links .crud button {
+.admin-panel .admin-panel-left .list-links .links .crud button {
   border-radius: 10px;
 }
-.admin-panel .admin-panel-left .links .crud button:hover {
+.admin-panel .admin-panel-left .list-links .links .crud button:hover {
   opacity: 0.5;
   transition: 0.4;
 }
-.admin-panel .admin-panel-left .links .crud .create {
+.admin-panel .admin-panel-left .list-links .links .crud .create {
   background-color: #4caf50;
 }
-.admin-panel .admin-panel-left .links .crud .read {
+.admin-panel .admin-panel-left .list-links .links .crud .read {
   background-color: #2196f3;
 }
-.admin-panel .admin-panel-left .links .crud .update {
+.admin-panel .admin-panel-left .list-links .links .crud .update {
   background-color: #ff9800;
 }
-.admin-panel .admin-panel-left .links .crud .delete {
+.admin-panel .admin-panel-left .list-links .links .crud .delete {
   background-color: #f44336;
 }
 .admin-panel .admin-panel-right {
@@ -4767,4 +4767,132 @@ div.menu-wrapper .menus .menu img {
 .admin-panel .admin-panel-right .staticts span:hover {
   opacity: 0.5;
   color: black;
+}
+
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 16px;
+  text-align: left;
+  width: 1200px;
+  margin: auto;
+  background-color: rgb(123, 123, 123);
+}
+@media screen and (max-width: 1200px) {
+  .styled-table {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .styled-table {
+    width: 375px;
+    margin: auto;
+  }
+}
+
+.styled-table th,
+.styled-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  font-size: 15px;
+  font-family: "Flame Sans";
+  color: rgb(80, 35, 20);
+}
+@media screen and (max-width: 767px) {
+  .styled-table th,
+  .styled-table td {
+    border-bottom: 1px solid #ddd;
+    font-size: 6px;
+    font-weight: bold;
+    font-family: "Flame Sans";
+    color: rgb(80, 35, 20);
+  }
+}
+
+.styled-table th {
+  background-color: #f2f2f2;
+}
+
+.styled-table tbody tr:hover {
+  background-color: #f5f5f5;
+}
+
+tbody td .crud {
+  display: flex;
+  gap: 5px;
+}
+tbody td .crud .crud-link {
+  text-decoration: none;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}
+tbody td .crud button {
+  border-radius: 10px;
+}
+tbody td .crud button:hover {
+  opacity: 0.5;
+  transition: 0.4;
+}
+tbody td .crud .create {
+  background-color: #4caf50;
+}
+tbody td .crud .read {
+  background-color: #2196f3;
+}
+tbody td .crud .update {
+  background-color: #ff9800;
+}
+tbody td .crud .delete {
+  background-color: #f44336;
+}
+
+.form-container {
+  width: 1200px;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
+@media screen and (max-width: 1200px) {
+  .form-container {
+    width: 767px;
+    margin: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .form-container {
+    width: 375px;
+    margin: auto;
+  }
+}
+.form-container form {
+  display: flex;
+  flex-direction: column;
+}
+.form-container form label {
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+.form-container form input {
+  padding: 8px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+.form-container form button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.form-container form button:hover {
+  background-color: #2980b9;
 }

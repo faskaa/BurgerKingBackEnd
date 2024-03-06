@@ -1,0 +1,40 @@
+tbody{
+
+    td{
+
+        .crud {
+            display: flex;
+            gap: 5px;
+    
+            .crud-link {
+              text-decoration: none;
+              color: #fff;
+              border-radius: 5px;
+              cursor: pointer;
+            }
+            button {
+              border-radius: 10px;
+              &:hover {
+                opacity: 0.5;
+                transition: 0.4;
+              }
+            }
+    
+            .create {
+              background-color: #4caf50;
+            }
+    
+            .read {
+              background-color: #2196f3;
+            }
+    
+            .update {
+              background-color: #ff9800;
+            }
+    
+            .delete {
+              background-color: #f44336;
+            }
+          }
+    }
+}

@@ -1,0 +1,63 @@
+﻿@model SliderCreateVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="delivery-job-hiring-header">
+    <div>
+        <div>
+            <a href="">
+                <button><img src="../../Assets/Icons/close.png" alt="" /></button>
+            </a>
+        </div>
+        <div>
+            <div>Join Our Team</div>
+        </div>
+        <div></div>
+    </div>
+</div>
+<div class="form-container">
+    <form asp-area="Admin" asp-controller="Slider" asp-action="Create" enctype="multipart/form-data" method="post">
+        <div style="font-size:15px; color: red; font-weight:bold; font-family:'Flame Sans'" asp-validation-summary="All"></div>
+        <label asp-for="@Model.Title">Title:</label>
+        <input asp-for="@Model.Title" id="username" >
+        <div>
+            <span style="font-size:15px; color:   red; font-family:'Flame Sans'" asp-validation-for="@Model.Title"></span>
+        </div>
+
+        <label asp-for="@Model.IImage">Image</label>
+        <input asp-for="@Model.IImage" id="username"  >
+        <div>
+            <span style="font-size:15px; color:  red; font-family:'Flame Sans'" asp-validation-for="@Model.IImage"></span>
+        </div>
+
+        <label asp-for="@Model.IDeliveryImage">Delivery Image</label>
+        <input asp-for="@Model.IDeliveryImage" id="username" >
+        <div>
+            <span style="font-size:15px; color:  red; font-family:'Flame Sans'" asp-validation-for="@Model.IDeliveryImage"></span>
+        </div>
+
+        <label asp-for="@Model.IOrderImage">Order Image</label>
+        <input asp-for="@Model.IOrderImage" id="username" >
+        <div>
+            <span style="font-size:15px; color: red; font-family:'Flame Sans'" asp-validation-for="@Model.IOrderImage"></span>
+        </div>
+
+        @* <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required> *@
+
+        <button style=" margin-top:20px" type="submit">Submit</button>
+    </form>
+</div>

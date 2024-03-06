@@ -1,0 +1,51 @@
+﻿@model Slider
+@{
+    ViewData["Title"] = "Detail";
+}
+
+<div class="delivery-job-hiring-header">
+    <div>
+        <div>
+            <a href="">
+                <button><img src="../../Assets/Icons/close.png" alt="" /></button>
+            </a>
+        </div>
+        <div>
+            <div>Join Our Team</div>
+        </div>
+        <div></div>
+    </div>
+</div>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Image</th>
+            <th>DeliveryImage</th>
+            <th>OrderImage</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.Title</td>
+            <td>
+                <img style="width:50px;" src="~/Assets/Icons/@Model.Image" />
+            </td>
+            <td>
+                <img style="width:50px;" src="~/Assets/Icons/@Model.DeliveryImage" />
+            </td>
+            <td>
+                <img style="width:50px;" src="~/Assets/Icons/@Model.OrderImage" />
+            </td>
+
+        <!-- <tr>
+          <td>2</td>
+          <td>Jane Smith</td>
+          <td>30</td>
+          <td>jane@example.com</td>
+        </tr> -->
+    </tbody>
+</table>
+
