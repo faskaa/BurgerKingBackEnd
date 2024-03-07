@@ -1,0 +1,39 @@
+﻿@model Ad
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+<div class="delivery-job-hiring-header">
+    <div>
+        <div>
+            <a href="">
+                <button><img src="../../Assets/Icons/close.png" alt="" /></button>
+            </a>
+        </div>
+        <div>
+            <div>Ad Detail</div>
+        </div>
+        <div></div>
+    </div>
+</div>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Description</th>
+            <th>Image</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.Title</td>
+            <td>@Model.Description</td>
+            <td>
+                <img style="width:50px;" src="~/Assets/Images/@Model.Image" />
+            </td>
+    </tbody>
+</table>
+

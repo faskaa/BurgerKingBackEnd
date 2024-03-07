@@ -5,6 +5,22 @@
       "PackagePath": "staticwebassets\\Assets\\Icons\\39941c12-8f0d-496a-9d61-1a441a5264881-1.webp"
     },
     {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\60245c41-8876-4fe9-aa7a-9b25bb9e6ca5card-2.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\60245c41-8876-4fe9-aa7a-9b25bb9e6ca5card-2.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\881d5655-b216-4bc0-a426-ee74b40947afdownload_3.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\881d5655-b216-4bc0-a426-ee74b40947afdownload_3.jpg"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\9c714d2b-614f-4973-8c15-fcc33c46d152card-4.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\9c714d2b-614f-4973-8c15-fcc33c46d152card-4.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\9e5c4099-e2f3-4cb1-bb6f-17387aaf7ceacard-2.png",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\9e5c4099-e2f3-4cb1-bb6f-17387aaf7ceacard-2.png"
+    },
+    {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\badge.png",
       "PackagePath": "staticwebassets\\Assets\\Icons\\badge.png"
     },
@@ -37,6 +53,10 @@
       "PackagePath": "staticwebassets\\Assets\\Icons\\cart.png"
     },
     {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\cd1a2dc9-26f5-4948-8bb3-d4c4fcd8f7aedownload_3.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\cd1a2dc9-26f5-4948-8bb3-d4c4fcd8f7aedownload_3.jpg"
+    },
+    {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\close.png",
       "PackagePath": "staticwebassets\\Assets\\Icons\\close.png"
     },
@@ -51,6 +71,14 @@
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\discount.png",
       "PackagePath": "staticwebassets\\Assets\\Icons\\discount.png"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\f79692b9-8e5c-49b5-b562-2d06421f79d4download.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\f79692b9-8e5c-49b5-b562-2d06421f79d4download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\f806b5c0-254a-4fbe-9fa1-0fc54b462a34app.ico",
+      "PackagePath": "staticwebassets\\Assets\\Icons\\f806b5c0-254a-4fbe-9fa1-0fc54b462a34app.ico"
     },
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\heart-red.png",
@@ -111,6 +139,14 @@
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Icons\\small-drink-size.webp",
       "PackagePath": "staticwebassets\\Assets\\Icons\\small-drink-size.webp"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\3c59ac57-8e84-44cc-8805-31cf4fc5b5a5download.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\3c59ac57-8e84-44cc-8805-31cf4fc5b5a5download.jpg"
+    },
+    {
+      "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\71cef6a6-b5c2-42c6-a45f-061c4551130fdownload.jpg",
+      "PackagePath": "staticwebassets\\Assets\\Images\\71cef6a6-b5c2-42c6-a45f-061c4551130fdownload.jpg"
     },
     {
       "Id": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\99448da9-156d-4f27-87d5-93bf57cc02451-3.jpg",

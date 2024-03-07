@@ -16,6 +16,22 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\acer\Desktop\BurgerKingBackEnd\BurgerKingBackEnd
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/acer/Desktop/BurgerKingBackEnd/BurgerKingBackEnd/Areas/Admin/Views/Ad/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/Desktop/BurgerKingBackEnd/BurgerKingBackEnd/Areas/Admin/Views/Ad/Detail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRcRGV0YWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/Desktop/BurgerKingBackEnd/BurgerKingBackEnd/Areas/Admin/Views/Ad/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/Desktop/BurgerKingBackEnd/BurgerKingBackEnd/Areas/Admin/Views/Ad/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQWRcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/acer/Desktop/BurgerKingBackEnd/BurgerKingBackEnd/Areas/Admin/Views/DashBoard/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcRGFzaEJvYXJkXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -34,6 +50,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/acer/Desktop/BurgerKingBackEnd/BurgerKingBackEnd/Areas/Admin/Views/Slider/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVyXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/acer/Desktop/BurgerKingBackEnd/BurgerKingBackEnd/Areas/Admin/Views/Slider/Update.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcU2xpZGVyXFVwZGF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/acer/Desktop/BurgerKingBackEnd/BurgerKingBackEnd/Areas/Admin/Views/_ViewImports.cshtml]

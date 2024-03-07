@@ -37,8 +37,8 @@ var app = builder.Build();
 
 app.UseStaticFiles();
 app.UseAuthentication();
-app.UseAuthorization();
 app.UseRouting();
+app.UseAuthorization();
 app.UseEndpoints(endpoints =>
 {
     endpoints.MapControllerRoute(

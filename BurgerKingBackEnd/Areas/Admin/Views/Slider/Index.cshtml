@@ -46,7 +46,7 @@
                             <a class="crud-link" asp-area="Admin" asp-controller="Slider" asp-action="Detail" asp-route-id="@slider.Id" >Read</a>
                     </button>
                     <button class="update">
-                        <a class="crud-link" href="">Update</a>
+                            <a class="crud-link" asp-area="Admin" asp-controller="Slider" asp-action="Update" asp-route-id="@slider.Id">Update</a>
                     </button>
                         <button class="delete" onclick="return confirmDelete('@slider.Id')">
                             <a class="crud-link" asp-area="Admin" asp-controller="Slider" asp-action="Delete" asp-route-id="@slider.Id">Delete</a>
