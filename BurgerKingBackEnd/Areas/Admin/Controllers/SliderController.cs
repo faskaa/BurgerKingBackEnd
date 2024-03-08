@@ -48,17 +48,17 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         {
             if (slider == null) return BadRequest();
             if (!ModelState.IsValid) return View();
+            if (!slider.IImage.IsImage() || !slider.IDeliveryImage.IsImage() || !slider.IOrderImage.IsImage() )
+            {
+                ModelState.AddModelError(string.Empty, "Please upload valid images.");
+                return View();
+            }
             if ((double)slider.IImage.Length / 1024 / 1024 > 1 || (double)slider.IOrderImage.Length / 1024 / 1024 > 1 || (double)slider.IDeliveryImage.Length / 1024 / 1024 > 1)
             {
                 ModelState.AddModelError(string.Empty, "Please set the image smaller than 1 mb");
                 return View();
             };
 
-            if (!slider.IImage.IsImage() || !slider.IDeliveryImage.IsImage() || !slider.IOrderImage.IsImage() )
-            {
-                ModelState.AddModelError(string.Empty, "Please upload valid images.");
-                return View();
-            }
            
             string webRootPath = _env.WebRootPath;
 

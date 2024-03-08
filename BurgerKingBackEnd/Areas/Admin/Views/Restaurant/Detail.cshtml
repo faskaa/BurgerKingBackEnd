@@ -1,0 +1,38 @@
+﻿@model Restaurant
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+<div class="delivery-job-hiring-header">
+<div>
+    <div>
+        <a href="">
+            <button><img src="../../Assets/Icons/close.png" alt="" /></button>
+        </a>
+    </div>
+    <div>
+        <div>Restaurant Detail</div>
+    </div>
+    <div></div>
+</div>
+</div>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Opening Time</th>
+            <th>Closing Time</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.Id</td>
+            <td>@Model.Title</td>
+            <td>@Model.OpeningTime</td>
+            <td>@Model.ClosingTime</td>
+    </tbody>
+</table>
+

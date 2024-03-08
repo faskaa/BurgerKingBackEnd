@@ -1,0 +1,43 @@
+﻿@model RestaurantCreateVM
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="delivery-job-hiring-header">
+    <div>
+        <div>
+            <a href="">
+                <button><img src="../../Assets/Icons/close.png" alt="" /></button>
+            </a>
+        </div>
+        <div>
+            <div>Restaurant Create</div>
+        </div>
+        <div></div>
+    </div>
+</div>
+<div class="form-container">
+    <form asp-area="Admin" asp-controller="Restaurant" asp-action="Create"  method="post">
+        <div style="font-size:15px; color: red; font-weight:bold; font-family:'Flame Sans'" asp-validation-summary="All"></div>
+        <label asp-for="@Model.Title">Title:</label>
+        <input asp-for="@Model.Title" id="username">
+        <div>
+            <span style="font-size:15px; color:   red; font-family:'Flame Sans'" asp-validation-for="@Model.Title"></span>
+        </div>
+
+        <label asp-for="@Model.OpeningTime">Opening Time</label>
+        <input asp-for="@Model.OpeningTime" id="username">
+        <div>
+            <span style="font-size:15px; color:  red; font-family:'Flame Sans'" asp-validation-for="@Model.OpeningTime"></span>
+        </div>
+
+        <label asp-for="@Model.ClosingTime">Closing Time</label>
+        <input asp-for="@Model.ClosingTime" id="username">
+        <div>
+            <span style="font-size:15px; color:  red; font-family:'Flame Sans'" asp-validation-for="@Model.ClosingTime"></span>
+        </div>
+
+
+        <button style=" margin-top:20px" type="submit">Submit</button>
+    </form>
+</div>

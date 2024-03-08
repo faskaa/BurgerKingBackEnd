@@ -1,0 +1,39 @@
+﻿@model PRDetailVM
+@{
+    ViewData["Title"] = "Detail";
+}
+
+
+<div class="delivery-job-hiring-header">
+    <div>
+        <div>
+            <a href="">
+                <button><img src="../../Assets/Icons/close.png" alt="" /></button>
+            </a>
+        </div>
+        <div>
+            <div>Product of Restaurant Detail</div>
+        </div>
+        <div></div>
+    </div>
+</div>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Restaurant</th>
+            <th>Product</th>
+            <th>Count</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>@Model.restaurantProduct.Id</td>
+            <td>@Model.restaurant.Title</td>
+            <td>@Model.product.Title</td>
+            <td>@Model.restaurantProduct.Count</td>
+    </tbody>
+</table>
+
+
+

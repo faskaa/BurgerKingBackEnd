@@ -1,0 +1,88 @@
+﻿@model PRIndexVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="delivery-job-hiring-header">
+    <div>
+        <div>
+            <a href="">
+                <button><img src="../../Assets/Icons/close.png" alt="" /></button>
+            </a>
+        </div>
+        <div>
+            <div>Restaurant of Products Index</div>
+        </div>
+        <div></div>
+    </div>
+</div>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Restaurant</th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th>Crud</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (RestaurantProduct restaurantProduct in Model.restaurantProduct)
+        {
+            <tr>
+                <td>
+                    @{
+                        var count = 0;
+                        ++count;
+                    }@count
+                </td>
+                <td>
+
+                    @Model.restaurant.FirstOrDefault(x=>x.Id==restaurantProduct.RestaurantId).Title
+                    @* @restaurantProduct.RestaurantId *@
+                </td>
+                <td>
+                    @Model.product.FirstOrDefault(x=>x.Id==restaurantProduct.ProductId).Title
+                </td>
+                <td>
+                    @restaurantProduct.Count
+                </td>
+                
+                <td>
+                    <div class="crud">
+                        <button class="create">
+                            <a asp-area="Admin" asp-controller="RestaurantProduct" asp-action="Create" class="crud-link">Create</a>
+                        </button>
+                        <button class="read">
+                            <a class="crud-link" asp-area="Admin" asp-controller="RestaurantProduct" asp-action="Detail" asp-route-id="@restaurantProduct.Id">Read</a>
+                        </button>
+                        <button class="update">
+                            <a class="crud-link" asp-area="Admin" asp-controller="RestaurantProduct" asp-action="Update" asp-route-id="@restaurantProduct.Id">Update</a>
+                        </button>
+                        <button class="delete" onclick="return confirmDelete('@restaurantProduct.Id')">
+                            <a class="crud-link" asp-area="Admin" asp-controller="RestaurantProduct" asp-action="Delete" asp-route-id="@restaurantProduct.Id">Delete</a>
+                        </button>
+                    </div>
+                </td>
+
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
+
+<script>
+    function confirmDelete(sliderId) {
+        var result = confirm("Are you sure you want to delete this Ad?");
+
+        if (result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+

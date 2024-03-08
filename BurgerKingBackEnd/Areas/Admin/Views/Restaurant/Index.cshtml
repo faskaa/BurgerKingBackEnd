@@ -1,0 +1,75 @@
+﻿@model List<Restaurant>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="delivery-job-hiring-header">
+    <div>
+        <div>
+            <a href="">
+                <button><img src="../../Assets/Icons/close.png" alt="" /></button>
+            </a>
+        </div>
+        <div>
+            <div>Join Our Team</div>
+        </div>
+        <div></div>
+    </div>
+</div>
+<table class="styled-table">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Title</th>
+            <th>Crud</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Restaurant restaurant in Model)
+        {
+            <tr>
+                <td>
+                    @{
+                        var count = 0;
+                        ++count;
+                    }@count
+                </td>
+                <td>@restaurant.Title</td>
+                <td>
+                    <div class="crud">
+                        <button class="create">
+                            <a asp-area="Admin" asp-controller="restaurant" asp-action="Create" class="crud-link">Create</a>
+                        </button>
+                        <button class="read">
+                            <a class="crud-link" asp-area="Admin" asp-controller="restaurant" asp-action="Detail" asp-route-id="@restaurant.Id">Read</a>
+                        </button>
+                        <button class="update">
+                            <a class="crud-link" asp-area="Admin" asp-controller="restaurant" asp-action="Update" asp-route-id="@restaurant.Id">Update</a>
+                        </button>
+                        <button class="delete" onclick="return confirmDelete('@restaurant.Id')">
+                            <a class="crud-link" asp-area="Admin" asp-controller="restaurant" asp-action="Delete" asp-route-id="@restaurant.Id">Delete</a>
+                        </button>
+                    </div>
+                </td>
+
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+
+
+<script>
+    function confirmDelete(sliderId) {
+        var result = confirm("Are you sure you want to delete this Ad?");
+
+        if (result) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+</script>
+

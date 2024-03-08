@@ -1,0 +1,78 @@
+﻿@model PRUpdateVM
+@{
+    ViewData["Title"] = "Update";
+}
+
+
+<div class="delivery-job-hiring-header">
+    <div>
+        <div>
+            <a href="">
+                <button><img src="../../Assets/Icons/close.png" alt="" /></button>
+            </a>
+        </div>
+        <div>
+            <div>Product of Restaurant Update</div>
+        </div>
+        <div></div>
+    </div>
+</div>
+<div class="form-container">
+    <form asp-area="Admin" asp-controller="RestaurantProduct" asp-action="Update"  method="post">
+        <div style="font-size:15px; color: red; font-weight:bold; font-family:'Flame Sans'" asp-validation-summary="All"></div>
+
+        
+
+        <label asp-for="@Model.RestaurantId">Restaurant Id</label>
+        <input asp-for="@Model.RestaurantId" id="username">
+        <div>
+            <span style="font-size:15px; color:   red; font-family:'Flame Sans'" asp-validation-for="@Model.RestaurantId"></span>
+        </div>
+
+        <label asp-for="@Model.ProductId">Product Id</label>
+        <input asp-for="@Model.ProductId" id="username">
+        <div>
+            <span style="font-size:15px; color:  red; font-family:'Flame Sans'" asp-validation-for="@Model.ProductId"></span>
+        </div>
+
+        <label asp-for="@Model.Count">Count</label>
+        <input asp-for="@Model.Count" id="username">
+        <div>
+            <span style="font-size:15px; color:  red; font-family:'Flame Sans'" asp-validation-for="@Model.Count"></span>
+        </div>
+
+     
+
+        <button style=" margin-top:20px" type="submit">Submit</button>
+    </form>
+
+    <div style="margin-top:20px">
+
+        <h4>Restaurants</h4>
+        @foreach (var item in Model.restaurant)
+        {
+            <div style="margin-top:5px">
+                <span>Id: @item.Id =></span>
+                <span>@item.Title</span>
+            </div>
+
+
+        }
+    </div>
+    <div style="margin-top:20px">
+
+        <h4>Products</h4>
+        @foreach (var item in Model.product)
+        {
+            <div style="margin-top:5px">
+                <span>Id: @item.Id =></span>
+                <span>@item.Title</span>
+            </div>
+
+
+        }
+    </div>
+</div>
+
+
+
