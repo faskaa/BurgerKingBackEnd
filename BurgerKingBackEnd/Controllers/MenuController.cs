@@ -214,7 +214,9 @@ namespace BurgerKingBackEnd.Controllers
         {
             CustomUser user = await _userManager.GetUserAsync(User);
             List<CardItem> items = _context.CardItems.Where(x=>x.UserId == user.Id).ToList();
- 
+            List<Order> orders = _context.Orders.Where(x=>x.CustomUserId == user.Id).ToList();
+
+            _context.Orders.RemoveRange(orders);
             _context.CardItems.RemoveRange(items);
             await _context.SaveChangesAsync();
 

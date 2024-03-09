@@ -1,6 +1,6 @@
 ﻿<div class="payment-header">
     <div class="left">
-        <a href="../Home/home.html">
+        <a asp-controller="home" asp-action="index">
             <img src="../../Assets/Icons/close.png" alt="" />
         </a>
     </div>
@@ -55,21 +55,7 @@
                title="5 digits numeric zipcode"
                required /><br />
     </div>
-    <div class="saveCard">
-        <input class="chexbox"
-               type="checkbox"
-               id="saveCard"
-               name="saveCard" /><br />
-        <span>
-            Save Card, by saving your card you consent for your card to be stored
-            and used for purchases.
-        </span>
-    </div>
-
-    <div class="total-price">
-        <span>Total</span>
-        <span>$22.88</span>
-    </div>
+ 
     <div>
         <input class="submit-btn" type="submit" value="Submit" />
     </div>

@@ -22,13 +22,13 @@ namespace BurgerKingBackEnd.Controllers
         }
 
 
-        public async Task<IActionResult> Index()
-        {
-            CustomUser user = await _userManager.GetUserAsync(User);
-            List<Order> order = _context.Orders.Where(x => x.CustomUserId == user.Id).Where(x => x.IsSubmited == true).Include(x=>x.cardItems).ToList();
+        //public async Task<IActionResult> Index()
+        //{
+        //    CustomUser user = await _userManager.GetUserAsync(User);
+        //    List<Order> order = _context.Orders.Where(x => x.CustomUserId == user.Id).Where(x => x.IsSubmited == true).Include(x=>x.cardItems).ToList();
 
-            return Json(order);
-        }
+        //    return Vieworder);
+        //}
 
         [HttpPost]
         public async Task<IActionResult> Delivery(string unit , string instructions , int phone)
@@ -204,7 +204,7 @@ namespace BurgerKingBackEnd.Controllers
             
 
             CustomUser user = await _userManager.GetUserAsync(User);
-            List<Order> orders = _context.Orders.Where(x=>x.CustomUserId == user.Id).Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Include(x => x.cardItems).Include(x => x.CustomUser).ToList();
+            List<Order> orders = _context.Orders.Include(x=>x.cardItems).Where(x=>x.CustomUserId == user.Id).Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Include(x => x.cardItems).Include(x => x.CustomUser).ToList();
             List<Restaurant> restaurants = _context.Restaurant.ToList();
             if (orders.Count > 0)
             {
@@ -216,6 +216,7 @@ namespace BurgerKingBackEnd.Controllers
                     Restaurant = restaurants,
                 };
 
+                
                 return View(orderVM);
 
             }

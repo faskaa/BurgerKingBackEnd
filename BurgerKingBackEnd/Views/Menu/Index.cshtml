@@ -3,23 +3,31 @@
 <header>
     <div class="navbar">
         <div class="top">
-            <a class="burgermenu" href="../BurgerMenu/burgermenu.html">
+            <a class="burgermenu" asp-controller="burgermenu" asp-action="index">
                 <img src="./../../Assets/Icons/burger-bar.png" alt="" />
             </a>
-            <a class="logo" asp-controller="Location" asp-action="PickUp">
+            <a class="logo" asp-controller="home" asp-action="index">
                 <img src="./../../Assets/Icons/burger-king.png" alt="" />
             </a>
-            <div class="buttons">
-                <a class="account" href="../Sign-Up/signup.html">
-                    <button>Sign Up/Sing In</button>
-                </a>
-                <a class="basket" href="../Sign-Up/signup.html">
-                    <button>
-                        <img src="./../../Assets/Icons/basket.png" alt="" />
-                        $0.00
-                    </button>
-                </a>
-            </div>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <div style="width:209.5px;display:flex;justify-content:end" class="buttons">
+                    <a class="account" asp-controller="account" asp-action="index">
+                        <button>@User.Identity.Name</button>
+                    </a>
+
+                </div>
+            }
+            else
+            {
+                <div style="width:209.5px;display:flex;justify-content:end" class="buttons">
+                    <a class="account" asp-controller="account" asp-action="register">
+                        <button>Sign Up/Sing In</button>
+                    </a>
+
+                </div>
+            }
+
         </div>
 @*         <div class="bottom">
             <a asp-controller="Location" asp-action="PickUp">
@@ -51,23 +59,11 @@
 <footer>
     <div class="footer">
         <div>
-            <a href="../Home/home.html">
+            <a asp-controller="Home" asp-action="Index">
                 <img src="../../Assets/Icons/home.png" alt="" />
                 <span>Home</span>
             </a>
         </div>
-        <div>
-            <a href="../Locations/location.html">
-                <img src="../../Assets/Icons/menu.png" alt="" />
-                <span>Menu</span>
-            </a>
-        </div>
 
-        <div>
-            <a href="../Offer/offer.html">
-                <img src="../../Assets/Icons/discount.png" alt="" />
-                <span>Offers</span>
-            </a>
-        </div>
     </div>
 </footer>

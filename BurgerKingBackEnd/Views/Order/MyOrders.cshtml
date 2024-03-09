@@ -3,12 +3,12 @@
 <div class="delivery-job-hiring-header">
     <div>
         <div>
-            <a href="">
+            <a asp-controller="home" asp-action="index">
                 <button><img src="../../Assets/Icons/close.png" alt="" /></button>
             </a>
         </div>
         <div>
-            <div>Join Our Team</div>
+            <div>My Orders</div>
         </div>
         <div></div>
     </div>
@@ -18,8 +18,8 @@
     {
         <div class="orders-index">
             <div class="detail">
-                <span>@Model.Restaurant.FirstOrDefault(x=>x.Id == order.CustomUser.SelectedRestaurantId).Title</span>
-                <span>Price of products: @order.cardItems.Sum(x=>x.Price)</span>
+                <span>Your Order</span>
+                <span>Restaurant: @Model.Restaurant.FirstOrDefault(x=>x.Id == order.CustomUser.SelectedRestaurantId).Title</span>
             </div>
             <a style="text-decoration:none" asp-controller="Order" asp-action="Detail" asp-route-id="@order.Id">
                 <button asp-controller="O" asrderp-action="Detail" asp-route-id="@order.Id">Detail</button>

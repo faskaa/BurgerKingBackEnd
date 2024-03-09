@@ -2,7 +2,7 @@
 
 <div class="card-header">
     <div class="left">
-        <a href="../Home/home.html">
+        <a asp-controller="home" asp-action="index">
             <img src="../../Assets/Icons/close.png" alt="" />
         </a>
     </div>
@@ -14,8 +14,7 @@
     <h4>Delivery Details</h4>
     <form asp-controller="Order" asp-action="Delivery"   method="post">
         <div class="form">
-            <span class="time">Eta: 1 hour</span>
-            <span class="location">15 Muar Street</span>
+            <span class="location">Delivery</span>
 
             <label for="unit">Unit (Optional):</label>
             <input type="text" id="unit" name="unit" />
