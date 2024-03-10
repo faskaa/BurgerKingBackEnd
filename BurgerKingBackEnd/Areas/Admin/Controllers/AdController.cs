@@ -24,12 +24,14 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             List<Ad> ad= _context.Ads.ToList();
             return View(ad);
         }
 
         public IActionResult Detail(int id)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (id == 0) return BadRequest();
             Ad ad = _context.Ads.FirstOrDefault(x=>x.Id == id)!;
             if (ad == null) return NotFound();
@@ -40,12 +42,14 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(AdCreateVM ad)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (ad is null) return BadRequest();
 
             if (!ModelState.IsValid) return View();
@@ -81,6 +85,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Update(int id)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (id == 0) return BadRequest();
             AdUpdateVM ad = _context.Ads.Select(x=>new AdUpdateVM
             {
@@ -96,6 +101,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(int id , AdUpdateVM newAd)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (id == 0) return BadRequest();
             AdUpdateVM ad = _context.Ads.Select(x=> new AdUpdateVM
             {
@@ -141,6 +147,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
 
         public IActionResult Delete(int id)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (id==0) return BadRequest();
             Ad ad = _context.Ads.FirstOrDefault(a => a.Id == id)!;
             if (ad == null) return NotFound();

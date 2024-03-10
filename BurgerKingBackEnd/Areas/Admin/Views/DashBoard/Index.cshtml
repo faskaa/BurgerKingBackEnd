@@ -1,4 +1,4 @@
-﻿
+﻿@model DashboardVM
 @{
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
@@ -13,18 +13,18 @@
         <h4>Welcome Back , Faska</h4>
         <div class="staticts">
             <span>Totals:</span>
-            <span class="total">
+           @*  <span class="total">
                 Total Sales: $33913
-            </span>
+            </span> *@
             <span class="total">
-                Total Users: 94
+                Total Users: @Model.Users.Count
             </span>
-            <span class="total">
+            @* <span class="total">
                 Total Couriers: 12
             </span>
             <span class="total">
                 Total Admins : 3
-            </span>
+            </span> *@
         </div>
     </div>
     <div class="admin-panel-left">

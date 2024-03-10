@@ -23,12 +23,14 @@ namespace BurgerKingBackEnd.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Title = "Delivery - Burger King";
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> AddCourier( string name , int phone , int license , int experience , string vehicle)
         {
+            ViewBag.Title = "Delivery - Burger King";
             CustomUser user = await _userManager.GetUserAsync(User);
 
             Courier courier = new Courier
@@ -55,6 +57,7 @@ namespace BurgerKingBackEnd.Controllers
 
         public async Task<IActionResult> Orders()
         {
+            ViewBag.Title = "Delivery - Burger King";
             CustomUser user = await _userManager.GetUserAsync(User);
             List<Order> orders = _context.Orders.Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Where(x=>x.Status == null).Include(x=>x.cardItems).Include(x=>x.CustomUser).ToList();
             List<Restaurant> restaurants = _context.Restaurant.ToList();
@@ -74,7 +77,8 @@ namespace BurgerKingBackEnd.Controllers
 
 
         public async Task<IActionResult> Detail(int id)
-        {   
+        {
+            ViewBag.Title = "Delivery - Burger King";
             CustomUser user = await _userManager.GetUserAsync(User);
             Order order = _context.Orders.Where(x=>x.PickUpType==false).Include(x=>x.cardItems).Include(x=>x.CustomUser).Include(x=>x.cardItems).FirstOrDefault(x => x.Id == id);
             if (order == null) return NotFound();
@@ -88,7 +92,7 @@ namespace BurgerKingBackEnd.Controllers
 
         public async Task<IActionResult> Delivered(int id)
         {
-
+            ViewBag.Title = "Delivery - Burger King";
             CustomUser user = await _userManager.GetUserAsync(User);
             if (id == 0) return BadRequest();
             Order order = _context.Orders.Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Include(x => x.cardItems).Include(x => x.CustomUser).FirstOrDefault(x => x.Id == id);

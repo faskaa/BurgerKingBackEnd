@@ -6,12 +6,12 @@
 <div class="delivery-job-hiring-header">
     <div>
         <div>
-            <a href="">
+            <a asp-area="Admin" asp-controller="DashBoard" asp-action="Index">
                 <button><img src="../../Assets/Icons/close.png" alt="" /></button>
             </a>
         </div>
         <div>
-            <div>Join Our Team</div>
+            <div>Ad Index</div>
         </div>
         <div></div>
     </div>
@@ -26,13 +26,16 @@
         </tr>
     </thead>
     <tbody>
+        @{
+            var count = 0;
+        }
         @foreach (Ad ad in Model)
         {
             <tr>
                 <td>
                     @{
-                        var count = 0;
-                        ++count;
+                        count +=1;
+                        
                     }@count
                 </td>
                 <td>@ad.Title</td>

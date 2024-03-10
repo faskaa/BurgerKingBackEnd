@@ -25,12 +25,14 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             List<Product> products = _context.Product.ToList();
             return View(products);
         }
 
         public IActionResult Detail(int id)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (id == 0) return BadRequest();
             Product product = _context.Product.FirstOrDefault(x=>x.Id==id)!;
             if (product == null) return NotFound();
@@ -42,13 +44,15 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            
+            ViewBag.Title = "Admin Panel - Burger King";
+
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(ProductCreateVM product)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (product == null) return BadRequest();
             if (!ModelState.IsValid) return View();
 
@@ -85,6 +89,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Update(int id)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (id == 0) return BadRequest();
             ProductUpdateVM product = _context.Product.Select(x=>new ProductUpdateVM
             {
@@ -103,7 +108,8 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(int id , ProductUpdateVM newProduct)
         {
-            if(id == 0) return BadRequest();
+            ViewBag.Title = "Admin Panel - Burger King";
+            if (id == 0) return BadRequest();
             ProductUpdateVM product = _context.Product.Select(x=>new ProductUpdateVM
             {
                 Id=x.Id,
@@ -146,6 +152,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
 
         public IActionResult Delete(int id)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (id == 0) return BadRequest();
             Product product = _context.Product.FirstOrDefault(x => x.Id == id)!;
             if (product == null) return NotFound();

@@ -60,7 +60,7 @@ namespace BurgerKingBackEnd.Controllers
         public IActionResult Detail(int RestaurantId , int ProductId )
         {
             ViewBag.js = "Detail/detail.js";
-            ViewBag.title = "Detail - Burger King";
+            ViewBag.title = "Menu - Burger King";
 
             MenuVM model = new MenuVM
             {

@@ -17,6 +17,7 @@ namespace BurgerKingBackEnd.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Title = "About - Burger King";
             List<Setting> setting = _context.Settings.ToList();
             return View(setting);
         }

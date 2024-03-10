@@ -21,12 +21,14 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             List<Restaurant> restaurant = _context.Restaurant.ToList();
             return View(restaurant);
         }
 
         public IActionResult Detail(int id)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (id == 0) return BadRequest();
             Restaurant restaurant = _context.Restaurant.FirstOrDefault(x => x.Id == id)!;
             if (restaurant == null) return NotFound();
@@ -36,11 +38,13 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             return View();
         }
 
         public IActionResult Create(RestaurantCreateVM restaurant)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (restaurant is null) return BadRequest();
             if (!ModelState.IsValid) return View();
 
@@ -57,9 +61,10 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult Update(int id) 
+        public IActionResult Update(int id)
         {
-            if(id==0) return BadRequest();
+            ViewBag.Title = "Admin Panel - Burger King";
+            if (id==0) return BadRequest();
             RestaurantUpdateVM restaurant = _context.Restaurant.Select(x=>new RestaurantUpdateVM
             {
                 Id = x.Id,
@@ -75,6 +80,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Update(int id , RestaurantUpdateVM newRestaurant)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (id == 0) return BadRequest();
             RestaurantUpdateVM restaurant = _context.Restaurant.Select(x => new RestaurantUpdateVM
             {
@@ -99,6 +105,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
 
         public IActionResult Delete(int id)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (id == 0) return BadRequest();
             Restaurant restaurant = _context.Restaurant.FirstOrDefault(x=>x.Id == id)!;
             if (restaurant == null) return NotFound();

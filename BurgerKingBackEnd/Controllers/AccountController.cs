@@ -26,7 +26,7 @@ namespace BurgerKingBackEnd.Controllers
 
         public async  Task<IActionResult> Index()
         {
-
+            ViewBag.Title = "Account - Burger King";
             CustomUser user = await _userManager.GetUserAsync(User);
             if (user is null) return BadRequest();
 
@@ -35,12 +35,14 @@ namespace BurgerKingBackEnd.Controllers
 
         public IActionResult Login()
         {
+            ViewBag.Title = "Account - Burger King";
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> Login(LoginVM login)
         {
+            ViewBag.Title = "Account - Burger King";
             if (!ModelState.IsValid) return View();
             CustomUser user = await _userManager.FindByNameAsync(login.Username);
 
@@ -68,13 +70,15 @@ namespace BurgerKingBackEnd.Controllers
 
         public IActionResult Register()
         {
+            ViewBag.Title = "Account - Burger King";
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> Register(RegisterVM account)
         {
-            if(!ModelState.IsValid)
+            ViewBag.Title = "Account - Burger King";
+            if (!ModelState.IsValid)
             {
                 return View();
             }

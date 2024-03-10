@@ -24,7 +24,7 @@ namespace BurgerKingBackEnd.Controllers
 
         public async Task<IActionResult> PickUp()
         {
-
+            ViewBag.Title = "Card - Burger King";
 
             var customUser = await _userManager.GetUserAsync(User);
            
@@ -69,7 +69,7 @@ namespace BurgerKingBackEnd.Controllers
 
         public async Task<IActionResult> Delivery()
         {
-
+            ViewBag.Title = "Card - Burger King";
 
             var customUser = await _userManager.GetUserAsync(User);
 

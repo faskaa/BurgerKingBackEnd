@@ -20,7 +20,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
-
+            ViewBag.Title = "Admin Panel - Burger King";
             List<RestaurantProduct> restaurantProduct = _context.RestaurantProduct.ToList();
             List<Restaurant> restaurant = _context.Restaurant.ToList();
             List<Product> product = _context.Product.ToList();
@@ -38,6 +38,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            ViewBag.Title = "Admin Panel - Burger King";
 
             List<Restaurant> restaurant = _context.Restaurant.ToList();
             List<Product> product = _context.Product.ToList();
@@ -53,6 +54,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Create(PRCreateVM pr)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             List<Restaurant> prrestaurant = _context.Restaurant.ToList();
             List<Product> prproduct = _context.Product.ToList();
             PRCreateVM pRCreateVM = new PRCreateVM
@@ -109,6 +111,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Update(int id)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             List<Restaurant> prRestaurant = _context.Restaurant.ToList();
             List<Product> prProduct = _context.Product.ToList();
             if (id == 0) return BadRequest();
@@ -130,6 +133,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         [HttpPost]
         public IActionResult Update(int id, PRUpdateVM pr)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             List<Restaurant> pr2Restaurant = _context.Restaurant.ToList();
             List<Product> pr2Product = _context.Product.ToList();
             if (id == 0) return BadRequest();
@@ -184,7 +188,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
 
         public IActionResult Detail(int id)
         {
-
+            ViewBag.Title = "Admin Panel - Burger King";
             if (id == 0) return BadRequest();
             RestaurantProduct restaurantProduct = _context.RestaurantProduct.FirstOrDefault(x => x.Id == id)!;
             Restaurant restaurant = _context.Restaurant.FirstOrDefault(x=>x.Id == restaurantProduct.RestaurantId);
@@ -203,6 +207,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
 
         public IActionResult Delete(int id)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (id == 0) return BadRequest();
             RestaurantProduct restaurantProduct = _context.RestaurantProduct.FirstOrDefault(a => a.Id == id)!;
             if (restaurantProduct == null) return NotFound();

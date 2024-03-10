@@ -23,6 +23,7 @@ namespace BurgerKingBackEnd.Controllers
 
         public async Task<IActionResult> Index()
         {
+            ViewBag.Title = "Burger Menu - Burger King";
             CustomUser user = await _userManager.GetUserAsync(User);
             //IList<string> userRole = await _userManager.GetRolesAsync(user);
             List<Order> orders = _context.Orders.Where(x => x.CustomUserId == user.Id).Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).ToList();
@@ -32,6 +33,7 @@ namespace BurgerKingBackEnd.Controllers
                 {
                     CustomUser = user,
                     IsCourier = false,
+                    IsAdmin = false,
                     Order = orders,
                     Courier = null
                     
@@ -42,6 +44,7 @@ namespace BurgerKingBackEnd.Controllers
             {
 
               bool userRole = await _userManager.IsInRoleAsync(user, Roles.Courier.ToString());
+              bool userRoleAdmin = await _userManager.IsInRoleAsync(user, Roles.Admin.ToString());
                 Courier courier = _context.Courier.FirstOrDefault(x=>x.CustomUserId==user.Id);
                 if (courier == null)
                 {
@@ -50,6 +53,7 @@ namespace BurgerKingBackEnd.Controllers
                     {
                         CustomUser = user,
                         IsCourier = userRole,
+                        IsAdmin= userRoleAdmin,
                         Order = orders,
                         Courier = null
                         
@@ -63,6 +67,7 @@ namespace BurgerKingBackEnd.Controllers
                     {
                         CustomUser = user,
                         IsCourier = userRole,
+                        IsAdmin = userRoleAdmin,
                         Order = orders,
                         Courier = courier
 

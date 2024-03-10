@@ -26,12 +26,15 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
 
         public IActionResult Index()
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             List<Slider> slider = _context.Sliders.ToList();
             return View(slider);
         }
 
         public IActionResult Detail(int id)
-        { if (id == 0) return BadRequest();
+        {
+            ViewBag.Title = "Admin Panel - Burger King";
+            if (id == 0) return BadRequest();
             Slider slider = _context.Sliders.FirstOrDefault(x => x.Id == id)!;
             if (slider == null) return NotFound();
             return View(slider);
@@ -40,12 +43,14 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Create()
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             return View();
         }
 
         [HttpPost]
         public async Task<IActionResult> Create(SliderCreateVM slider)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (slider == null) return BadRequest();
             if (!ModelState.IsValid) return View();
             if (!slider.IImage.IsImage() || !slider.IDeliveryImage.IsImage() || !slider.IOrderImage.IsImage() )
@@ -85,6 +90,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         [HttpGet]
         public IActionResult Update(int id)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (id == 0) return BadRequest();
             SliderUpdateVM slider = _context.Sliders.Select(x=> new SliderUpdateVM
             {
@@ -102,6 +108,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
         [HttpPost]
         public async Task<IActionResult> Update(int id, SliderUpdateVM Newslider)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (id == 0) return BadRequest();
             SliderUpdateVM slider = _context.Sliders.Select(x => new SliderUpdateVM
             {
@@ -181,6 +188,7 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
 
         public IActionResult Delete(int id)
         {
+            ViewBag.Title = "Admin Panel - Burger King";
             if (id == 0) return BadRequest();
             Slider slider = _context.Sliders.FirstOrDefault(x => x.Id == id)!;
             if (slider == null) return NotFound();

@@ -33,6 +33,7 @@ namespace BurgerKingBackEnd.Controllers
         [HttpPost]
         public async Task<IActionResult> Delivery(string unit , string instructions , int phone)
         {
+            ViewBag.title = "Order - Burger King";
             CustomUser user = await _userManager.GetUserAsync(User);
            List<CardItem> cardItems=  _context.CardItems.Where(x => x.UserId == user.Id).Where(x => x.OrderType == false).ToList();
             Order order = new Order
@@ -57,6 +58,7 @@ namespace BurgerKingBackEnd.Controllers
         [HttpPost]
         public async Task<IActionResult> PickUp(string option)
         {
+            ViewBag.title = "Order - Burger King";
             CustomUser user = await _userManager.GetUserAsync(User);
             List<CardItem> cardItems = _context.CardItems.Where(x => x.UserId == user.Id).Where(x => x.OrderType == true).ToList();
             Order order = new Order
@@ -80,6 +82,7 @@ namespace BurgerKingBackEnd.Controllers
         [HttpPost]
         public async Task<IActionResult> DeliveryPayment(string nameOnCard, int creditCardNumber , DateTime expirationDate , int cvv , int zipcode)
         {
+            ViewBag.title = "Order - Burger King";
             CustomUser user = await _userManager.GetUserAsync(User);
             //Order order = _context.Orders.Where(x=>x.PickUpType == false).Where(x=>x.IsSubmited == true).FirstOrDefault(x => x.CustomUserId == user.Id);
             Order order = _context.Orders.Where(x=>x.CustomUserId == user.Id).Where(x => x.PickUpType == false).FirstOrDefault(x=>x.IsSubmited == false);
@@ -140,6 +143,7 @@ namespace BurgerKingBackEnd.Controllers
 
         public async Task<IActionResult> PickUpPayment(string nameOnCard, int creditCardNumber, DateTime expirationDate, int cvv, int zipcode)
         {
+            ViewBag.title = "Order - Burger King";
             CustomUser user = await _userManager.GetUserAsync(User);
             //Order order = _context.Orders.Where(x=>x.PickUpType == true).Where(x=>x.IsSubmited==true).FirstOrDefault(x => x.CustomUserId == user.Id);
             Order order = _context.Orders.Where(x => x.CustomUserId == user.Id).Where(x => x.PickUpType == true).FirstOrDefault(x => x.IsSubmited == false)!;
@@ -201,7 +205,7 @@ namespace BurgerKingBackEnd.Controllers
 
         public async Task<IActionResult> MyOrders()
         {
-            
+            ViewBag.title = "Order - Burger King";
 
             CustomUser user = await _userManager.GetUserAsync(User);
             List<Order> orders = _context.Orders.Include(x=>x.cardItems).Where(x=>x.CustomUserId == user.Id).Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Include(x => x.cardItems).Include(x => x.CustomUser).ToList();
@@ -230,7 +234,7 @@ namespace BurgerKingBackEnd.Controllers
         public async Task<IActionResult> Detail(int id)
         {
 
-
+            ViewBag.title = "Order - Burger King";
             CustomUser user = await _userManager.GetUserAsync(User);
             if (id == 0) return BadRequest();
             Order order = _context.Orders.Where(x => x.CustomUserId == user.Id).Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Include(x => x.cardItems).Include(x => x.CustomUser).FirstOrDefault(x=>x.Id == id);
