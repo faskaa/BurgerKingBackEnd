@@ -44,7 +44,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Ads");
+                    b.ToTable("Ads", (string)null);
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.Card", b =>
@@ -79,7 +79,7 @@ namespace BurgerKingBackEnd.Migrations
                     b.HasIndex("OrderId")
                         .IsUnique();
 
-                    b.ToTable("Cards");
+                    b.ToTable("Cards", (string)null);
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.CardItem", b =>
@@ -126,7 +126,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("CardItems");
+                    b.ToTable("CardItems", (string)null);
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.Category", b =>
@@ -143,7 +143,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Category");
+                    b.ToTable("Category", (string)null);
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.Courier", b =>
@@ -186,7 +186,7 @@ namespace BurgerKingBackEnd.Migrations
                     b.HasIndex("CustomUserId")
                         .IsUnique();
 
-                    b.ToTable("Courier");
+                    b.ToTable("Courier", (string)null);
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.CustomUser", b =>
@@ -295,7 +295,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Downloads");
+                    b.ToTable("Downloads", (string)null);
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.Order", b =>
@@ -335,7 +335,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasIndex("CustomUserId");
 
-                    b.ToTable("Orders");
+                    b.ToTable("Orders", (string)null);
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.Product", b =>
@@ -366,7 +366,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Product");
+                    b.ToTable("Product", (string)null);
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.Restaurant", b =>
@@ -389,7 +389,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Restaurant");
+                    b.ToTable("Restaurant", (string)null);
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.RestaurantProduct", b =>
@@ -415,7 +415,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasIndex("RestaurantId");
 
-                    b.ToTable("RestaurantProduct");
+                    b.ToTable("RestaurantProduct", (string)null);
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.Setting", b =>
@@ -436,7 +436,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Settings");
+                    b.ToTable("Settings", (string)null);
                 });
 
             modelBuilder.Entity("BurgerKingBackEnd.Entities.Slider", b =>
@@ -465,7 +465,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Sliders");
+                    b.ToTable("Sliders", (string)null);
                 });
 
             modelBuilder.Entity("CardItemOrder", b =>
@@ -480,7 +480,7 @@ namespace BurgerKingBackEnd.Migrations
 
                     b.HasIndex("cardItemsId");
 
-                    b.ToTable("CardItemOrder");
+                    b.ToTable("CardItemOrder", (string)null);
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>

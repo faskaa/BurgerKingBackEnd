@@ -215,6 +215,16 @@ namespace BurgerKingBackEnd.Controllers
             CustomUser user = await _userManager.GetUserAsync(User);
             List<CardItem> items = _context.CardItems.Where(x=>x.UserId == user.Id).ToList();
             List<Order> orders = _context.Orders.Where(x=>x.CustomUserId == user.Id).ToList();
+            foreach (var item in orders)
+            {
+                Courier courier = _context.Courier.FirstOrDefault(x=>x.DeliveringOrderId == item.Id);
+                courier.IsDelivering = false;
+                courier.DeliveringOrderId = null;
+                _context.SaveChanges();
+            }
+                //List<Courier> couriers = _context.Courier.Where(x => x.DeliveringOrderId == item.Id).ToList();
+
+         
 
             _context.Orders.RemoveRange(orders);
             _context.CardItems.RemoveRange(items);

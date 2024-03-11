@@ -11,6 +11,7 @@
         public bool IsDelivering { get; set; }
         public int? DeliveringOrderId { get; set; }
 
+
         public string CustomUserId { get; set; }
         public CustomUser CustomUser { get; set; }
     }

@@ -12,6 +12,8 @@
         //null= processing , false== En route , true Delivered
         public bool? Status { get; set; }
         public List<CardItem> cardItems { get; set; }
+        
+
 
 
         public string CustomUserId { get; set; }
