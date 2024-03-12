@@ -13,35 +13,72 @@
 <div class="delivery-form-wrapper">
     <h4>Delivery Details</h4>
     <form asp-controller="Order" asp-action="Delivery"   method="post">
-        <div class="form">
-            <span class="location">Delivery</span>
+        
+            @if (Model.cardItems.Count>0)
+            {
+                
+                <div class="form">
+                    <span class="location">Delivery</span>
 
-            <label for="unit">Unit (Optional):</label>
-            <input type="text" id="unit" name="unit" />
+                    <label for="unit">Unit (Optional):</label>
+                    <input type="text" id="unit" name="unit" />
 
-            <br />
+                    <br />
 
-            <label for="instructions">Delivery Instructions (Required):</label>
-            <textarea class="textarea"
-                      id="instructions"
-                      name="instructions"
-                      rows="4"
-                      cols="50" required></textarea>
+                    <label for="instructions">Delivery Instructions (Required):</label>
+                    <textarea  class="textarea"
+                              id="instructions"
+                              name="instructions"
+                              rows="4"
+                              cols="50" required></textarea>
 
-            <br />
+                    <br />
 
-            <label for="phone">Phone Number (Required):</label>
-            <input type="tel" id="phone" name="phone" required />
+                    <label for="phone">Phone Number (Required):</label>
+                    <input type="tel" id="phone" name="phone" required />
 
-            <br />
-            @* <div class="chexbox">
-                <input type="checkbox" />
-                <span>
-                    Save My Information. Please save my phone number and delivery
-                    address for faster checkout the next time I place an order.
-                </span>
+                    <br />
+                    @* <div class="chexbox">
+                        <input type="checkbox" />
+                        <span>
+                            Save My Information. Please save my phone number and delivery
+                            address for faster checkout the next time I place an order.
+                        </span>
+                    </div> *@
+            </div>
+        }
+        else
+        {
+            <div style="opacity:0.5" class="form">
+                <span class="location">Delivery</span>
+
+                <label for="unit">Unit (Optional):</label>
+                <input disabled style="cursor:not-allowed" type="text" id="unit" name="unit" />
+
+                <br />
+
+                <label for="instructions">Delivery Instructions (Required):</label>
+                <textarea style="cursor:not-allowed" disabled class="textarea"
+                          id="instructions"
+                          name="instructions"
+                          rows="4"
+                          cols="50" required></textarea>
+
+                <br />
+
+                <label for="phone">Phone Number (Required):</label>
+                <input style="cursor:not-allowed" disabled type="tel" id="phone" name="phone" required />
+
+                <br />
+                @* <div class="chexbox">
+            <input type="checkbox" />
+            <span>
+            Save My Information. Please save my phone number and delivery
+            address for faster checkout the next time I place an order.
+            </span>
             </div> *@
-        </div>
+            </div>
+        }
         <div class="orders-wrapper">
             <h4>Your Card</h4>
             <div class="orders">
@@ -73,9 +110,13 @@
             <a style="text-decoration:none" asp-controller="Menu" asp-action="DeliveryIndex" asp-route-id="@Model.RestaurantId">
                 <button type="button">+ Add Items</button>
             </a>
+            @if (Model.cardItems.Count>0)
+            {
+                
             <a style="text-decoration:none" asp-controller="Menu" asp-action="DeleteDeliveryCardItem">
                 <button type="button">- Delete Items</button>
             </a>
+            }
         </div>
 
         <div class="taxs-wrapper">
@@ -95,9 +136,19 @@
             </div>
         </div>
         <div class="submit-wrapper">
-            <a href="#">
-                <input class="submit-btn" type="submit" placeholder="Continue" name="Continue" id="" />
-            </a>
+            @if (Model.cardItems.Count > 0)
+            {
+                <a href="#">
+                    <input class="submit-btn" type="submit" placeholder="Continue" name="Continue" id="" />
+                </a>
+
+            }
+            else
+            {
+                <a href="#">
+                    <input  style="background-color:gray;opacity:0.5;cursor:not-allowed" class="submit-btn" type="button" placeholder="Continue" value="Please select items" name="Continue" id="" />
+                </a>
+            }
         </div>
     </form>
 </div>

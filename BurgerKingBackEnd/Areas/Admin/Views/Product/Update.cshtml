@@ -7,12 +7,12 @@
 <div class="delivery-job-hiring-header">
     <div>
         <div>
-            <a href="">
-                <button><img src="../../Assets/Icons/close.png" alt="" /></button>
+            <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">
+                <button><img src="~/Assets/Icons/close.png" alt="" /></button>
             </a>
         </div>
         <div>
-            <div>Ad Update</div>
+            <div>Product Update</div>
         </div>
         <div></div>
     </div>
@@ -42,7 +42,7 @@
             <span style="font-size:15px; color:  red; font-family:'Flame Sans'" asp-validation-for="@Model.Price"></span>
         </div>
 
-        <label asp-for="@Model.Calory">Description</label>
+        <label asp-for="@Model.Calory">Calory</label>
         <input asp-for="@Model.Calory" id="username">
         <div>
             <span style="font-size:15px; color:  red; font-family:'Flame Sans'" asp-validation-for="@Model.Calory"></span>

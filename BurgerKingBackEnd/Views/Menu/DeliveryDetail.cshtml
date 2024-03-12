@@ -73,27 +73,26 @@
 
     <form asp-controller="Menu" asp-action="DeliveryAddOrder" asp-route-restaurantId="@Model.Restaurants.Id" asp-route-productId="@Model.Product.Id" method="post">
 
+
         <div class="form">
-            <h4>Standart Drink Size</h4>
+            <h4>Select Size</h4>
             <div class="size">
                 <label>
                     <div class="infos">
-                        <img src="../../Assets/Icons/small-drink-size.webp" alt="" />
                         <div class="info">
                             <span>Small</span>
-                            <span>100 cal</span>
+                            <span>@Model.Product.Calory cal</span>
                         </div>
                     </div>
-                    <input required type="radio" name="size" value="Small" />
+                    <input required type="radio" checked="checked" name="size" value="Small" />
                 </label>
             </div>
             <div class="size">
                 <label>
                     <div class="infos">
-                        <img src="../../Assets/Icons/small-drink-size.webp" alt="" />
                         <div class="info">
                             <span>Medium</span>
-                            <span>150 cal</span>
+                            <span>@(Math.Round(Model.Product.Calory*(decimal)1.5)) cal</span>
                         </div>
                     </div>
                     <input required type="radio" name="size" value="Medium" />
@@ -102,10 +101,9 @@
             <div class="size">
                 <label>
                     <div class="infos">
-                        <img src="../../Assets/Icons/small-drink-size.webp" alt="" />
                         <div class="info">
                             <span>Large</span>
-                            <span>200 cal</span>
+                            <span>@(Model.Product.Calory*2) cal</span>
                         </div>
                     </div>
                     <input required type="radio" name="size" value="Large" />
@@ -191,17 +189,51 @@
     function updatePrice() {
         var quantity = document.getElementById('numberInput').value;
         var unitPrice = parseFloat("@Model.Product.Price");
-        var price = unitPrice * quantity;
-        document.getElementById('price').innerText = '$' + price.toFixed(2);
+        var size = document.querySelector('input[name="size"]:checked').value;
+        var sizeMultiplier = 1.0;
+
+        if (size === 'Medium') {
+            sizeMultiplier = 1.5;
+        } else if (size === 'Large') {
+            sizeMultiplier = 2.0;
+        }
+
+        var totalPrice = unitPrice * sizeMultiplier * quantity;
+        document.getElementById('price').innerText = '$' + totalPrice.toFixed(2);
+    }
+
+    document.querySelectorAll('input[name="size"]').forEach(function (input) {
+        input.addEventListener('change', updatePrice);
+    });
+
+    function increaseValue() {
+        var input = document.getElementById('numberInput');
+        input.value = parseInt(input.value, 10) + 1;
+        updatePrice();
+    }
+
+    function decreaseValue() {
+        var input = document.getElementById('numberInput');
+        if (parseInt(input.value, 10) > 1) {
+            input.value = parseInt(input.value, 10) - 1;
+            updatePrice();
+        }
     }
 
     function addToCart() {
         var quantity = document.getElementById('numberInput').value;
+        var size = document.querySelector('input[name="size"]:checked').value;
         var unitPrice = parseFloat("@Model.Product.Price");
-        var totalPrice = unitPrice * quantity;
+        var sizeMultiplier = 1.0;
 
+        if (size === 'Medium') {
+            sizeMultiplier = 1.5;
+        } else if (size === 'Large') {
+            sizeMultiplier = 2.0;
+        }
+
+        var totalPrice = unitPrice * sizeMultiplier * quantity;
         console.log('Added to cart - Quantity: ' + quantity + ', Total Price: $' + totalPrice.toFixed(2));
-
     }
 
 

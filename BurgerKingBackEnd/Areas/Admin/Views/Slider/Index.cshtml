@@ -9,12 +9,12 @@
 <div class="delivery-job-hiring-header">
     <div>
         <div>
-            <a href="">
+            <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index"> 
                 <button><img src="../../Assets/Icons/close.png" alt="" /></button>
             </a>
         </div>
         <div>
-            <div>Join Our Team</div>
+            <div>Slider Index</div>
         </div>
         <div></div>
     </div>
@@ -39,18 +39,18 @@
                 <td>@slider.Title</td>
             <td>
                 <div class="crud">
-                    <button class="create">
+              @*       <button class="create">
                             <a asp-area="Admin" asp-controller="Slider" asp-action="Create" class="crud-link" >Create</a>
-                    </button>
+                    </button> *@
                     <button class="read">
                             <a class="crud-link" asp-area="Admin" asp-controller="Slider" asp-action="Detail" asp-route-id="@slider.Id" >Read</a>
                     </button>
                     <button class="update">
                             <a class="crud-link" asp-area="Admin" asp-controller="Slider" asp-action="Update" asp-route-id="@slider.Id">Update</a>
                     </button>
-                        <button class="delete" onclick="return confirmDelete('@slider.Id')">
+       @*                  <button class="delete" onclick="return confirmDelete('@slider.Id')">
                             <a class="crud-link" asp-area="Admin" asp-controller="Slider" asp-action="Delete" asp-route-id="@slider.Id">Delete</a>
-                    </button>
+                    </button> *@
                 </div>
             </td>
 

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CZkIDOny5bFAm4IbvJ11wX39UuOC2wMC6n8lZ0J9drw=",
+  "Hash": "NkAGwz/Lk7R6/zSJwlnNlPl2qZ+cgatQwjUazPAsRx0=",
   "Source": "BurgerKingBackEnd",
   "BasePath": "_content/BurgerKingBackEnd",
   "Mode": "Default",
@@ -646,6 +646,23 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Images\\232e90a8-c301-48b7-92db-9e59a539849128f37c5a4018fc3c167a119948c36e21d08d6a31-1333x1333.webp"
     },
     {
+      "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\3a9cbf64-b726-4ab7-89b0-69d32a10342028f37c5a4018fc3c167a119948c36e21d08d6a31-1333x1333.webp",
+      "SourceId": "BurgerKingBackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\",
+      "BasePath": "_content/BurgerKingBackEnd",
+      "RelativePath": "Assets/Images/3a9cbf64-b726-4ab7-89b0-69d32a10342028f37c5a4018fc3c167a119948c36e21d08d6a31-1333x1333.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Images\\3a9cbf64-b726-4ab7-89b0-69d32a10342028f37c5a4018fc3c167a119948c36e21d08d6a31-1333x1333.webp"
+    },
+    {
       "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\3c59ac57-8e84-44cc-8805-31cf4fc5b5a5download.jpg",
       "SourceId": "BurgerKingBackEnd",
       "SourceType": "Discovered",
@@ -680,6 +697,23 @@
       "OriginalItemSpec": "wwwroot\\Assets\\Images\\3fc7c4a1-5c46-4ea2-a4a1-ccb23f804f1b63852aa0afcfb46f6acd0a3566e5df85e15aa101-1333x1333.webp"
     },
     {
+      "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\4ded4960-a669-45eb-bce9-cfa04f1e3609b7d109aa23dbacd772c8e8168a208bff2a3025b1-1333x1333.webp",
+      "SourceId": "BurgerKingBackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\",
+      "BasePath": "_content/BurgerKingBackEnd",
+      "RelativePath": "Assets/Images/4ded4960-a669-45eb-bce9-cfa04f1e3609b7d109aa23dbacd772c8e8168a208bff2a3025b1-1333x1333.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Images\\4ded4960-a669-45eb-bce9-cfa04f1e3609b7d109aa23dbacd772c8e8168a208bff2a3025b1-1333x1333.webp"
+    },
+    {
       "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\5ae549f4-5437-4d5a-8e98-6d7f07d0fd4fWhatsApp Image 2024-01-31 at 22.15.37_0c715366.jpg",
       "SourceId": "BurgerKingBackEnd",
       "SourceType": "Discovered",
@@ -695,6 +729,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Images\\5ae549f4-5437-4d5a-8e98-6d7f07d0fd4fWhatsApp Image 2024-01-31 at 22.15.37_0c715366.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\664e1665-b76c-490f-852f-6801c0097df0Screenshot 2024-01-13 233318.png",
+      "SourceId": "BurgerKingBackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\",
+      "BasePath": "_content/BurgerKingBackEnd",
+      "RelativePath": "Assets/Images/664e1665-b76c-490f-852f-6801c0097df0Screenshot 2024-01-13 233318.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Images\\664e1665-b76c-490f-852f-6801c0097df0Screenshot 2024-01-13 233318.png"
     },
     {
       "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\6b647b10-6c8d-416c-9b43-278e5e2dd9fa30233b5e1f56ff9dbd96645f3d865b4d765b6980-1333x1333.webp",
@@ -746,6 +797,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\Images\\71cef6a6-b5c2-42c6-a45f-061c4551130fdownload.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\7791bc2c-b075-429f-8622-5910aaba5f0fScreenshot 2023-09-23 151956.png",
+      "SourceId": "BurgerKingBackEnd",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\",
+      "BasePath": "_content/BurgerKingBackEnd",
+      "RelativePath": "Assets/Images/7791bc2c-b075-429f-8622-5910aaba5f0fScreenshot 2023-09-23 151956.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\Images\\7791bc2c-b075-429f-8622-5910aaba5f0fScreenshot 2023-09-23 151956.png"
     },
     {
       "Identity": "C:\\Users\\acer\\Desktop\\BurgerKingBackEnd\\BurgerKingBackEnd\\wwwroot\\Assets\\Images\\95512b34-ec49-4c6a-863e-71f22c2b706adownload.jpg",

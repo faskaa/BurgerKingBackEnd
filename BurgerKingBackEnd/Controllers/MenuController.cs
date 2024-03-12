@@ -127,7 +127,24 @@ namespace BurgerKingBackEnd.Controllers
                 TempData["ErrorMessage"] = "The amount you have entered is more than the available amount..";
                 return RedirectToAction("Detail", new { RestaurantId = restaurantId, ProductId = productId });
             }
-            {   
+            {
+                decimal resultPrice = 0;
+                if (size == "Small")
+                {
+                    resultPrice = product.Price * quantity;
+
+                }
+                if (size == "Medium")
+                {
+                    resultPrice = product.Price * (decimal)1.5 * quantity;
+
+                }
+                if (size == "Large")
+                {
+                    resultPrice = product.Price * (decimal)2 * quantity;
+
+                }
+
                 CardItem cardItem = new CardItem
                 {
                     UserId = user.Id,
@@ -135,7 +152,7 @@ namespace BurgerKingBackEnd.Controllers
                     RestaurantId = restaurantId,
                     Title = product.Title,
                     Description = product.Description,
-                    Price = product.Price * quantity,
+                    Price =resultPrice,
                     Size = size,
                     Quantity = quantity,
                     OrderType = true
@@ -182,6 +199,23 @@ namespace BurgerKingBackEnd.Controllers
                 return RedirectToAction("DeliveryDetail", new { RestaurantId = restaurantId, ProductId = productId });
             }
             {
+                decimal resultPrice = 0;
+                if (size == "Small")
+                {
+                    resultPrice = product.Price * quantity;
+
+                }
+                if (size == "Medium")
+                {
+                    resultPrice = product.Price * (decimal)1.5 * quantity;
+
+                }
+                if (size == "Large")
+                {
+                     resultPrice = product.Price * (decimal)2 * quantity;
+
+                }
+
                 CardItem cardItem = new CardItem
                 {
                     UserId = user.Id,
@@ -189,7 +223,7 @@ namespace BurgerKingBackEnd.Controllers
                     RestaurantId = restaurantId,
                     Title = product.Title,
                     Description = product.Description,
-                    Price = product.Price * quantity,
+                    Price = resultPrice,
                     Size = size,
                     Quantity = quantity,
                     OrderType = false

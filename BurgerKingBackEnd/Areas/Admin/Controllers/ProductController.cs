@@ -68,6 +68,18 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
                 return View();
             };
 
+            if (product.Calory < 0)
+            {
+                ModelState.AddModelError(string.Empty, "You cannot write negative to calory");
+                return View();
+            }
+
+            if (product.Price <= 0)
+            {
+                ModelState.AddModelError(string.Empty, "You cannot write negative or zero to price");
+                return View();
+            }
+
             string webRootPath = _env.WebRootPath;
             product.Image = await product.IImage.GeneratePhoto(webRootPath,"Assets" ,"Images");
 
@@ -121,6 +133,18 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
             }).FirstOrDefault(x=>x.Id==id)!;
             if (product is null) return NotFound();
             if(!ModelState.IsValid) return View(product);
+            if (newProduct.Calory < 0)
+            {
+                ModelState.AddModelError(string.Empty, "You cannot write negative to calory");
+                return View(product);
+            }
+
+            if (newProduct.Price <= 0)
+            {
+                ModelState.AddModelError(string.Empty, "You cannot write negative or zero to price");
+                return View(product);
+            }
+
 
             Product oldProduct = _context.Product.FirstOrDefault(x => x.Id == id)!;
             string webRootPath = _env.WebRootPath;

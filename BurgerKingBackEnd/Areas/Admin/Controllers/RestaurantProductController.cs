@@ -77,6 +77,11 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
                 return View(pRCreateVM);
             }
 
+            if (pr.Count<0)
+            {
+                ModelState.AddModelError(string.Empty, "You cannot write negative to count");
+                return View(pRCreateVM);
+            }
 
             Product product = _context.Product.FirstOrDefault(x => x.Id == pr.ProductId)!;
             if (product is null)
@@ -162,7 +167,11 @@ namespace BurgerKingBackEnd.Areas.Admin.Controllers
                 return View(product);
             }
 
-
+            if (pr.Count < 0)
+            {
+                ModelState.AddModelError(string.Empty, "You cannot write negative to count");
+                return View(product);
+            }
             Product prProduct = _context.Product.FirstOrDefault(x => x.Id == pr.ProductId)!;
             if (prProduct is null)
             {

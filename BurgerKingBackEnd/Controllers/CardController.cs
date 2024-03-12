@@ -58,10 +58,10 @@ namespace BurgerKingBackEnd.Controllers
                 
             };
 
-            if(uniqueCardItems.Count <= 0)
-            {
-                return RedirectToAction("Index" , "Home");
-            }
+            //if(uniqueCardItems.Count <= 0)
+            //{
+            //    return RedirectToAction("Index" , "Home");
+            //}
 
 
             return View(cardVM);
@@ -104,10 +104,7 @@ namespace BurgerKingBackEnd.Controllers
 
             };
 
-            if (uniqueCardItems.Count <= 0)
-            {
-                return RedirectToAction("Index", "Home");
-            }
+           
 
             return View(cardVM);
         }

@@ -16,17 +16,34 @@
             <div class="detail">
                 <span>Pick Up</span>
             </div>
-            <div class="form">
-                <label>
-                    <input required type="radio" name="option" value="Drive Thru" />Drive Thru
-                </label>
-                <label>
-                    <input required type="radio" name="option" value="Pick Up" />Pick Up
-                </label>
-                <label>
-                    <input required type="radio" name="option" value="Dine In" />Dine In
-                </label>
-            </div>
+            @if (Model.cardItems.Count>0)
+            {
+                <div class="form">
+                    <label>
+                        <input required type="radio" name="option" value="Drive Thru" />Drive Thru
+                    </label>
+                    <label>
+                        <input required type="radio" name="option" value="Pick Up" />Pick Up
+                    </label>
+                    <label>
+                        <input required type="radio" name="option" value="Dine In" />Dine In
+                    </label>
+                </div>
+            }
+            else{
+                <div style="opacity:0.5" class="form">
+                    <label>
+                        <input style="cursor:not-allowed" required type="radio" disabled name="option" value="Drive Thru" />Drive Thru
+                    </label>
+                    <label>
+                        <input style="cursor:not-allowed" required type="radio" disabled name="option" value="Pick Up" />Pick Up
+                    </label>
+                    <label>
+                        <input style="cursor:not-allowed" required type="radio" disabled name="option" value="Dine In" />Dine In
+                    </label>
+                </div>
+
+            }
         </div>
         <div class="orders-wrapper">
             <h4>Your Card</h4>
@@ -50,12 +67,16 @@
                     <button type="button">+ Add Items</button>
                 </a>
             </div>
+            @if (Model.cardItems.Count>0)
+            {
+                
             <div>
                 <a  asp-controller="Menu" asp-action="DeletePickupCardItem" asp-route-Id="@Model.RestaurantId">
                     <button type="button">- Delete Items</button>
                 </a>
 
             </div>
+            }
  @*            <a asp-controller="Menu" asp-action="Index" asp-route-Id="@Model.RestaurantId">
                 <button type="button">+ Add Items</button>
             </a>
@@ -76,9 +97,19 @@
             </div>
         </div>
         <div class="submit-wrapper">
-            <a href="#">
-                <input class="submit-btn" type="submit" placeholder="Continue" name="Continue" id="" />
-            </a>
+            @if (Model.cardItems.Count>0)
+            {
+                <a href="#">
+                    <input class="submit-btn" type="submit" placeholder="Continue" name="Continue" id="" />
+                </a>
+
+            }
+            else
+            {
+                <a href="#">
+                    <input style="background-color:gray;opacity:0.5;cursor:not-allowed" class="submit-btn" type="button" placeholder="Continue" value="Please select items" name="Continue" id="" />
+                </a>
+            }
         </div>
         <!-- <button type="submit">Submit</button> -->
     </form>
