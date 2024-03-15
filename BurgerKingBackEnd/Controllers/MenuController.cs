@@ -252,9 +252,13 @@ namespace BurgerKingBackEnd.Controllers
             foreach (var item in orders)
             {
                 Courier courier = _context.Courier.FirstOrDefault(x=>x.DeliveringOrderId == item.Id);
-                courier.IsDelivering = false;
-                courier.DeliveringOrderId = null;
-                _context.SaveChanges();
+                if (courier != null)
+                {
+                    courier.IsDelivering = false;
+                    courier.DeliveringOrderId = null;
+                    _context.SaveChanges();
+                   
+                }
             }
                 //List<Courier> couriers = _context.Courier.Where(x => x.DeliveringOrderId == item.Id).ToList();
 

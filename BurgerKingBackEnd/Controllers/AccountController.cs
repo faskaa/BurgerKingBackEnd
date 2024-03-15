@@ -52,7 +52,7 @@ namespace BurgerKingBackEnd.Controllers
                 return View();
             }
 
-            Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user, login.Password, true, true);
+            Microsoft.AspNetCore.Identity.SignInResult result = await _signInManager.PasswordSignInAsync(user, login.Password, true , true);
             if (!result.Succeeded)
             {
                 if (result.IsLockedOut)
@@ -101,6 +101,7 @@ namespace BurgerKingBackEnd.Controllers
             }
 
             await _userManager.AddToRoleAsync(user , Roles.Member.ToString());
+            await  _signInManager.SignInAsync(user,true);
             return RedirectToAction("Index", "Home");
         }
 
