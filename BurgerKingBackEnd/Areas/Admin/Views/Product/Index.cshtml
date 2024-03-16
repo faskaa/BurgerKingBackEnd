@@ -26,13 +26,16 @@
         </tr>
     </thead>
     <tbody>
+        @{
+            var count = 0;
+        }
         @foreach (Product product in Model)
         {
             <tr>
                 <td>
                     @{
-                        var count = 0;
-                        ++count;
+                        count += 1;
+                        
                     }@count
                 </td>
                 <td>@product.Title</td>

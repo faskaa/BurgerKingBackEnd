@@ -59,7 +59,7 @@ namespace BurgerKingBackEnd.Controllers
         {
             ViewBag.Title = "Delivery - Burger King";
             CustomUser user = await _userManager.GetUserAsync(User);
-            List<Order> orders = _context.Orders.Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Where(x=>x.Status == null).Include(x=>x.cardItems).Include(x=>x.CustomUser).ToList();
+            List<Order> orders = _context.Orders.Where(x=>x.CustomUserId != user.Id).Where(x => x.IsSubmited == true).Where(x => x.PickUpType == false).Where(x=>x.Status == null).Include(x=>x.cardItems).Include(x=>x.CustomUser).ToList();
             List<Restaurant> restaurants = _context.Restaurant.ToList();
             
             

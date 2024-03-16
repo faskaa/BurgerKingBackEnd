@@ -28,13 +28,15 @@
         </tr>
     </thead>
     <tbody>
+        @{
+            var count = 0;
+        }
         @foreach (RestaurantProduct restaurantProduct in Model.restaurantProduct)
         {
             <tr>
                 <td>
                     @{
-                        var count = 0;
-                        ++count;
+                        count += 1;
                     }@count
                 </td>
                 <td>

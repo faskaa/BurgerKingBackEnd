@@ -80,7 +80,7 @@
                     <div class="infos">
                         <div class="info">
                             <span>Small</span>
-                            <span>100 cal</span>
+                            <span>@Model.Product.Calory</span>
                         </div>
                     </div>
                     <input required checked type="radio" name="size" value="Small" />
@@ -91,7 +91,7 @@
                     <div class="infos">
                         <div class="info">
                             <span>Medium</span>
-                            <span>150 cal</span>
+                            <span>@(Math.Round(Model.Product.Calory * (decimal)1.5))</span>
                         </div>
                     </div>
                     <input required type="radio" name="size" value="Medium" />
@@ -102,7 +102,7 @@
                     <div class="infos">
                         <div class="info">
                             <span>Large</span>
-                            <span>200 cal</span>
+                            <span>@(Math.Round(Model.Product.Calory * (decimal)2))</span>
                         </div>
                     </div>
                     <input required type="radio" name="size" value="Large" />
